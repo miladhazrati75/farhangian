@@ -38,8 +38,6 @@ class StudentsController extends Controller
 
     public function updateStudent($student_id)
     {
-//        dd($student_id);
-
         $this->validate(request(), [
             'name' => 'required',
             'family' => 'required',
