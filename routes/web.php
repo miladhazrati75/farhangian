@@ -18,6 +18,8 @@ Route::get('/', 'StudentsController@allOfStudents')->name('masterPage');
 
 Route::get('/delete/student/{student_id}', 'StudentsController@deleteStudent')->name('delete.student');
 
+Route::get('/download/student/info', 'StudentsController@studentInfo')->name('download.student.info');
+
 Route::get('/add/student/', 'StudentsController@addStudent')->name('add.get.student');
 Route::post('/add/student/', 'StudentsController@createStudent')->name('add.post.student');
 

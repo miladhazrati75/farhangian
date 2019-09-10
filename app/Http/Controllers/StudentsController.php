@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
@@ -39,7 +40,7 @@ class StudentsController extends Controller
     public function updateStudent($student_id)
     {
 
-	//dd
+        //dd
         $this->validate(request(), [
             'name' => 'required',
             'family' => 'required',
@@ -64,8 +65,8 @@ class StudentsController extends Controller
         ];
         $student = Student::find($student_id);
         $student->update($student_data);
-        if ($student){
-            return redirect()->route('masterPage')->with('success','اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+        if ($student) {
+            return redirect()->route('masterPage')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
 
     }
@@ -100,8 +101,26 @@ class StudentsController extends Controller
         ];
         $new_student_object = Student::create($student_data);
         if ($new_student_object && $new_student_object instanceof Student) {
-            return redirect()->route('masterPage')->with('success','دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('masterPage')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
         }
 
+    }
+
+    public function studentInfo()
+    {
+//        $allOfStudents=Student::join();
+        $allOfStudents=Student::all();
+        $filename='studentsInfo.csv';
+        $handle=fopen($filename,'w+');
+        fputcsv($handle,array('name','family','National_Code','student_code','term'));
+        foreach ($allOfStudents as $rows){
+          fputcsv($handle,array($rows['name'],$rows['family'],$rows['National_Code'],$rows['student_code'],$rows['term']));
+        }
+        fclose($handle);
+        $headers=array(
+            'Content-Type'=>'text/csv'
+        );
+
+        return \Illuminate\Support\Facades\Response::download($filename,'studentsInfo.csv',$headers);
     }
 }

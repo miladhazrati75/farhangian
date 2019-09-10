@@ -630,9 +630,11 @@
                     <div class="panel panel-default card-view">
                         <div class="row">
                             <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
-                                <div class="btn btn-warning btn-rounded btn-anim mt-5"><i
-                                            class="fa fa-download"></i><span class="btn-text">دانلود</span>
-                                </div>
+                                <a href="{{route('download.student.info')}}">
+                                    <div class="btn btn-warning btn-rounded btn-anim mt-5"><i
+                                                class="fa fa-download"></i><span class="btn-text">دانلود</span>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                                 <a href="{{route('add.get.student')}}">
