@@ -123,4 +123,8 @@ class StudentsController extends Controller
 
         return \Illuminate\Support\Facades\Response::download($filename,'studentsInfo.csv',$headers);
     }
+    public function login(){
+        return view('login');
+    }
+
 }

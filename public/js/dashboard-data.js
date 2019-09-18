@@ -4,12 +4,7 @@
 
 /*****Ready function start*****/
 $(document).ready(function(){
-	$('#statement').DataTable({
-		"bFilter": false,
-		"bLengthChange": false,
-		"bPaginate": false,
-		"bInfo": false,
-	});
+	
 	if( $('#chart_2').length > 0 ){
 		var ctx2 = document.getElementById("chart_2").getContext("2d");
 		var data2 = {
@@ -279,37 +274,14 @@ $(document).ready(function(){
 	$('#morris_switch').each(function() {
 		new Switchery($(this)[0], $(this).data());
 	});
-	var swichMorris = function() {
-		if($("#morris_switch").is(":checked")) {
-			lineChart.setData(data);
-			lineChart.redraw();
-		} else {
-			lineChart.setData(dataNew);
-			lineChart.redraw();
-		}
-	}
-	swichMorris();	
-	$(document).on('change', '#morris_switch', function () {
-		swichMorris();
-	});
+
+
 	
 });
 /*****Ready function end*****/
 
 /*****Load function start*****/
-$(window).load(function(){
-	window.setTimeout(function(){
-		$.toast({
-			heading: ' خوش آمدید',
-			text: 'ترجمه و راستچینی توسط دانشگاه فرهنگیان',
-			position: 'top-right',
-			loaderBg:'#f0c541',
-			icon: 'success',
-			hideAfter: 3500, 
-			stack: 6
-		});
-	}, 3000);
-});
+
 /*****Load function* end*****/
 
 var sparklineLogin = function() { 

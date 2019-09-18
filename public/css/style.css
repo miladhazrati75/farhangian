@@ -3255,14 +3255,15 @@ a#toggle_mobile_nav {
     color: #212121; }
   .breadcrumb > li + li::after, .breadcrumb > li + li::before {
     font-family: FontAwesome; }
-  .breadcrumb > li + li::after {
+  .breadcrumb > li + li::before {
     content: "\f104";
     padding: 0 9px; }
   .breadcrumb > li + li::before {
     color: #212121;
     opacity: .5;
-    content: "";
-    padding: 0; }
+    /* content: "";
+    padding: 0; */
+   }
 
 footer {
   position: absolute;
@@ -7642,4 +7643,8 @@ h1,p,b,h2,body,h3,h4,h6{font-family:CodeAdvance!important}
 .modal-footer button{
   border-radius: 10px;
 
+}
+#head-row{
+  margin-top:20px;
+  margin-right: 10px;
 }

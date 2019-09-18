@@ -27,9 +27,7 @@ Route::get('/edit/student/{student_id}', 'StudentsController@editStudent')->name
 Route::post('/edit/student/{student_id}', 'StudentsController@updateStudent')->name('edit.post.student');
 
 //Route::post('/edit/student/{student_id}', 'StudentsController@updateStudent')->name('update.student');
-
-
-
+Route::get('/login','StudentsController@login');
 
 
 
