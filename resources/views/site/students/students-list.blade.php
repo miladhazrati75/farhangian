@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-   لیست دانشجویان
+   لیست دانشجویان|دانشگاه فرهنگیان
 @stop
 @section('content')
     <!-- Main Content -->

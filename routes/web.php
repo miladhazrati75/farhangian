@@ -28,6 +28,9 @@ Route::post('/edit/student/{student_id}', 'StudentsController@updateStudent')->n
 Route::get('/login','StudentsController@login');
 
 
+//start teachers route
+Route::get('/list-teachers','TeachersController@teacherList');
+//end teachers route
 
 
 
