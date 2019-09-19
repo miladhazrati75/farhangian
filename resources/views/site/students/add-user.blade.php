@@ -34,8 +34,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام</label>
-                                                    <input type="text" required style="" id="name" name="name" class="form-control"
-                                                           placeholder="نام دانشجو">
+                                                    <input class="form-control" type="text" name="name" id="name" placeholder="نام دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -47,7 +46,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام خانوادگی</label>
                                                     <input type="text" id="family" name="family" class="form-control"
-                                                           placeholder="نام خانوادگی دانشجو">
+                                                           placeholder="نام خانوادگی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -60,7 +59,7 @@
                                                     <label class="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code"
                                                            class="form-control"
-                                                           placeholder="شماره دانشجویی">
+                                                           placeholder="شماره دانشجویی" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -73,7 +72,7 @@
                                                     <label class="control-label mb-10">شماره ملی</label>
                                                     <input type="text" id="National_Code" name="National_Code"
                                                            class="form-control"
-                                                           placeholder="شماره ملی دانشجو">
+                                                           placeholder="شماره ملی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -85,7 +84,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" class="form-control"
-                                                           placeholder="ترم">
+                                                           placeholder="ترم" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
