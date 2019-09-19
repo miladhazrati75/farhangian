@@ -1,4 +1,4 @@
-@extends('layout/main')
+@extends('layout.main')
 @section('title')
     ویرایش اطلاعات
 @stop
@@ -90,7 +90,6 @@
                                             <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
                                                         class="fa fa-check"></i> <span>ثبت</span></button>
                                             <button type="button" class="btn btn-warning pull-left">لغو</button>
-                                            <div class="clearfix"></div>
                                         </div>
                                     </form>
                                 </div>

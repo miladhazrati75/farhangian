@@ -13,7 +13,7 @@ class StudentsController extends Controller
     public function allOfStudents()
     {
         $students = Student::all();
-        return view('index', compact('students'));
+        return view('site/students/students-list', compact('students'));
     }
 
     public function deleteStudent($student_id)
@@ -32,7 +32,7 @@ class StudentsController extends Controller
         if ($student_id && ctype_digit($student_id)) {
             $studentItem = Student::find($student_id);
             if ($studentItem && $studentItem instanceof Student) {
-                return view('edit', compact('studentItem'));
+                return view('site/students/edit', compact('studentItem'));
             }
         }
     }
@@ -73,7 +73,7 @@ class StudentsController extends Controller
 
     public function addStudent()
     {
-        return view('add-user');
+        return view('site/students/add-user');
     }
 
     public function createStudent(Request $request)
@@ -124,7 +124,7 @@ class StudentsController extends Controller
         return \Illuminate\Support\Facades\Response::download($filename,'studentsInfo.csv',$headers);
     }
     public function login(){
-        return view('login');
+        return view('site/login/login');
     }
 
 }

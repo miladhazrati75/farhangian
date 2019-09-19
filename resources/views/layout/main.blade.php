@@ -196,7 +196,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="#ecom_dr">
+                <a href="{{route('masterPage')}}" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست دانشجویان</span>
                     </div>
                     <div class="pull-right"></div>
@@ -204,17 +204,12 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="#app_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-accounts-outline mr-20"></i><span class="right-nav-text">لیست اساتید</span>
+                <a href="" data-toggle="collapse" data-target="#ecom_dr">
+                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید</span>
                     </div>
-                    <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
+                    <div class="pull-right"></div>
                     <div class="clearfix"></div>
                 </a>
-                <ul id="app_dr" class="collapse collapse-level-1">
-                    <li>
-                        <a href="#">چت ها</a>
-                    </li>
-                </ul>
             </li>
             <li>
                 <a href="#">
