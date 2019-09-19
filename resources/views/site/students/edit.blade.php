@@ -5,11 +5,17 @@
 @section('content')
 <!-- Main Content -->
             <!-- Title -->
-            <div class="row heading-bg">
+            <div class="row heading-bg" id="head-row">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                     <h5 class="txt-dark">ویرایش اطلاعات دانشجو</h5>
                 </div>
-
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('student-list')}}">لیست دانشجویان</a></li>
+                        <li class="breadcrumb-item active">ویرایش</li>
+                    </ol>
+                </nav>
             </div>
             <!-- /Title -->
 

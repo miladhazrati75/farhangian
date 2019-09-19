@@ -5,19 +5,20 @@
 @section('content')
     <!-- Main Content -->
             <!--start row-->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="panel-heading">
-                        <div class="pull-left">
-                            <h5 class="panel-title txt-dark">لیست دانشجویان</h5>
-                        </div>
-                        <br>
-                        <br>
-                        @include('partials.success')
-                        <div class="clearfix"></div>
-                    </div>
+            @include('partials.success')
+            <!-- Title -->
+            <div class="row heading-bg" id="head-row">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h5 class="txt-dark">لیست دانشجویان</h5>
                 </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('student-list')}}">لیست دانشجویان</a></li>
+                    </ol>
+                </nav>
             </div>
+            <!-- /Title -->
 
             <!--end row-->
             <!-- Row -->

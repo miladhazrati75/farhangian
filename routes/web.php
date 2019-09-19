@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout/main');
-});
-Route::get('/list-student', 'StudentsController@allOfStudents')->name('masterPage');
+Route::get('/', 'StudentsController@masterpage')->name('masterpage');
+Route::get('/list-student', 'StudentsController@allOfStudents')->name('student-list');
 
 Route::get('/delete/student/{student_id}', 'StudentsController@deleteStudent')->name('delete.student');
 

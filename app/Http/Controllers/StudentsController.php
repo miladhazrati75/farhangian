@@ -10,6 +10,9 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 class StudentsController extends Controller
 {
     //
+    public function masterpage(){
+        return view('layout/main');
+    }
     public function allOfStudents()
     {
         $students = Student::all();
@@ -22,7 +25,7 @@ class StudentsController extends Controller
             $student = Student::find($student_id);
             if ($student && $student instanceof Student) {
                 $student->delete();
-                return redirect()->route('masterPage');
+                return redirect()->route('student-list');
             }
         }
     }
@@ -66,7 +69,7 @@ class StudentsController extends Controller
         $student = Student::find($student_id);
         $student->update($student_data);
         if ($student) {
-            return redirect()->route('masterPage')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('student-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
 
     }
@@ -86,6 +89,7 @@ class StudentsController extends Controller
             'term' => 'required',
         ], [
             'name.required' => 'لطفا نام کامل را وارد نمایید.',
+
             'family.required' => 'لطفا نام خانوادگی کامل را وارد نمایید.',
             'student_code.required' => 'لطفا شماره دانشجویی را بصورت صحیح وارد نمایید.',
             'National_Code.required' => 'لطفا کدملی دانشجو را بصورت صحیح وارد نمایید.',
@@ -101,7 +105,7 @@ class StudentsController extends Controller
         ];
         $new_student_object = Student::create($student_data);
         if ($new_student_object && $new_student_object instanceof Student) {
-            return redirect()->route('masterPage')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('student-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
         }
 
     }

@@ -196,7 +196,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{route('masterPage')}}" data-toggle="collapse" data-target="#ecom_dr">
+                <a href="{{route('student-list')}}" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست دانشجویان</span>
                     </div>
                     <div class="pull-right"></div>
@@ -204,7 +204,7 @@
                 </a>
             </li>
             <li>
-                <a href="" data-toggle="collapse" data-target="#ecom_dr">
+                <a href="#" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید</span>
                     </div>
                     <div class="pull-right"></div>
@@ -603,6 +603,7 @@
     <div class="page-wrapper mt-20">
         <div class="container-fluid">
          @yield('content')
+
          <!-- Footer -->
              <footer class="footer container-fluid pl-30 pr-30">
                  <div class="row">
