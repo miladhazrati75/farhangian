@@ -18,8 +18,9 @@ class ProfessorsInUni extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
             $table->string('family');
-            $table->string('password');
+            $table->string('National_Code')->nullable();
             $table->string('Professor_Code', 10)->unique();
+            $table->string('education')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

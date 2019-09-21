@@ -29,7 +29,7 @@ Route::get('/login','StudentsController@login');
 
 
 //start teachers route
-Route::get('/list-teachers','TeachersController@teacherList');
+Route::get('/list-Professors','ProfessorsController@ProfessorsList')->name('Professors-list');
 //end teachers route
 
 

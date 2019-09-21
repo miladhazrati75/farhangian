@@ -204,7 +204,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="#ecom_dr">
+                <a href="{{route('Professors-list')}}" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید</span>
                     </div>
                     <div class="pull-right"></div>
@@ -482,8 +482,8 @@
                                                     <span class="inline-block font-11  pull-right message-time">12:28 AM</span>
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">پیام Themeworld از طریق مشخصات نمایه انویتو شما ارسال شد</span>
-                                                    <p class="txt-grey truncate">ملت وب ایپسوم متن ساختگی با تولید سادگی
-                                                        ملت وب از صنعت چاپ و با ملت وب از ملت وب گرافیک است. </p>
+                                                    <p class="txt-grey truncate">ایپسوم متن ساختگی با تولید سادگی
+                                                         از صنعت چاپ و با است. </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -499,7 +499,7 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">پایان پروژه بی نهایت</span>
                                                     <p class="txt-grey truncate"> متن ساختگی با تولید سادگی از صنعت چاپ
-                                                        و با ملت وب از ملت وب گرافیک است. </p>
+                                                        و با ملت  از   گرافیک است. </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -562,7 +562,7 @@
                                                     <span class="inline-block font-11  pull-right message-time">19 Jan</span>
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">تم آپلود شده شما انتخاب شده است</span>
-                                                    <p class="txt-grey truncate"> متن ساختگی با تولید سادگی ملت وب از
+                                                    <p class="txt-grey truncate"> متن ساختگی با تولید سادگی  وب از
                                                         صنعت چاپ و با از گرافیک است. </p>
                                                 </div>
                                             </div>
