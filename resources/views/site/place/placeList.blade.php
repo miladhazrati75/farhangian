@@ -1,5 +1,10 @@
 @extends('layout/main')
+@section('title')
+    لیست حوزه ها|دانشگاه فرهنگیان
+@stop
+@section('content')
 <!--start row-->
+@include('partials.success')
 <div class="row">
 				  <div class="col-sm-12">
 					  <div class="panel-heading">
@@ -161,3 +166,4 @@
 						</div>
 					</div>
 				</div>
+				@stop
