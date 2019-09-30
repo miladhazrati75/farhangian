@@ -212,7 +212,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route('place-list')}}">
                     <div class="pull-left"><i class="zmdi zmdi-gps mr-20"></i><span
                             class="right-nav-text">لیست حوزه ها</span></div>
                     <div class="pull-right"><span class="label label-warning">8</span></div>

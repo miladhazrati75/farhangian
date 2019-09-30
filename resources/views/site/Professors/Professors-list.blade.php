@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
-                        <a href="add-teacher.html"><div class="btn btn-danger btn-rounded btn-anim mt-5"> <i class="fa fa-plus"></i><span class="btn-text">افزودن</span>
+                        <a href="{{route('add-get-professor')}}"><div class="btn btn-danger btn-rounded btn-anim mt-5"> <i class="fa fa-plus"></i><span class="btn-text">افزودن</span>
                             </div></a>
                     </div>
 
@@ -68,7 +68,7 @@
                                     <tr>
                                         <th>ردیف</th>
                                         <th>نام و نام خانوادگی</th>
-                                        <th>شماره استادی</th>
+                                        <th>شناسه استاد</th>
                                         <th>شماره ملی</th>
                                         <th>موارد دیگر</th>
                                         <th>تحصیلات</th>
