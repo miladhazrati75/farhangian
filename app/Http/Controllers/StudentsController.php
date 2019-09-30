@@ -130,5 +130,4 @@ class StudentsController extends Controller
     public function login(){
         return view('site/login/login');
     }
-
 }

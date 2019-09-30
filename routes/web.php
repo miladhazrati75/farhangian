@@ -38,5 +38,5 @@ Route::get('/list-Professors','ProfessorsController@ProfessorsList')->name('Prof
 Route::get('/list-place','placeController@placeList')->name('place-list');
 //end place route
 
-
-
+Route::get('/add/professor','ProfessorsController@addProfessor')->name('add-get-professor');
+Route::post('/add/professor','ProfessorsController@createProfessor')->name('add-post-professor');
