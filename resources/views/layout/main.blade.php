@@ -172,7 +172,7 @@
 
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="zmdi zmdi-power"></i><span>خروج</span></a>
+                            <a href="{{route('logout')}}"><i class="zmdi zmdi-power"></i><span>خروج</span></a>
                         </li>
                     </ul>
                 </li>

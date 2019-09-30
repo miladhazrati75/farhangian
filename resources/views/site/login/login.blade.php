@@ -21,14 +21,23 @@
             <h1 style="font-size: 37px">ورود به سایت</h1>
         </div>
         <div class="text-center m-t-20">
-            <h4>سامانه کارورزی دانشگاه فرهنگیان</h3>
+            <h4>سامانه کارورزی دانشگاه فرهنگیان</h4>
         </div>
         <div class="row">
             <div class="col-lg-6 m-t-80">
                 <div class="wrap-login100">
-                    <form class="login100-form validate-form">
+                    @if(session('loginError'))
+                        <div class="alert alert-danger">
+                            <p>
+                                {{session('loginError')}}
+                            </p>
+                        </div>
+                    @endif
+                        <br>
+                    <form class="login100-form validate-form" method="post" action="{{route('post-login')}}">
+                        {{csrf_field()}}
                         <div class="wrap-input100 validate-input" >
-                            <input class="input100" type="text" name="username">
+                            <input class="input100" type="text" name="name">
                             <span class="focus-input100" data-placeholder="نام کاربری"></span>
                         </div>
 
@@ -36,7 +45,7 @@
 										<span class="btn-show-pass">
 												<i class="zmdi zmdi-eye"></i>
 										</span>
-                            <input class="input100" type="password" name="pass">
+                            <input class="input100" type="password" name="password">
                             <span class="focus-input100" data-placeholder="پسورد"></span>
                         </div>
                         <div class="row">
