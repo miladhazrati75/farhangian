@@ -205,7 +205,7 @@
             </li>
             <li>
                 <a href="{{route('Professors-list')}}" data-toggle="collapse" data-target="#ecom_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید</span>
+                    <div class="pull-left"><i class="zmdi zmdi-collection-text mr-20"></i><span class="right-nav-text">لیست اساتید</span>
                     </div>
                     <div class="pull-right"></div>
                     <div class="clearfix"></div>
@@ -213,9 +213,9 @@
             </li>
             <li>
                 <a href="{{route('place-list')}}">
-                    <div class="pull-left"><i class="zmdi zmdi-gps mr-20"></i><span
+                    <div class="pull-left"><i class="zmdi zmdi-pin-drop mr-20" style="font-size:20px;"></i><span
                             class="right-nav-text">لیست حوزه ها</span></div>
-                    <div class="pull-right"><span class="label label-warning">8</span></div>
+                    
                     <div class="clearfix"></div>
                 </a>
             </li>
@@ -225,14 +225,14 @@
 
             <li>
                 <a href="#" data-toggle="collapse" data-target="#ui_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-smartphone-setup mr-20"></i><span class="right-nav-text">گزارش های کارورزی</span>
+                    <div class="pull-left"><i class="zmdi zmdi-calendar-check mr-20" style="font-size:20px;"></i><span class="right-nav-text">گزارش های کارورزی</span>
                     </div>
                     <div class="clearfix"></div>
                 </a>
             </li>
             <li>
                 <a href="#" data-toggle="collapse" data-target="#form_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-edit mr-20"></i><span
+                    <div class="pull-left"><i class="zmdi zmdi-square-down mr-20"></i><span
                             class="right-nav-text">فرم ها</span></div>
                     <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div>
                     <div class="clearfix"></div>
@@ -248,14 +248,14 @@
             </li>
             <li>
                 <a href="#" data-toggle="collapse" data-target="#chart_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-chart-donut mr-20"></i><span class="right-nav-text">سابقه کارورزی </span>
+                    <div class="pull-left"><i class="zmdi zmdi-time-interval mr-20"></i><span class="right-nav-text">سابقه کارورزی </span>
                     </div>
                     <div class="clearfix"></div>
                 </a>
             </li>
             <li>
                 <a href="#" data-toggle="collapse" data-target="#table_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-calendar-note mr-20"></i><span class="right-nav-text">گزارش غیبت ها</span>
+                    <div class="pull-left"><i class="zmdi zmdi-border-color mr-20"></i><span class="right-nav-text">گزارش غیبت ها</span>
                     </div>
                     <div class="clearfix"></div>
                 </a>
