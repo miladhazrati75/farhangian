@@ -16,6 +16,8 @@ Route::get('/list-student', 'StudentsController@allOfStudents')->name('student-l
 
 Route::get('/delete/student/{student_id}', 'StudentsController@deleteStudent')->name('delete.student');
 
+Route::get('/delete/professor/{professor_id}', 'ProfessorsController@deleteProfessor')->name('delete.professor');
+
 Route::get('/download/student/info', 'StudentsController@studentInfo')->name('download.student.info');
 
 Route::get('/add/student/', 'StudentsController@addStudent')->name('add.get.student');

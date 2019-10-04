@@ -58,4 +58,16 @@ class ProfessorsController extends Controller
            return redirect()->route('Professors-list')->with('success','اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
+
+    public function deleteProfessor($professor_id)
+    {
+        if ($professor_id && ctype_digit($professor_id)){
+            $professor = Professor::find($professor_id);
+            if ($professor && $professor instanceof Professor){
+                $professor->delete();
+                return redirect()->route('Professors-list');
+            }
+
+        }
+    }
 }

@@ -90,7 +90,7 @@
                                                     <a href="{{route('edit-get-professor',[$professor->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
                                                         <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
                                                     </a>
-                                                    <a href="" title="delete"  data-toggle="tooltip" data-original-title="delete">
+                                                    <a href="{{route('delete.professor',[$professor->id])}}" title="delete"  data-toggle="tooltip" data-original-title="delete">
                                                         <i class="fa fa-close text-danger"></i>
                                                     </a>
                                                 </td>
