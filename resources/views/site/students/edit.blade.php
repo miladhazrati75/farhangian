@@ -95,7 +95,9 @@
                                         <div class="form-actions mt-20">
                                             <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
                                                         class="fa fa-check"></i> <span>ثبت</span></button>
-                                            <button type="button" class="btn btn-warning pull-left">لغو</button>
+                                            <a href="{{route('student-list')}}">
+                                                <button type="button" class="btn btn-warning pull-left">لغو</button>
+                                            </a>
                                         </div>
                                     </form>
                                 </div>
