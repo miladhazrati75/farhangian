@@ -32,6 +32,12 @@ Route::get('/login','StudentsController@login');
 Route::get('/list-Professors','ProfessorsController@ProfessorsList')->name('Professors-list');
 //end teachers route
 
+//Start Auth
+Route::get('/login','UsersController@login')->name('login');
+Route::post('/login','UsersController@doLogin')->name('post-login');
+Route::get('/logout','UsersController@logout')->name('logout');
+//End Auth
+
 //start place route
 Route::get('/list-place','placeController@placeList')->name('place-list');
 //end place route

@@ -7648,3 +7648,6 @@ h1,p,b,h2,body,h3,h4,h6{font-family:CodeAdvance!important}
   margin-top:0px;
   margin-right: 10px;
 }
+.fixed-sidebar-left{
+  margin-top:3px;
+}
