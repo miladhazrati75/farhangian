@@ -81,12 +81,19 @@
                                         @foreach($professors as $professor)
                                             <tr>
                                                 <td>{{$i}}</td>
-                                                <td>{{$professor->name}}{{' '}}{{$professor->familly}}</td>
+                                                <td>{{$professor->name}}{{' '}}{{$professor->family}}</td>
                                                 <td>{{$professor->Professor_Code}}</td>
                                                 <td>{{$professor->National_Code}}</td>
                                                 <td></td>
                                                 <td>{{$professor->education}}</td>
-                                                <td class="text-nowrap"><a href="edit-teacher.html" class="mr-25" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i> </a> <a href="#" title="delete" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"> <i class="fa fa-close text-danger"></i> </a> </td>
+                                                <td class="text-nowrap">
+                                                    <a href="{{route('edit-get-professor',[$professor->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
+                                                        <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
+                                                    </a>
+                                                    <a href="" title="delete"  data-toggle="tooltip" data-original-title="delete">
+                                                        <i class="fa fa-close text-danger"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
                                         {{$i++}}
                                         @endforeach

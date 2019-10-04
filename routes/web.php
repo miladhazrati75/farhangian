@@ -32,11 +32,16 @@ Route::get('/login','StudentsController@login');
 Route::get('/list-Professors','ProfessorsController@ProfessorsList')->name('Professors-list');
 //end teachers route
 
-
-
 //start place route
 Route::get('/list-place','placeController@placeList')->name('place-list');
 //end place route
 
+//start add list professor
 Route::get('/add/professor','ProfessorsController@addProfessor')->name('add-get-professor');
 Route::post('/add/professor','ProfessorsController@createProfessor')->name('add-post-professor');
+//end add list professor
+
+//start edit list professor
+Route::get('/edit/professor/{professor_id}','ProfessorsController@editProfessor')->name('edit-get-professor');
+Route::post('/edit/professor/{professor_id}','ProfessorsController@updateProfessor')->name('edit-post-professor');
+//end edit list professor

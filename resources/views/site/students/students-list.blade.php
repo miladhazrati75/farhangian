@@ -95,15 +95,14 @@
                                                         <td>{{$student->National_Code}}</td>
                                                         <td></td>
                                                         <td>{{$student->term}}</td>
-                                                        <td class="text-nowrap"><a
-                                                                    href="{{route('edit.get.student',[$student->id])}}"
-                                                                    class="mr-25" data-toggle="tooltip"
-                                                                    data-original-title="Edit"> <i
-                                                                        class="fa fa-pencil text-inverse m-r-10"
-                                                                        style="color:#2ecd99;"></i> </a> <a
-                                                                    href="{{route('delete.student',[$student->id])}}"
-                                                                    data-toggle="tooltip" data-original-title="delete">
-                                                                <i class="fa fa-close text-danger"></i> </a></td>
+                                                        <td class="text-nowrap">
+                                                            <a href="{{route('edit.get.student',[$student->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
+                                                                <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
+                                                            </a>
+                                                            <a href="{{route('delete.student',[$student->id])}}" data-toggle="tooltip" data-original-title="delete">
+                                                                <i class="fa fa-close text-danger"></i>
+                                                            </a>
+                                                        </td>
                                                         {{$i++}}
                                                     </tr>
                                                 @endforeach

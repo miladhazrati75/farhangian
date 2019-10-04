@@ -42,7 +42,6 @@ class StudentsController extends Controller
 
     public function updateStudent($student_id)
     {
-
         //dd
         $this->validate(request(), [
             'name' => 'required',
