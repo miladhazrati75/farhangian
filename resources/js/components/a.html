@@ -1,0 +1,126 @@
+@if($students && count($students)>0)
+                                                {{$i=1}}
+                                                @foreach($students as $student)
+
+                                                    <tr>
+                                                        <td>{{$i}}</td>
+                                                        <td>{{$student->name}}{{' '}}{{$student->family}}</td>
+                                                        <td>{{$student->student_code}}</td>
+                                                        <td>{{$student->National_Code}}</td>
+                                                        <td></td>
+                                                        <td>{{$student->term}}</td>
+                                                        <td class="text-nowrap"><a
+                                                                    href="{{route('edit.get.student',[$student->id])}}"
+                                                                    class="mr-25" data-toggle="tooltip"
+                                                                    data-original-title="Edit"> <i
+                                                                        class="fa fa-pencil text-inverse m-r-10"
+                                                                        style="color:#2ecd99;"></i> </a> <a
+                                                                    href="{{route('delete.student',[$student->id])}}"
+                                                                    data-toggle="tooltip" data-original-title="delete">
+                                                                <i class="fa fa-close text-danger"></i> </a></td>
+                                                        {{$i++}}
+                                                    </tr>
+
+
+-------------------------------------------------------------------
+<div class="row heading-bg" id="head-row">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h5 class="txt-dark">ویرایش اطلاعات دانشجو</h5>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
+            <li class="breadcrumb-item"><a href="{{route('student-list')}}">لیست دانشجویان</a></li>
+            <li class="breadcrumb-item active">افزودن</li>
+        </ol>
+    </nav>
+</div>
+<!-- /Title -->
+
+<!-- Row -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default card-view">
+            <div class="panel-wrapper collapse in">
+                <div class="panel-body">
+                    <div class="form-wrap">
+                        @include('partials.errors')
+                        <form action="" method="post" style="padding: 22px">
+                            {{csrf_field()}}
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">نام</label>
+                                        <input class="form-control" type="text" name="name" id="name" placeholder="نام دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">نام خانوادگی</label>
+                                        <input type="text" id="family" name="family" class="form-control"
+                                               placeholder="نام خانوادگی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">شماره دانشجویی</label>
+                                        <input type="text" id="student_code" name="student_code"
+                                               class="form-control"
+                                               placeholder="شماره دانشجویی" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">شماره ملی</label>
+                                        <input type="text" id="National_Code" name="National_Code"
+                                               class="form-control"
+                                               placeholder="شماره ملی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label mb-10">ترم</label>
+                                        <input type="text" id="term" name="term" class="form-control"
+                                               placeholder="ترم" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-actions mt-20">
+                                <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
+                                            class="fa fa-check"></i> <span>افزودن</span></button>
+                                <button type="button" class="btn btn-warning pull-left">لغو</button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
