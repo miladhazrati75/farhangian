@@ -42,7 +42,6 @@ class StudentsController extends Controller
 
     public function updateStudent($student_id)
     {
-
         //dd
         $this->validate(request(), [
             'name' => 'required',
@@ -71,7 +70,6 @@ class StudentsController extends Controller
         if ($student) {
             return redirect()->route('student-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
-
     }
 
     public function addStudent()
