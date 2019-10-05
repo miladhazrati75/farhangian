@@ -40,10 +40,6 @@ Route::post('/login','UsersController@doLogin')->name('post-login');
 Route::get('/logout','UsersController@logout')->name('logout');
 //End Auth
 
-//start place route
-Route::get('/list-place','placeController@placeList')->name('place-list');
-//end place route
-
 //start add list professor
 Route::get('/add/professor','ProfessorsController@addProfessor')->name('add-get-professor');
 Route::post('/add/professor','ProfessorsController@createProfessor')->name('add-post-professor');
@@ -53,3 +49,15 @@ Route::post('/add/professor','ProfessorsController@createProfessor')->name('add-
 Route::get('/edit/professor/{professor_id}','ProfessorsController@editProfessor')->name('edit-get-professor');
 Route::post('/edit/professor/{professor_id}','ProfessorsController@updateProfessor')->name('edit-post-professor');
 //end edit list professor
+
+//start place route
+Route::get('/list-place','placeController@placeList')->name('place-list');
+
+Route::get('/add/place','placeController@addPlace')->name('add-get-place');
+Route::post('/add/place','placeController@createPlace')->name('add-post-place');
+
+Route::get('/delete/place/{place_id}','placeController@deletePlace')->name('delete.place');
+
+Route::get('/edit/place/{place_id}','placeController@editPlace')->name('edit-get-place');
+Route::post('/edit/place/{place_id}','placeController@updatePlace')->name('edit-post-place');
+//end place route
