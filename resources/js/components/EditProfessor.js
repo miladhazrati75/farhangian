@@ -68,8 +68,8 @@ class EditProfessor extends React.Component {
         </div>
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="index.html">صفحه اصلی</a></li>
-                <li className="breadcrumb-item"><a href="index.html">لیست اساتید</a></li>
+                <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                <li className="breadcrumb-item"><Link to="/Dashboard/ProfessorsList">لیست اساتید</Link></li>
                 <li className="breadcrumb-item active" aria-current="page">ویرایش</li>
             </ol>
         </nav>

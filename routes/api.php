@@ -56,14 +56,14 @@ Route::post('/edit/professor/{professor_id}','ProfessorsController@updateProfess
 //end edit list professor
 
 //start place route
-Route::get('/list-place','placeController@placeList')->name('place-list');
+Route::get('/list-place','PlaceController@placeList')->name('place-list');
 
-Route::get('/add/place','placeController@addPlace')->name('add-get-place');
-Route::post('/add/place','placeController@createPlace')->name('add-post-place');
+Route::get('/add/place','PlaceController@addPlace')->name('add-get-place');
+Route::post('/add/place','PlaceController@createPlace')->name('add-post-place');
 
-Route::get('/delete/place/{place_id}','placeController@deletePlace')->name('delete.place');
+Route::get('/delete/place/{place_id}','PlaceController@deletePlace')->name('delete.place');
 
-Route::get('/edit/place/{place_id}','placeController@editPlace')->name('edit-get-place');
-Route::post('/edit/place/{place_id}','placeController@updatePlace')->name('edit-post-place');
+Route::get('/edit/place/{place_id}','PlaceController@editPlace')->name('edit-get-place');
+Route::post('/edit/place/{place_id}','PlaceController@updatePlace')->name('edit-post-place');
 //end place route
 

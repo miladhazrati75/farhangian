@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Axios from 'axios'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
 class EditStudent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             userData: {},
-
             name: '',
             family: '',
             studentCode: '',
@@ -68,8 +68,8 @@ class EditStudent extends React.Component {
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                        <li className="breadcrumb-item"><a href="{{route('student-list')}}">لیست دانشجویان</a></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard/StudentsList">لیست دانشجویان</Link></li>
                         <li className="breadcrumb-item active">ویرایش</li>
                     </ol>
                 </nav>

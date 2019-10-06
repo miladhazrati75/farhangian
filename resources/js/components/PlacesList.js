@@ -52,8 +52,8 @@ class PlacesList extends React.Component {
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                        <li className="breadcrumb-item"><a href="{{route('place-list')}}">لیست حوزه ها</a></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard/PlacesList">لیست حوزه ها</Link></li>
                     </ol>
                 </nav>
             </div>
@@ -107,7 +107,7 @@ class PlacesList extends React.Component {
                                     </thead>
                                     <tbody>
                                     {this.state.PlacesData.map((item, index) => (
-                                        <tr>
+                                        <tr key={index}>
                                             <td>{index}</td>
                                             <td>{item.nameSchool}</td>
                                             <td>{item.address}</td>
@@ -133,7 +133,7 @@ class PlacesList extends React.Component {
             </div>
         </div>
     </div>
-    <div className="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="exampleModal1" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
             <div className="modal-content">
                 <div className="modal-header">
@@ -142,7 +142,7 @@ class PlacesList extends React.Component {
                     </button>
                 </div>
                 <div className="modal-body">
-                    <form method="post" action="#">
+                    <div>
                         <form id="search_form" role="search" className="top-nav-search pull-left collapse in" aria-expanded="true" >
                             <div className="input-group">
                                 <label>آیا می خواهید حذف کنید؟</label>
@@ -152,7 +152,7 @@ class PlacesList extends React.Component {
                             <button type="submit"  className="btn btn-danger btn-anim" data-dismiss="modal"><i className="fa fa-recycle" aria-hidden="true"></i><span className="btn-text">delete</span></button>
                             <button type="button" className="btn btn-primary">close</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

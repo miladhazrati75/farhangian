@@ -58532,8 +58532,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Login */ "./resources/js/components/Login.js");
-/* harmony import */ var _Dashboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Dashboard */ "./resources/js/components/Dashboard.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -58544,14 +58544,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -58564,15 +58563,80 @@ var EditPlace =
 function (_React$Component) {
   _inherits(EditPlace, _React$Component);
 
-  function EditPlace() {
+  function EditPlace(props) {
+    var _this;
+
     _classCallCheck(this, EditPlace);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(EditPlace).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(EditPlace).call(this, props));
+    _this.state = {
+      PlacesData: {},
+      nameSchool: '',
+      address: '',
+      phone: '',
+      capacity: '',
+      managerName: ''
+    };
+    _this.sendData = _this.sendData.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(EditPlace, [{
+    key: "fetchData",
+    value: function fetchData() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get("/api/edit/place/" + this.props.match.params.id).then(function (res) {
+        console.log(res);
+
+        _this2.setState({
+          PlacesData: res.data
+        });
+
+        _this2.setState({
+          nameSchool: res.data.nameSchool,
+          address: res.data.address,
+          phone: res.data.phone,
+          managerName: res.data.managerName,
+          capacity: res.data.capacity
+        });
+
+        console.log(_this2.state);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }, {
+    key: "sendData",
+    value: function sendData() {
+      var _this3 = this;
+
+      var data = {
+        nameSchool: this.state.nameSchool,
+        address: this.state.address,
+        phone: this.state.phone,
+        capacity: this.state.capacity,
+        managerName: this.state.managerName
+      };
+      console.log(data);
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post("/api/edit/place/" + this.state.PlacesData.id, data).then(function (res) {
+        console.log(res);
+
+        _this3.props.history.push('/Dashboard/PlacesList');
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.fetchData();
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this4 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "\u0648\u06CC\u0631\u0627\u06CC\u0634 \u062D\u0648\u0632\u0647 | \u062F\u0627\u0646\u0634\u06AF\u0627\u0647 \u0641\u0631\u0647\u0646\u06AF\u06CC\u0627\u0646")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row heading-bg",
         id: "head-row"
@@ -58586,12 +58650,12 @@ function (_React$Component) {
         className: "breadcrumb"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('masterpage')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard"
       }, "\u0635\u0641\u062D\u0647 \u0627\u0635\u0644\u06CC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('place-list')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard/PlacesList"
       }, "\u0644\u06CC\u0633\u062A \u062D\u0648\u0632\u0647 \u0647\u0627")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item active",
         "aria-current": "page"
@@ -58607,9 +58671,7 @@ function (_React$Component) {
         className: "panel-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-wrap"
-      }, "@include('partials.errors')", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        action: "#",
-        method: "post",
+      }, "@include('partials.errors')", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           padding: 22 + 'px'
         }
@@ -58626,7 +58688,12 @@ function (_React$Component) {
         id: "nameSchool",
         name: "nameSchool",
         className: "form-control",
-        value: this.state.PlacesData.name
+        defaultValue: this.state.PlacesData.nameSchool,
+        onChange: function onChange(text) {
+          _this4.setState({
+            nameSchool: text.target.value
+          });
+        }
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58642,7 +58709,12 @@ function (_React$Component) {
         id: "address",
         name: "address",
         className: "form-control",
-        value: "{{old('name',isset($place) ? $place->address : '')}}"
+        defaultValue: this.state.PlacesData.address,
+        onChange: function onChange(text) {
+          _this4.setState({
+            address: text.target.value
+          });
+        }
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58658,7 +58730,12 @@ function (_React$Component) {
         id: "phone",
         name: "phone",
         className: "form-control",
-        value: "{{old('name',isset($place) ? $place->phone : '')}}"
+        defaultValue: this.state.PlacesData.phone,
+        onChange: function onChange(text) {
+          _this4.setState({
+            phone: text.target.value
+          });
+        }
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58674,7 +58751,12 @@ function (_React$Component) {
         id: "managerName",
         name: "managerName",
         className: "form-control",
-        value: "{{old('name',isset($place) ? $place->managerName : '')}}"
+        defaultValue: this.state.PlacesData.managerName,
+        onChange: function onChange(text) {
+          _this4.setState({
+            managerName: text.target.value
+          });
+        }
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58690,17 +58772,25 @@ function (_React$Component) {
         id: "capacity",
         name: "capacity",
         className: "form-control",
-        value: "{{old('name',isset($place) ? $place->capacity : '')}}"
+        defaultValue: this.state.PlacesData.capacity,
+        onChange: function onChange(text) {
+          _this4.setState({
+            capacity: text.target.value
+          });
+        }
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-actions mt-20"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          _this4.sendData();
+        },
         className: "btn btn-success btn-icon left-icon mr-10 pull-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-check"
-      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u062B\u0628\u062A")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('place-list')}}"
+      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u062B\u0628\u062A")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard/PlacesList"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "btn btn-warning pull-left"
@@ -59142,12 +59232,12 @@ function (_React$Component) {
         className: "breadcrumb"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('masterpage')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+        to: "/Dashboard"
       }, "\u0635\u0641\u062D\u0647 \u0627\u0635\u0644\u06CC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('student-list')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+        to: "/Dashboard/StudentsList"
       }, "\u0644\u06CC\u0633\u062A \u062F\u0627\u0646\u0634\u062C\u0648\u06CC\u0627\u0646")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item active"
       }, "\u0648\u06CC\u0631\u0627\u06CC\u0634")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59582,12 +59672,12 @@ function (_React$Component) {
         className: "breadcrumb"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('masterpage')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard"
       }, "\u0635\u0641\u062D\u0647 \u0627\u0635\u0644\u06CC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('place-list')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard/PlacesList"
       }, "\u0644\u06CC\u0633\u062A \u062D\u0648\u0632\u0647 \u0647\u0627"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -59656,7 +59746,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "\u0631\u062F\u06CC\u0641"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "\u0646\u0627\u0645 \u062D\u0648\u0632\u0647"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, " \u0627\u062F\u0631\u0633 \u062D\u0648\u0632\u0647"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, " \u062A\u0644\u0641\u0646 \u062D\u0648\u0632\u0647"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "\u0646\u0627\u0645 \u0645\u062F\u06CC\u0631"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "\u0638\u0631\u0641\u06CC\u062A \u067E\u0630\u06CC\u0631\u0634"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", {
         className: "text-nowrap"
       }, "\u0639\u0645\u0644\u06CC\u0627\u062A"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.PlacesData.map(function (item, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, index), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.nameSchool), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.managerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.capacity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+          key: index
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, index), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.nameSchool), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.managerName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, item.capacity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
           className: "text-nowrap"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
           to: "/Dashboard/EditPlace/" + item.id,
@@ -59681,7 +59773,7 @@ function (_React$Component) {
       })))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal fade",
         id: "exampleModal1",
-        tabindex: "-1",
+        tabIndex: "-1",
         role: "dialog",
         "aria-labelledby": "exampleModalLabel",
         "aria-hidden": "true"
@@ -59701,10 +59793,7 @@ function (_React$Component) {
         "aria-hidden": "true"
       }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        method: "post",
-        action: "#"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         id: "search_form",
         role: "search",
         className: "top-nav-search pull-left collapse in",
@@ -59860,12 +59949,12 @@ function (_React$Component) {
         className: "breadcrumb"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('masterpage')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard"
       }, "\u0635\u0641\u062D\u0647 \u0627\u0635\u0644\u06CC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "breadcrumb-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "{{route('Professors-list')}}"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/Dashboard/ProfessorsList"
       }, "\u0644\u06CC\u0633\u062A \u0627\u0633\u0627\u062A\u06CC\u062F"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

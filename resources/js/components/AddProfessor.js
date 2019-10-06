@@ -45,8 +45,8 @@ class AddProfessor extends React.Component {
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                        <li className="breadcrumb-item"><a href="{{route('Professors-list')}}">لیست اساتید</a></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard/AddProfessor">لیست اساتید</Link></li>
                         <li className="breadcrumb-item active" aria-current="page">افزودن</li>
                     </ol>
                 </nav>

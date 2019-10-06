@@ -53,8 +53,8 @@ class ProfessorsList extends React.Component {
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                        <li className="breadcrumb-item"><a href="{{route('Professors-list')}}">لیست اساتید</a></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard/ProfessorsList">لیست اساتید</Link></li>
                     </ol>
                 </nav>
             </div>
@@ -114,7 +114,7 @@ class ProfessorsList extends React.Component {
                                     </thead>
                                     <tbody>
                                     {this.state.ProfessorsData.map((item, index) => (
-                                            <tr>
+                                            <tr key={index}>
                                                 <td>{index}</td>
                                                 <td>{item.name + ' ' + item.family}</td>
                                                 <td>{item.Professor_Code}</td>

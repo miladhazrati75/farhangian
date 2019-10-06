@@ -117,7 +117,7 @@ class StudentsList extends React.Component {
                                             </thead>
                                             <tbody>
                                             {this.state.userData.map((item, index) => (
-                                                    <tr>
+                                                    <tr key={index}>
                                                         <td>{index}</td>
                                                         <td>{item.name + ' ' + item.family}</td>
                                                         <td>{item.student_code}</td>

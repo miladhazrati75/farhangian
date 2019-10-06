@@ -45,9 +45,8 @@ class AddPlace extends React.Component {
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb">
-                        <li className="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-
-                        <li className="breadcrumb-item"><a href="{{route('place-list')}}">لیست حوزه ها</a></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard">صفحه اصلی</Link></li>
+                        <li className="breadcrumb-item"><Link to="/Dashboard/PlacesList">لیست حوزه ها</Link></li>
                         <li className="breadcrumb-item active" aria-current="page">افزودن</li>
                     </ol>
                 </nav>
