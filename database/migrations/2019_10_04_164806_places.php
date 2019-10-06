@@ -13,7 +13,7 @@ class Places extends Migration
      */
     public function up()
     {
-        Schema::create('Places',function (Blueprint $table){
+        Schema::create('places',function (Blueprint $table){
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('nameSchool');

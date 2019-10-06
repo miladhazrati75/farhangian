@@ -9,14 +9,10 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class StudentsController extends Controller
 {
-    //
-    public function masterpage(){
-        return view('layout/main');
-    }
     public function allOfStudents()
     {
         $students = Student::all();
-        return view('site/students/students-list', compact('students'));
+        return $students->toJson();
     }
 
     public function deleteStudent($student_id)
@@ -25,17 +21,19 @@ class StudentsController extends Controller
             $student = Student::find($student_id);
             if ($student && $student instanceof Student) {
                 $student->delete();
-                return redirect()->route('student-list');
+                return response()->json('دانشجو با موفقیت حذف شد.');
             }
         }
     }
 
-    public function editStudent($student_id)
+    public function editStudent($student_id)//Request $request)
     {
+        //$student_id = $request->input('id');
         if ($student_id && ctype_digit($student_id)) {
             $studentItem = Student::find($student_id);
             if ($studentItem && $studentItem instanceof Student) {
-                return view('site/students/edit', compact('studentItem'));
+                //return view('site/students/edit', compact('studentItem'));
+                return $studentItem->toJson();
             }
         }
     }
@@ -68,13 +66,11 @@ class StudentsController extends Controller
         $student = Student::find($student_id);
         $student->update($student_data);
         if ($student) {
-            return redirect()->route('student-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return response()->json('اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
-    }
-
-    public function addStudent()
-    {
-        return view('site/students/add-user');
+        else {
+            return response()->json('failed');
+        }
     }
 
     public function createStudent(Request $request)
@@ -103,7 +99,7 @@ class StudentsController extends Controller
         ];
         $new_student_object = Student::create($student_data);
         if ($new_student_object && $new_student_object instanceof Student) {
-            return redirect()->route('student-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return response()->json('دانشجوی مورد نظر با موفقیت اضافه شد');
         }
 
     }

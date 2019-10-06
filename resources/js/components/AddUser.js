@@ -1,9 +1,36 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Login from './Login'
-import Dashboard from './Dashboard'
+import Axios from 'axios'
+
 class AddUser extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            family: '',
+            studentCode: '',
+            nationalCode: '',
+            term: '',
+        };
+        this.sendData = this.sendData.bind(this);
+      }
+      sendData() {
+          let data = {
+              name: this.state.name,
+              family: this.state.family,
+              student_code: this.state.studentCode,
+              National_Code: this.state.nationalCode,
+              term: this.state.term,
+          } 
+          console.log(data)
+        Axios.post("/api/add/student/", data)
+        .then(res => {
+          console.log(res);
+            this.props.history.push('/Dashboard/StudentsList');
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      }
   render () {
     return (
         <div>
@@ -26,12 +53,12 @@ class AddUser extends React.Component {
                             <div className="panel-body">
                                 <div className="form-wrap">
                                     @include('partials.errors')
-                                    <form action="" method="post" style={{padding: 22 + 'px'}}>
+                                    <div style={{padding: 22 + 'px'}}>
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <div className="form-group">
                                                     <label className="control-label mb-10">نام</label>
-                                                    <input className="form-control" type="text" name="name" id="name" placeholder="نام دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" />
+                                                    <input className="form-control" type="text" name="name" id="name" placeholder="نام دانشجو" required="" onInvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" onInput="setCustomValidity('')" onChange={text => { this.setState({ name: text.target.value });}} />
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -43,7 +70,7 @@ class AddUser extends React.Component {
                                                 <div className="form-group">
                                                     <label className="control-label mb-10">نام خانوادگی</label>
                                                     <input type="text" id="family" name="family" className="form-control"
-                                                        placeholder="نام خانوادگی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" />
+                                                        placeholder="نام خانوادگی دانشجو" required="" onInvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" onInput="setCustomValidity('')" onChange={text => { this.setState({ family: text.target.value });}} />
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -56,7 +83,7 @@ class AddUser extends React.Component {
                                                     <label className="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code"
                                                         className="form-control"
-                                                        placeholder="شماره دانشجویی" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" />
+                                                        placeholder="شماره دانشجویی" required="" onInvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" onInput="setCustomValidity('')" onChange={text => { this.setState({ studentCode: text.target.value });}}/>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -69,7 +96,7 @@ class AddUser extends React.Component {
                                                     <label className="control-label mb-10">شماره ملی</label>
                                                     <input type="text" id="National_Code" name="National_Code"
                                                         className="form-control"
-                                                        placeholder="شماره ملی دانشجو" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" />
+                                                        placeholder="شماره ملی دانشجو" required="" onInvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" onInput="setCustomValidity('')" onChange={text => { this.setState({ nationalCode: text.target.value });}} />
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -81,7 +108,7 @@ class AddUser extends React.Component {
                                                 <div className="form-group">
                                                     <label className="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" className="form-control"
-                                                        placeholder="ترم" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')"  />
+                                                        placeholder="ترم" required="" onInvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" onInput="setCustomValidity('')" onChange={text => { this.setState({ term: text.target.value });}} />
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -91,12 +118,12 @@ class AddUser extends React.Component {
 
 
                                         <div className="form-actions mt-20">
-                                            <button className="btn btn-success btn-icon left-icon mr-10 pull-left"><i
+                                            <button onClick={() => { this.sendData()}} className="btn btn-success btn-icon left-icon mr-10 pull-left"><i
                                                         className="fa fa-check"></i> <span>افزودن</span></button>
                                             <button type="button" className="btn btn-warning pull-left">لغو</button>
                                             <div className="clearfix"></div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -4,13 +4,20 @@ import { Link, BrowserRouter, Route, Switch } from 'react-router-dom'
 import StudentsList from './StudentsList'
 import AddUser from './AddUser';
 import EditStudent from './EditStudent';
+import ProfessorsList from './ProfessorsList';
+import AddProfessor from './AddProfessor';
+import EditProfessor from './EditProfessor';
+import PlacesList from './PlacesList';
+import AddPlace from './AddPlace';
+import EditPlace from './EditPlace';
+
 class Dashboard extends React.Component {
   render () {
     return (
         <BrowserRouter>
         <div>
             <Helmet>
-                <title>asdfgh</title>
+                <title>داشبورد | دانشگاه فرهنگیان</title>
                 <link href="../../css/style.css" rel="stylesheet" type="text/css"/>
                 <meta charset="UTF-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -197,20 +204,20 @@ class Dashboard extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <a href="{{route('Professors-list')}}" data-toggle="collapse" data-target="#ecom_dr">
+                            <Link to="/Dashboard/ProfessorsList">
                                 <div className="pull-left"><i className="zmdi zmdi-collection-text mr-20"></i><span className="right-nav-text">لیست اساتید</span>
                                 </div>
                                 <div className="pull-right"></div>
                                 <div className="clearfix"></div>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="{{route('place-list')}}">
+                            <Link to="/Dashboard/PlacesList">
                                 <div className="pull-left"><i className="zmdi zmdi-pin-drop mr-20" style={{fontSize: 20 + 'px'}}></i><span
                                         className="right-nav-text">لیست حوزه ها</span></div>
 
                                 <div className="clearfix"></div>
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <hr className="light-grey-hr mb-10"/>
@@ -585,15 +592,15 @@ class Dashboard extends React.Component {
                 <div className="page-wrapper mt-20">
                         <div className="container-fluid">
                             <Switch>
-                                <Route exact path='/Dashboard/StudentsList' >
-                                    <StudentsList />
-                                </Route>
-                                <Route exact path='/Dashboard/AddUser'>
-                                    <AddUser />
-                                </Route>
-                                <Route exact path='/Dashboard/EditStudent'>
-                                    <EditStudent />
-                                </Route>
+                                <Route exact path='/Dashboard/StudentsList' component={StudentsList}/>
+                                <Route exact path='/Dashboard/AddUser' component={AddUser}/>
+                                <Route exact path='/Dashboard/EditStudent/:id' component={EditStudent}/>
+                                <Route exact path='/Dashboard/ProfessorsList' component={ProfessorsList}/>
+                                <Route exact path='/Dashboard/AddProfessor' component={AddProfessor}/>
+                                <Route exact path='/Dashboard/EditProfessor/:id' component={EditProfessor}/>
+                                <Route exact path='/Dashboard/PlacesList' component={PlacesList}/>
+                                <Route exact path='/Dashboard/AddPlace' component={AddPlace}/>
+                                <Route exact path='/Dashboard/EditPlace/:id' component={EditPlace}/>
                             </Switch>
                             <footer className="footer container-fluid pl-30 pr-30">
                                 <div className="row">

@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::view('{path?}', 'app');
+/*
 Route::get('/', 'StudentsController@masterpage')->name('masterpage');
 Route::get('/list-student', 'StudentsController@allOfStudents')->name('student-list');
 
@@ -61,3 +62,4 @@ Route::get('/delete/place/{place_id}','placeController@deletePlace')->name('dele
 Route::get('/edit/place/{place_id}','placeController@editPlace')->name('edit-get-place');
 Route::post('/edit/place/{place_id}','placeController@updatePlace')->name('edit-post-place');
 //end place route
+*/

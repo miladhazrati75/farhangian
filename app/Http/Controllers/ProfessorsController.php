@@ -3,23 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Professor;
-use App\Models\Student;
+use http\Env\Response;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class ProfessorsController extends Controller
 {
     public function ProfessorsList(){
         $professors = Professor::all();
-        return view('site/Professors/Professors-list',compact('professors'));
-    }
-    public function addProfessor()
-    {
-        return view('site/Professors/add-professor');
+        return $professors->toJson();
     }
 
     public function createProfessor(Request $request)
     {
+
         $professor_data = [
             'name' =>request()->input('name'),
             'family' =>request()->input('family'),
@@ -27,9 +24,15 @@ class ProfessorsController extends Controller
             'National_Code' =>request()->input('National_Code'),
             'education' =>request()->input('education'),
         ];
+
         $new_professor_object= Professor::create($professor_data);
         if ($new_professor_object && $new_professor_object instanceof Professor){
-            return redirect()->route('Professors-list');
+            return response()->json('استاد با موفقیت اضافه شد.');
+        }
+        else
+        {
+            return response()->json('استاد با موفقیت اضافه نشد.');
+   
         }
     }
 
@@ -38,7 +41,7 @@ class ProfessorsController extends Controller
         if ($professor_id && ctype_digit($professor_id)){
             $professorItem= Professor::find($professor_id);
             if ($professorItem && $professorItem instanceof Professor){
-                return view('site/Professors/edit',compact('professorItem'));
+                return $professorItem->toJson();
             }
         }
     }
@@ -55,7 +58,7 @@ class ProfessorsController extends Controller
         $professor = Professor::find($professor_id);
         $professor->update($professor_data);
         if($professor){
-           return redirect()->route('Professors-list')->with('success','اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+           return response()->json('اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 
@@ -65,7 +68,7 @@ class ProfessorsController extends Controller
             $professor = Professor::find($professor_id);
             if ($professor && $professor instanceof Professor){
                 $professor->delete();
-                return redirect()->route('Professors-list');
+                return response()->json('استاد با موفقیت حذف شد.');
             }
 
         }

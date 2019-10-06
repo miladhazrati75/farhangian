@@ -1,7 +1,42 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import Axios from 'axios'
 class StudentsList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            userData: [],
+            successMsg: '',
+            errorMsg: ''
+        };
+        //this.login = this.login.bind(this);
+      }
+      sendData(id) {
+        Axios.get("/api/delete/student/" + id)
+          .then(res => {
+            console.log(res);
+            this.setState({ successMsg: res.data });
+            this.fetchData();
+          })
+          .catch(err => {
+            this.setState({ errorMsg: err });
+            console.log(err);
+          });
+      }
+      fetchData() {
+        Axios.get("/api/list-student")
+          .then(res => {
+            console.log(res);
+            this.setState({ userData: res.data });
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      }
+      componentDidMount() {
+        this.fetchData();
+      }
   render () {
     return (
         <div>
@@ -34,7 +69,8 @@ class StudentsList extends React.Component {
                             <div className="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                                 <Link to='/Dashboard/AddUser'>
                                     <div className="btn btn-danger btn-rounded btn-anim mt-5">
-                                        <i className="fa fa-plus"></i><span className="btn-text">افزودن</span>
+                                        <i className="fa fa-plus"></i>
+                                        <span className="btn-text">افزودن</span>
                                     </div>
                                 </Link>
                             </div>
@@ -80,24 +116,24 @@ class StudentsList extends React.Component {
                                             </tr>
                                             </thead>
                                             <tbody>
+                                            {this.state.userData.map((item, index) => (
                                                     <tr>
-                                                        <td>$i</td>
-                                                        <td>$student->name $student->family</td>
-                                                        <td>$student->student_code</td>
-                                                        <td>$student->National_Code</td>
+                                                        <td>{index}</td>
+                                                        <td>{item.name + ' ' + item.family}</td>
+                                                        <td>{item.student_code}</td>
+                                                        <td>{item.National_Code}</td>
                                                         <td></td>
-                                                        <td>$student->term</td>
+                                                        <td>{item.term}</td>
                                                         <td className="text-nowrap">
-                                                            <Link to='/Dashboard/EditStudent'
+                                                            <Link to={'/Dashboard/EditStudent/' + item.id }
                                                                     className="mr-25" data-toggle="tooltip"
                                                                     data-original-title="Edit"> <i
                                                                         className="fa fa-pencil text-inverse m-r-10"
-                                                                        style={{color: '#2ecd99'}}></i> </Link> <a
-                                                                    href="{{route('delete.student',[$student->id])}}"
+                                                                        style={{color: '#2ecd99'}}></i> </Link> <a href="#"
                                                                     data-toggle="tooltip" data-original-title="delete">
-                                                                <i className="fa fa-close text-danger"></i> </a></td>
+                                                                <i onClick={() => { this.sendData(item.id)}} className="fa fa-close text-danger"></i> </a></td>
                                                     </tr>
-
+                                            ))}
                                             </tbody>
                                         </table>
                                     </div>

@@ -11,13 +11,8 @@ class PlaceController extends Controller
    public function placeList()
    {
         $places= Place::all();
-       return view('site/place/place-list',compact('places'));
+       return $places->toJson();
    }
-
-    public function addPlace()
-    {
-        return view('site/place/add-place');
-    }
 
     public function createPlace(Request $request)
     {
@@ -30,7 +25,7 @@ class PlaceController extends Controller
         ];
         $new_place_object = Place::create($place_data);
         if ($new_place_object && $new_place_object instanceof Place){
-            return redirect()->route('place-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return response()->json('دانشجوی مورد نظر با موفقیت اضافه شد');
         }
     }
 
