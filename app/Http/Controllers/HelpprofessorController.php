@@ -9,6 +9,6 @@ class HelpprofessorController extends Controller
 {
 
     public function helpprofessorlist(){
-        return view('site/helpprofessor-list');
+        return view('site/helpprofessors/helpprofessor-list');
     }
 }
