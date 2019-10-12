@@ -1,25 +1,28 @@
 @extends('layout/main')
 @section('title')
-    لیست حوزه ها|دانشگاه فرهنگیان
+    لیست اساتید|دانشگاه فرهنگیان
 @stop
 @section('content')
     <!--start row-->
     @include('partials.success')
+    <!-- Title -->
     <div class="row">
         <div class="col-sm-12 mb-20">
             <div class="panel-heading">
                 <div class="pull-left">
-                    <h6 class="panel-title txt-dark">لیست مدرسه ها</h6>
+                    <h6 class="panel-title txt-dark">لیست اساتید</h6>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                        <li class="breadcrumb-item"><a href="{{route('place-list')}}">لیست حوزه ها</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('Professors-list')}}">لیست اساتید</a></li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
+    <!--/ Title -->
+
     <!--end row-->
     <!-- Row -->
     <div class="row">
@@ -32,12 +35,13 @@
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
-                        <a href="{{route('add-get-place')}}">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5"> <i class="fa fa-plus"></i><span class="btn-text">افزودن</span>
-                            </div>
-                        </a>
+                        <a href="{{route('add-get-professor')}}"><div class="btn btn-danger btn-rounded btn-anim mt-5"> <i class="fa fa-plus"></i><span class="btn-text">افزودن</span>
+                            </div></a>
                     </div>
+
                     <div class="col-lg-6 col-md-4 col-sm-2 col-xs-4"></div>
+
+
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-10">
                         <div class="row">
                             <div class="col-xs-2"></div>
@@ -45,12 +49,13 @@
                                 <div class="input-group mb-0 mt-5">
                                     <input type="text" id="example-input1-group4" name="example-input1-group4" class="form-control" placeholder="جستجو">
                                     <span class="input-group-btn">
-                        <button type="submit" class="btn" id="span-btn"><i class="fa fa-search"></i></button>
-                        </span>
+										<button type="submit" class="btn" id="span-btn"><i class="fa fa-search"></i></button>
+									</span>
                                 </div>
                             </div>
                             <div class="col-xs-2"></div>
                         </div>
+
                     </div>
                 </div>
                 <div class="panel-wrapper collapse in">
@@ -62,39 +67,18 @@
                                     <thead>
                                     <tr>
                                         <th>ردیف</th>
-                                        <th>نام مدرسه</th>
-                                        <th> ادرس مدرسه</th>
-                                        <th> تلفن مدرسه</th>
-                                        <th>نام مدیر</th>
-                                        <th>نام معاون</th>
-                                        <th>ظرفیت پذیرش</th>
+                                        <th>نام و نام خانوادگی</th>
+                                        <th>شناسه استاد</th>
+                                        <th>شماره ملی</th>
+                                        <th>گرایش</th>
+                                        <th>تحصیلات</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                @if($places && count($places)>0)
-                                    {{$i=1}}
-                                    @foreach($places as $place)
-                                        <tr>
-                                            <td>{{$i}}</td>
-                                            <td>{{$place->nameSchool}}</td>
-                                            <td>{{$place->address}}</td>
-                                            <td>{{$place->phone}}</td>
-                                            <td>{{$place->managerName}} </td>
-                                            <td><!--نام معاون--> </td>
-                                            <td> {{$place->capacity}}</td>
-                                            <td class="text-nowrap">
-                                                <a href="{{route('edit-get-place',[$place->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
-                                                    <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
-                                                </a>
-                                                <a href="{{route('delete.place',[$place->id])}}" data-toggle="tooltip" data-original-title="delete">
-                                                    <i class="fa fa-close text-danger"></i>
-                                                </a>
-                                            </td>
-                                        {{$i++}}
-                                        </tr>
-                                    @endforeach
-                                @endif
+
+                                    <!-- کدهای پاک شده بخش بک اند-->
+
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->
@@ -105,16 +89,19 @@
             </div>
         </div>
         <!-- /Bordered Table -->
+
     </div>
     <!-- /Row -->
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+
                 <div class="modal-body">
                     <form method="post" action="#">
                         <form id="search_form" role="search" class="top-nav-search pull-left collapse in" aria-expanded="true" style="">
@@ -122,12 +109,15 @@
                                 <label>آیا می خواهید حذف کنید؟</label>
                             </div>
                         </form>
+
+
                         <div class="modal-footer">
                             <button type="submit"  class="btn btn-danger btn-anim" data-dismiss="modal"><i class="fa fa-recycle" aria-hidden="true"></i><span class="btn-text">delete</span></button>
                             <button type="button" class="btn btn-primary">close</button>
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>

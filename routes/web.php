@@ -61,3 +61,6 @@ Route::get('/edit/place/{place_id}','PlaceController@editPlace')->name('edit-get
 Route::post('/edit/place/{place_id}','PlaceController@updatePlace')->name('edit-post-place');
 //end place route
 
+//start helpprofessors route
+Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
+//start helpprofessors route

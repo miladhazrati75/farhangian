@@ -78,7 +78,8 @@
                                                 <th>نام و نام خانوادگی</th>
                                                 <th>شماره دانشجویی</th>
                                                 <th>شماره ملی</th>
-                                                <th>موارد دیگر</th>
+                                                <th>شماره موبایل</th>
+                                                <th>رشته</th>
                                                 <th>ترم</th>
                                                 <th class="text-nowrap">عملیات</th>
                                             </tr>
@@ -93,7 +94,8 @@
                                                         <td>{{$student->name}}{{' '}}{{$student->family}}</td>
                                                         <td>{{$student->student_code}}</td>
                                                         <td>{{$student->National_Code}}</td>
-                                                        <td></td>
+                                                        <td><!--بخش لاراول شماره موبایل--></td>
+                                                        <td><!--بخش لاراول رشته--></td>
                                                         <td>{{$student->term}}</td>
                                                         <td class="text-nowrap">
                                                             <a href="{{route('edit.get.student',[$student->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
