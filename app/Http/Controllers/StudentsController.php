@@ -66,7 +66,7 @@ class StudentsController extends Controller
         $student = Student::find($student_id);
         $student->update($student_data);
         if ($student) {
-            return response()->json('اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('masterPage')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
         else {
             return response()->json('failed');
@@ -75,7 +75,7 @@ class StudentsController extends Controller
 
     public function createStudent(Request $request)
     {
-        $this->validate(request(), [
+        /*$this->validate(request(), [
             'name' => 'required',
             'family' => 'required',
             'student_code' => 'required',
@@ -88,7 +88,7 @@ class StudentsController extends Controller
             'student_code.required' => 'لطفا شماره دانشجویی را بصورت صحیح وارد نمایید.',
             'National_Code.required' => 'لطفا کدملی دانشجو را بصورت صحیح وارد نمایید.',
             'term.required' => 'لطفا ترم تحصیلی دانشجو را وارد نمایید.',
-        ]);
+        ]);*/
 
         $student_data = [
             'name' => request()->input('name'),

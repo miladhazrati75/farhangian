@@ -11,8 +11,13 @@ class PlaceController extends Controller
    public function placeList()
    {
         $places= Place::all();
-        return $places->toJson();
-   }
+        return view('site/place/place-list',compact('places'));
+    }
+
+    public function addPlace()
+    {
+        return view('site/place/add-place');
+    }
 
     public function createPlace(Request $request)
     {
@@ -25,7 +30,7 @@ class PlaceController extends Controller
         ];
         $new_place_object = Place::create($place_data);
         if ($new_place_object && $new_place_object instanceof Place){
-            return response()->json('دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('place-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
         }
     }
 
@@ -46,7 +51,7 @@ class PlaceController extends Controller
             $place = Place::find($place_id);
             if ($place && $place instanceof Place) {
                 $place->delete();
-                return response()->json('حوزه با موفقیت حذف شد.');
+                return redirect()->route('place-list');
             }
         }
     }
@@ -56,7 +61,7 @@ class PlaceController extends Controller
         if($place_id && ctype_digit($place_id)){
             $place=Place::find($place_id);
             if ($place && $place instanceof Place){
-                return $place->toJson();
+                return view('site/place/edit',compact('place'));
             }
         }
     }
@@ -73,7 +78,7 @@ class PlaceController extends Controller
         $place = Place::find($place_id);
         $place->update($place_data);
         if($place){
-            return response()->json('اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد.');
+            return redirect()->route('place-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 }

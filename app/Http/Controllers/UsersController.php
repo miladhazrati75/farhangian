@@ -22,24 +22,22 @@ class UsersController extends Controller
 
     public function doLogin(Request $request)
     {
-
         $credentials = [
             'name' => $request['name'],
             'password' => $request['password'],
         ];
-
         if (Auth::attempt($credentials)) {
 
-            return redirect('/');
+            return response()->json('true');
         } else {
-            return redirect()->back()->with('loginError', 'نام کابری یا گذرواژه شما نادرست می باشد');
+            return response()->json('false');
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return response()->json('loggedOut');
     }
 
 }
