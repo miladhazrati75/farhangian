@@ -213,7 +213,7 @@
             </li>
 
             <li>
-                <a href="" data-toggle="collapse" data-target="#ecom_dr">
+                <a href="{{route('helpprofessor-list')}}" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید راهنما</span>
                     </div>
                     <div class="pull-right"></div>
