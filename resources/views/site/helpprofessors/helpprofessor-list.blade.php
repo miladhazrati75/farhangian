@@ -1,6 +1,6 @@
 @extends('layout/main')
 @section('title')
-    لیست اساتید|دانشگاه فرهنگیان
+    لیست اساتید راهنما|دانشگاه فرهنگیان
 @stop
 @section('content')
     <!--start row-->
@@ -10,7 +10,7 @@
         <div class="col-sm-12 mb-20">
             <div class="panel-heading">
                 <div class="pull-left">
-                    <h6 class="panel-title txt-dark">لیست اساتید</h6>
+                    <h6 class="panel-title txt-dark">لیست اساتید راهنما</h6>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">

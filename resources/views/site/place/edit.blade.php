@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title')
-    ویرایش اطلاعات
+     ویرایش اطلاعات
 @stop
 @section('content')
     <!-- Title -->
