@@ -11,7 +11,12 @@ class ProfessorsController extends Controller
 {
     public function ProfessorsList(){
         $professors = Professor::all();
-        return $professors->toJson();
+        return view('site/Professors/Professors-list',compact('professors'));
+    }
+
+    public function addProfessor()
+    {
+        return view('site/Professors/add-professor');
     }
 
     public function createProfessor(Request $request)
@@ -27,12 +32,7 @@ class ProfessorsController extends Controller
 
         $new_professor_object= Professor::create($professor_data);
         if ($new_professor_object && $new_professor_object instanceof Professor){
-            return response()->json('استاد با موفقیت اضافه شد.');
-        }
-        else
-        {
-            return response()->json('استاد با موفقیت اضافه نشد.');
-   
+            return redirect()->route('Professors-list');
         }
     }
 
@@ -41,7 +41,7 @@ class ProfessorsController extends Controller
         if ($professor_id && ctype_digit($professor_id)){
             $professorItem= Professor::find($professor_id);
             if ($professorItem && $professorItem instanceof Professor){
-                return $professorItem->toJson();
+                return view('site/Professors/edit',compact('professorItem'));
             }
         }
     }
@@ -58,7 +58,7 @@ class ProfessorsController extends Controller
         $professor = Professor::find($professor_id);
         $professor->update($professor_data);
         if($professor){
-           return response()->json('اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('Professors-list')->with('success','اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 
@@ -68,7 +68,7 @@ class ProfessorsController extends Controller
             $professor = Professor::find($professor_id);
             if ($professor && $professor instanceof Professor){
                 $professor->delete();
-                return response()->json('استاد با موفقیت حذف شد.');
+                return redirect()->route('Professors-list');
             }
 
         }

@@ -9,10 +9,14 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class StudentsController extends Controller
 {
+    public function masterpage()
+    {
+        return view('layout/main');
+    }
     public function allOfStudents()
     {
         $students = Student::all();
-        return $students->toJson();
+        return view('site/students/students-list', compact('students'));
     }
 
     public function deleteStudent($student_id)
@@ -21,7 +25,7 @@ class StudentsController extends Controller
             $student = Student::find($student_id);
             if ($student && $student instanceof Student) {
                 $student->delete();
-                return response()->json('دانشجو با موفقیت حذف شد.');
+                return redirect()->route('student-list');
             }
         }
     }
@@ -33,9 +37,14 @@ class StudentsController extends Controller
             $studentItem = Student::find($student_id);
             if ($studentItem && $studentItem instanceof Student) {
                 //return view('site/students/edit', compact('studentItem'));
-                return $studentItem->toJson();
+                return view('site/students/edit', compact('studentItem'));
             }
         }
+    }
+
+    public function addStudent()
+    {
+        return view('site/students/add-user');
     }
 
     public function updateStudent($student_id)
@@ -67,9 +76,6 @@ class StudentsController extends Controller
         $student->update($student_data);
         if ($student) {
             return redirect()->route('masterPage')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
-        }
-        else {
-            return response()->json('failed');
         }
     }
 
