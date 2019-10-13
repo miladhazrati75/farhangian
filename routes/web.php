@@ -10,30 +10,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/', 'StudentsController@masterpage')->name('masterpage');
+//Route::get('/', 'Admin/StudentsController@masterpage')->name('masterpage');
 
 Route::get('/','DashboardController@Dashbord')->name('masterpage');
 
-Route::get('/list-student', 'StudentsController@allOfStudents')->name('student-list');
+Route::get('/list-student', 'Admin/StudentsController@allOfStudents')->name('student-list');
 
-Route::get('/delete/student/{student_id}', 'StudentsController@deleteStudent')->name('delete.student');
+Route::get('/delete/student/{student_id}', 'Admin/StudentsController@deleteStudent')->name('delete.student');
 
-Route::get('/delete/professor/{professor_id}', 'ProfessorsController@deleteProfessor')->name('delete.professor');
+Route::get('/delete/professor/{professor_id}', 'Admin/ProfessorsController@deleteProfessor')->name('delete.professor');
 
-Route::get('/download/student/info', 'StudentsController@studentInfo')->name('download.student.info');
+Route::get('/download/student/info', 'Admin/StudentsController@studentInfo')->name('download.student.info');
 
-Route::get('/add/student/', 'StudentsController@addStudent')->name('add.get.student');
-Route::post('/add/student/', 'StudentsController@createStudent')->name('add.post.student');
+Route::get('/add/student/', 'Admin/StudentsController@addStudent')->name('add.get.student');
+Route::post('/add/student/', 'Admin/StudentsController@createStudent')->name('add.post.student');
 
-Route::get('/edit/student/{student_id}', 'StudentsController@editStudent')->name('edit.get.student');
-Route::post('/edit/student/{student_id}', 'StudentsController@updateStudent')->name('edit.post.student');
+Route::get('/edit/student/{student_id}', 'Admin/StudentsController@editStudent')->name('edit.get.student');
+Route::post('/edit/student/{student_id}', 'Admin/StudentsController@updateStudent')->name('edit.post.student');
 
-//Route::post('/edit/student/{student_id}', 'StudentsController@updateStudent')->name('update.student');
-Route::get('/login','StudentsController@login');
+//Route::post('/edit/student/{student_id}', 'Admin/StudentsController@updateStudent')->name('update.student');
+Route::get('/login','Admin/StudentsController@login');
 
 
 //start teachers route
-Route::get('/list-Professors','ProfessorsController@ProfessorsList')->name('Professors-list');
+Route::get('/list-Professors','Admin/ProfessorsController@ProfessorsList')->name('Professors-list');
 //end teachers route
 
 //Start Auth
@@ -43,25 +43,25 @@ Route::get('/logout','UsersController@logout')->name('logout');
 //End Auth
 
 //start add list professor
-Route::get('/add/professor','ProfessorsController@addProfessor')->name('add-get-professor');
-Route::post('/add/professor','ProfessorsController@createProfessor')->name('add-post-professor');
+Route::get('/add/professor','Admin/ProfessorsController@addProfessor')->name('add-get-professor');
+Route::post('/add/professor','Admin/ProfessorsController@createProfessor')->name('add-post-professor');
 //end add list professor
 
 //start edit list professor
-Route::get('/edit/professor/{professor_id}','ProfessorsController@editProfessor')->name('edit-get-professor');
-Route::post('/edit/professor/{professor_id}','ProfessorsController@updateProfessor')->name('edit-post-professor');
+Route::get('/edit/professor/{professor_id}','Admin/ProfessorsController@editProfessor')->name('edit-get-professor');
+Route::post('/edit/professor/{professor_id}','Admin/ProfessorsController@updateProfessor')->name('edit-post-professor');
 //end edit list professor
 
 //start place route
-Route::get('/list-place','PlaceController@placeList')->name('place-list');
+Route::get('/list-place','Admin/PlaceController@placeList')->name('place-list');
 
-Route::get('/add/place','PlaceController@addPlace')->name('add-get-place');
-Route::post('/add/place','PlaceController@createPlace')->name('add-post-place');
+Route::get('/add/place','Admin/PlaceController@addPlace')->name('add-get-place');
+Route::post('/add/place','Admin/PlaceController@createPlace')->name('add-post-place');
 
-Route::get('/delete/place/{place_id}','PlaceController@deletePlace')->name('delete.place');
+Route::get('/delete/place/{place_id}','Admin/PlaceController@deletePlace')->name('delete.place');
 
-Route::get('/edit/place/{place_id}','PlaceController@editPlace')->name('edit-get-place');
-Route::post('/edit/place/{place_id}','PlaceController@updatePlace')->name('edit-post-place');
+Route::get('/edit/place/{place_id}','Admin/PlaceController@editPlace')->name('edit-get-place');
+Route::post('/edit/place/{place_id}','Admin/PlaceController@updatePlace')->name('edit-post-place');
 //end place route
 
 //start helpprofessors route
