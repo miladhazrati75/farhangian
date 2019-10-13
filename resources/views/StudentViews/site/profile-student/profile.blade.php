@@ -31,6 +31,15 @@
                     <div class="panel-body">
                         <div class="form-wrap">
                             <form action="" method="post" style="padding: 22px">
+                                <div class="row mb-10">
+                                    <div class="col-md-6">
+                                        <img src="/img/profile.jpg" width="80px" style="border-radius: 100%" alt="">
+                                        <button>ویرایش پروفایل</button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
