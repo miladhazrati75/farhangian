@@ -10,7 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'StudentsController@masterpage')->name('masterpage');
+//Route::get('/', 'StudentsController@masterpage')->name('masterpage');
+
+Route::get('/','DashboardController@Dashbord')->name('masterpage');
+
 Route::get('/list-student', 'StudentsController@allOfStudents')->name('student-list');
 
 Route::get('/delete/student/{student_id}', 'StudentsController@deleteStudent')->name('delete.student');
