@@ -161,7 +161,7 @@
                             <a href="#" style="color:#ffffff"><span>دانشجو : </span><span>محمد شاددل</span> </a>
                         </li>
                         <li>
-                            <a href="#"><i class="zmdi zmdi-account"></i><span>پروفایل</span></a>
+                            <a href="{{route('profile-student')}}"><i class="zmdi zmdi-account"></i><span>پروفایل</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="zmdi zmdi-email"></i><span>صندوق ورودی</span></a>
