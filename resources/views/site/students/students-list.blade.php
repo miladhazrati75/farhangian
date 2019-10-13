@@ -98,11 +98,14 @@
                                                         <td><!--بخش لاراول رشته--></td>
                                                         <td>{{$student->term}}</td>
                                                         <td class="text-nowrap">
-                                                            <a href="{{route('edit.get.student',[$student->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
-                                                                <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
+                                                            <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
+                                                                <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
                                                             </a>
-                                                            <a href="{{route('delete.student',[$student->id])}}" data-toggle="tooltip" data-original-title="delete">
+                                                            <a href="{{route('delete.student',[$student->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                                 <i class="fa fa-close text-danger"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="tooltip" data-original-title="details">
+                                                                <i class="fa fa-calendar-check-o m-l-10" style="color: orange;"></i>
                                                             </a>
                                                         </td>
                                                         {{$i++}}

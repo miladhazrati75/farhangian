@@ -1,6 +1,6 @@
 @extends('layout/main')
 @section('title')
-    لیست حوزه ها|دانشگاه فرهنگیان
+    لیست مدرسه ها|دانشگاه فرهنگیان
 @stop
 @section('content')
     <!--start row-->

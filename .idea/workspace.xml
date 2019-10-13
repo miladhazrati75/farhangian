@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="افزودن ستون ها و منو بجز جزئیات دانشجویان">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HelpprofessorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/helpprofessors/add-helpprofessor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/helpprofessors/edit-helpprofessor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/helpprofessors/helpprofessor-list.blade.php" afterDir="false" />
+    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="افزودن ایکن جزئیات">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/helpprofessors/helpprofessor-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/helpprofessors/helpprofessor-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/place/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/place/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/place/place-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/place/place-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/students/students-list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +214,8 @@
       <workItem from="1569947953030" duration="5296000" />
       <workItem from="1570122010694" duration="5846000" />
       <workItem from="1570273653898" duration="7915000" />
-      <workItem from="1570874552345" duration="8702000" />
+      <workItem from="1570874552345" duration="9103000" />
+      <workItem from="1570908566912" duration="3699000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
@@ -294,7 +291,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -312,6 +311,7 @@
     <MESSAGE value="دکمه دیلیت صفحه اساتید نوشته شد" />
     <MESSAGE value="دکمه لغو صفحات ادد و ادیت نوشته شد" />
     <MESSAGE value="افزودن ستون ها و منو بجز جزئیات دانشجویان" />
-    <option name="LAST_COMMIT_MESSAGE" value="افزودن ستون ها و منو بجز جزئیات دانشجویان" />
+    <MESSAGE value="افزودن ایکن جزئیات" />
+    <option name="LAST_COMMIT_MESSAGE" value="افزودن ایکن جزئیات" />
   </component>
 </project>
