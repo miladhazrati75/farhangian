@@ -11,12 +11,12 @@ class PlaceController extends Controller
    public function placeList()
    {
         $places= Place::all();
-        return view('site/place/place-list',compact('places'));
+        return view('AdminViews/place/place-list',compact('places'));
     }
 
     public function addPlace()
     {
-        return view('site/place/add-place');
+        return view('AdminViews/place/add-place');
     }
 
     public function createPlace(Request $request)
@@ -61,7 +61,7 @@ class PlaceController extends Controller
         if($place_id && ctype_digit($place_id)){
             $place=Place::find($place_id);
             if ($place && $place instanceof Place){
-                return view('site/place/edit',compact('place'));
+                return view('AdminViews/place/edit',compact('place'));
             }
         }
     }

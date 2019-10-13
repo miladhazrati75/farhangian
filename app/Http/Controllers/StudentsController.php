@@ -16,7 +16,7 @@ class StudentsController extends Controller
     public function allOfStudents()
     {
         $students = Student::all();
-        return view('site/students/students-list', compact('students'));
+        return view('AdminViews/students/students-list', compact('students'));
     }
 
     public function deleteStudent($student_id)
@@ -37,14 +37,14 @@ class StudentsController extends Controller
             $studentItem = Student::find($student_id);
             if ($studentItem && $studentItem instanceof Student) {
                 //return view('site/students/edit', compact('studentItem'));
-                return view('site/students/edit', compact('studentItem'));
+                return view('AdminViews/students/edit', compact('studentItem'));
             }
         }
     }
 
     public function addStudent()
     {
-        return view('site/students/add-user');
+        return view('AdminViews/students/add-user');
     }
 
     public function updateStudent($student_id)
@@ -128,6 +128,6 @@ class StudentsController extends Controller
         return \Illuminate\Support\Facades\Response::download($filename,'studentsInfo.csv',$headers);
     }
     public function login(){
-        return view('site/login/login');
+        return view('AdminViews/login/login');
     }
 }

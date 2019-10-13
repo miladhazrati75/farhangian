@@ -11,7 +11,7 @@ class UsersController extends Controller
     public function login()
     {
 //        print 2;
-        return view('site.login.login');
+        return view('AdminViews.login.login');
 
     }
 

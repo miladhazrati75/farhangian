@@ -11,12 +11,12 @@ class ProfessorsController extends Controller
 {
     public function ProfessorsList(){
         $professors = Professor::all();
-        return view('site/Professors/Professors-list',compact('professors'));
+        return view('AdminViews/Professors/Professors-list',compact('professors'));
     }
 
     public function addProfessor()
     {
-        return view('site/Professors/add-professor');
+        return view('AdminViews/Professors/add-professor');
     }
 
     public function createProfessor(Request $request)
@@ -41,7 +41,7 @@ class ProfessorsController extends Controller
         if ($professor_id && ctype_digit($professor_id)){
             $professorItem= Professor::find($professor_id);
             if ($professorItem && $professorItem instanceof Professor){
-                return view('site/Professors/edit',compact('professorItem'));
+                return view('AdminViews/Professors/edit',compact('professorItem'));
             }
         }
     }
