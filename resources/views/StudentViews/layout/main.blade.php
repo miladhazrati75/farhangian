@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -15,7 +13,6 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     @yield('stylesheet')
 </head>
-
 <body>
 <!-- Preloader -->
 <div class="preloader-it">
@@ -33,12 +30,11 @@
                             <img class="brand-img" src="/img/logo.png" alt="brand"/>
                         </li>
                         <li>
-                            <span class="brand-text"><p class="titr-asli">دانشگاه فرهنگیان</p> </span>
-
+                           <span class="brand-text">
+                              <p class="titr-asli">دانشگاه فرهنگیان</p>
+                           </span>
                         </li>
                     </ul>
-
-
                 </div>
             </div>
             <a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="#"><i
@@ -52,7 +48,6 @@
                     <a id="open_right_sidebar" href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"
                                                               style="font-size: 17px;margin-top:23px;"></span></a>
                 </li>
-
                 <li class="dropdown alert-drp">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="zmdi zmdi-notifications top-nav-icon"></i><span
@@ -74,12 +69,13 @@
                                             <i class="zmdi zmdi-flag"></i>
                                         </div>
                                         <div class="sl-content">
-												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
-												اشتراک جدید ایجاد شد</span>
+                                       <span class="inline-block capitalize-font  pull-left truncate head-notifications">
+                                       اشتراک جدید ایجاد شد</span>
                                             <span class="inline-block font-11  pull-right notifications-time">2pm</span>
                                             <div class="clearfix"></div>
                                             <p class="truncate">مشتری شما برای طرح پایه مشترک شده است. مشتری 25 دلار در
-                                                ماه پرداخت خواهد کرد.</p>
+                                                ماه پرداخت خواهد کرد.
+                                            </p>
                                         </div>
                                     </a>
                                 </div>
@@ -108,7 +104,8 @@
                                             <span class="inline-block font-11  pull-right notifications-time">4pm</span>
                                             <div class="clearfix"></div>
                                             <p class="truncate"> آخرین پرداختی برای اشتراک G Suite Basic شما انجام
-                                                نشد</p>
+                                                نشد
+                                            </p>
                                         </div>
                                     </a>
                                 </div>
@@ -123,7 +120,8 @@
                                             <span class="inline-block font-11  pull-right notifications-time">1pm</span>
                                             <div class="clearfix"></div>
                                             <p class="truncate">متن ساختگی با تولید سادگی از صنعت چاپ و با از گرافیک
-                                                است. </p>
+                                                است.
+                                            </p>
                                         </div>
                                     </a>
                                 </div>
@@ -153,12 +151,15 @@
                     </ul>
                 </li>
                 <li class="dropdown auth-drp">
-                    <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="/img/user1.png"
-                                                                                         alt="user_auth"
-                                                                                         class="user-auth-img img-circle"/><span
-                            class="user-online-status"></span></a>
+                    <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown">
+                        <img src="/img/profile.jpg" alt="user_auth" class="user-auth-img img-circle"/>
+                        <span class="user-online-status"></span>
+                    </a>
                     <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX"
                         data-dropdown-out="flipOutX">
+                        <li class="pt-10 pb-10 bg-blue ">
+                            <a href="#" style="color:#ffffff"><span>دانشجو : </span><span>محمد شاددل</span> </a>
+                        </li>
                         <li>
                             <a href="#"><i class="zmdi zmdi-account"></i><span>پروفایل</span></a>
                         </li>
@@ -169,7 +170,6 @@
                             <a href="#"><i class="zmdi zmdi-settings"></i><span>تنظیمات</span></a>
                         </li>
                         <li class="divider"></li>
-
                         <li class="divider"></li>
                         <li>
                             <a href="{{route('logout')}}"><i class="zmdi zmdi-power"></i><span>خروج</span></a>
@@ -180,8 +180,6 @@
         </div>
     </nav>
     <!-- /Top Menu Items -->
-
-
     <!-- Left Sidebar Menu -->
     <div class="fixed-sidebar-left">
         <ul class="nav navbar-nav side-nav nicescroll-bar">
@@ -206,7 +204,6 @@
             <li>
                 <hr class="light-grey-hr mb-10"/>
             </li>
-
             <li>
                 <a href="#" data-toggle="collapse" data-target="#ui_dr">
                     <div class="pull-left"><i class="zmdi zmdi-calendar-check mr-20" style="font-size:20px;"></i><span class="right-nav-text">گزارش های کارورزی</span>
@@ -244,16 +241,12 @@
                     <div class="clearfix"></div>
                 </a>
             </li>
-
             <li>
                 <hr class="light-grey-hr mb-10"/>
             </li>
-
-
         </ul>
     </div>
     <!-- /Left Sidebar Menu -->
-
     <!-- Right Sidebar Menu -->
     <div class="fixed-sidebar-right">
         <ul class="right-sidebar">
@@ -283,9 +276,9 @@
                                             <input type="text" id="example-input1-group2" name="example-input1-group2"
                                                    class="form-control" placeholder="جستجو">
                                             <span class="input-group-btn">
-												<button type="button" class="btn btn-default rounded-0"><i
-                                                        class="zmdi zmdi-search"></i></button>
-												</span>
+                                       <button type="button" class="btn btn-default rounded-0"><i
+                                               class="zmdi zmdi-search"></i></button>
+                                       </span>
                                         </div>
                                     </form>
                                     <div id="chat_list_scroll">
@@ -329,7 +322,6 @@
                                                                 <div class="clearfix"></div>
                                                             </div>
                                                         </a>
-
                                                     </div>
                                                 </li>
                                             </ul>
@@ -359,7 +351,8 @@
                                                                      src="/img/user.png" alt="user"/>
                                                                 <div class="msg pull-left">
                                                                     <p>Hello Jason, how are you, it's been a long time
-                                                                        since we last met?</p>
+                                                                        since we last met?
+                                                                    </p>
                                                                     <div class="msg-per-detail text-right">
                                                                         <span class="msg-time txt-grey">2:30 PM</span>
                                                                     </div>
@@ -369,7 +362,8 @@
                                                         </li>
                                                         <li class="self mb-10">
                                                             <div class="self-msg-wrap">
-                                                                <div class="msg block pull-right"> Oh, hi Sarah I'm have
+                                                                <div class="msg block pull-right">
+                                                                    Oh, hi Sarah I'm have
                                                                     got a new job now and is going great.
                                                                     <div class="msg-per-detail text-right">
                                                                         <span class="msg-time txt-grey">2:31 pm</span>
@@ -380,7 +374,8 @@
                                                         </li>
                                                         <li class="self">
                                                             <div class="self-msg-wrap">
-                                                                <div class="msg block pull-right"> How about you?
+                                                                <div class="msg block pull-right">
+                                                                    How about you?
                                                                     <div class="msg-per-detail text-right">
                                                                         <span class="msg-time txt-grey">2:31 pm</span>
                                                                     </div>
@@ -434,7 +429,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div id="messages_tab" class="tab-pane fade" role="tabpanel">
                             <div class="message-box-wrap">
                                 <div class="msg-search">
@@ -460,7 +454,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">پیام Themeworld از طریق مشخصات نمایه انویتو شما ارسال شد</span>
                                                     <p class="txt-grey truncate">ایپسوم متن ساختگی با تولید سادگی
-                                                        از صنعت چاپ و با است. </p>
+                                                        از صنعت چاپ و با است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -476,7 +471,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">پایان پروژه بی نهایت</span>
                                                     <p class="txt-grey truncate"> متن ساختگی با تولید سادگی از صنعت چاپ
-                                                        و با ملت  از   گرافیک است. </p>
+                                                        و با ملت  از   گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -492,7 +488,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">تبریک از نامزدهای طراحی</span>
                                                     <p class="txt-grey truncate">متن ساختگی با تولید سادگی از صنعت چاپ و
-                                                        با از گرافیک است. </p>
+                                                        با از گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -508,7 +505,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">پیام پشتیبانی از موضوع Themeforest</span>
                                                     <p class="txt-grey truncate">متن ساختگی با تولید سادگی از صنعت چاپ و
-                                                        با از گرافیک است. </p>
+                                                        با از گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -524,7 +522,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">راهنما با فرم تماس</span>
                                                     <p class="txt-grey truncate">متن ساختگی با تولید سادگی از صنعت چاپ و
-                                                        با از گرافیک است. </p>
+                                                        با از گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -540,7 +539,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject">تم آپلود شده شما انتخاب شده است</span>
                                                     <p class="txt-grey truncate"> متن ساختگی با تولید سادگی  وب از
-                                                        صنعت چاپ و با از گرافیک است. </p>
+                                                        صنعت چاپ و با از گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -556,7 +556,8 @@
                                                     <div class="clearfix"></div>
                                                     <span class=" truncate message-subject"> امتیاز جدید دریافت شده است</span>
                                                     <p class="txt-grey truncate">متن ساختگی با تولید سادگی از صنعت چاپ و
-                                                        بااز گرافیک است. </p>
+                                                        بااز گرافیک است.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </a>
@@ -570,17 +571,13 @@
         </ul>
     </div>
     <!-- /Right Sidebar Menu -->
-
-
     <!-- Right Sidebar Backdrop -->
     <div class="right-sidebar-backdrop"></div>
     <!-- /Right Sidebar Backdrop -->
-
     <!-- Main Content -->
     <div class="page-wrapper mt-20">
         <div class="container-fluid">
         @yield('content')
-
         <!-- Footer -->
             <footer class="footer container-fluid pl-30 pr-30">
                 <div class="row">
@@ -595,20 +592,15 @@
     <!-- /Main Content -->
 </div>
 <!-- /#wrapper -->
-
-
 <!-- jQuery -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="/js/bootstrap.min.js"></script>
-
 <!-- Slimscroll JavaScript -->
 <script src="/js/jquery.slimscroll.js"></script>
-
 <!-- Fancy Dropdown JS -->
 <script src="/js/dropdown-bootstrap-extended.js"></script>
-
 <!-- Init JavaScript -->
 <script src="/js/init.js"></script>
 <script src="/js/dashboard-data.js"></script>

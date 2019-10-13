@@ -1,6 +1,6 @@
 @extends('StudentViews/layout/main')
 @section('title')
-    صفحه دانشجویان
+    سیستم مدیریتی دانشجو
 @stop
 @section('content')
     <!--start row-->
