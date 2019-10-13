@@ -34,7 +34,7 @@
                                 <div class="row mb-10">
                                     <div class="col-md-6">
                                         <img src="/img/profile.jpg" width="80px" style="border-radius: 100%" alt="">
-                                        <button>ویرایش پروفایل</button>
+                                        <input type="submit" value="ویرایش پروفایل">
                                     </div>
                                     <div class="col-md-6">
 
@@ -44,13 +44,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام</label>
-                                            <input class="form-control" type="text" name="name" id="name" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                            <input class="form-control" value="محمد" type="text" name="name" id="name" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">آدرس</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" id="address" value="هفده شهریور" name="address" class="form-control"
                                                     required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
@@ -59,14 +59,14 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام خانوادگی</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" id="family" value="شاددل" name="family" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شهر</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" id="city" value="بجنورد" name="city" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره دانشجویی</label>
-                                            <input type="text" id="student_code" name="student_code"
+                                            <input type="text" value="9711113533" id="student_code" name="student_code"
                                                    class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
@@ -83,7 +83,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" value="بجنورد" id="ostan" name="ostan" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره ملی</label>
-                                            <input type="text" id="National_Code" name="National_Code"
+                                            <input type="text" value="234567654" id="National_Code" name="National_Code"
                                                    class="form-control"
                                                     required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
@@ -100,7 +100,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">ایمیل</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" value="mohammad@gmail.com" id="email" name="email" class="form-control"
                                                     required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
@@ -109,21 +109,21 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">ترم</label>
-                                            <input type="text" id="term" name="term" class="form-control"
+                                            <input type="text" value="24" id="term" name="term" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">رشته تحصیلی</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" value="ریاضی" id="reshteh" name="reshteh" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">پسورد</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" value="***********" id="password" name="password" class="form-control"
                                                    required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
