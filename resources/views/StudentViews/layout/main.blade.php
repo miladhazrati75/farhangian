@@ -197,34 +197,9 @@
             </li>
             <li>
                 <a href="{{route('student-list')}}" data-toggle="collapse" data-target="#ecom_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست دانشجویان</span>
+                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست کارورزی ثبت شده</span>
                     </div>
                     <div class="pull-right"></div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li>
-                <a href="{{route('Professors-list')}}" data-toggle="collapse" data-target="#ecom_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-collection-text mr-20"></i><span class="right-nav-text">لیست اساتید</span>
-                    </div>
-                    <div class="pull-right"></div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-
-            <li>
-                <a href="{{route('helpprofessor-list')}}" data-toggle="collapse" data-target="#ecom_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست اساتید راهنما</span>
-                    </div>
-                    <div class="pull-right"></div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li>
-                <a href="{{route('place-list')}}">
-                    <div class="pull-left"><i class="zmdi zmdi-pin-drop mr-20" style="font-size:20px;"></i><span
-                            class="right-nav-text">لیست مدرسه ها</span></div>
-
                     <div class="clearfix"></div>
                 </a>
             </li>

@@ -74,4 +74,6 @@ Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->n
 
 //////////////////////student CMS
 
-Route::get('/student-master','Student\StudentController@masterpage')->name('student-masterpage');
+Route::get('/student-master','Student\DashboardController@dashboard')->name('student-masterpage');
+
+
