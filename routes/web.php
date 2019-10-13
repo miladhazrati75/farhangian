@@ -67,3 +67,11 @@ Route::post('/edit/place/{place_id}','Admin/PlaceController@updatePlace')->name(
 //start helpprofessors route
 Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
 //start helpprofessors route
+
+
+
+
+
+//////////////////////student CMS
+
+Route::get('/student-master','Student\StudentController@masterpage')->name('student-masterpage');
