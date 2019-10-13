@@ -75,7 +75,7 @@ class StudentsController extends Controller
         $student = Student::find($student_id);
         $student->update($student_data);
         if ($student) {
-            return redirect()->route('masterPage')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('student-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 
@@ -105,7 +105,7 @@ class StudentsController extends Controller
         ];
         $new_student_object = Student::create($student_data);
         if ($new_student_object && $new_student_object instanceof Student) {
-            return response()->json('دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('student-list')->with('success','دانشجوی مورد نظر با موفقیت اضافه شد');
         }
 
     }
