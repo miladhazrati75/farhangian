@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="" />
+    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/Professors/add-professor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/Professors/add-professor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/Professors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/Professors/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/place/add-place.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/place/add-place.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/place/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/place/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/place/place-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/place/place-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/main.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,6 +223,8 @@
       <workItem from="1570874552345" duration="9103000" />
       <workItem from="1570908566912" duration="3699000" />
       <workItem from="1571001162749" duration="1159000" />
+      <workItem from="1571002567952" duration="651000" />
+      <workItem from="1571085432204" duration="5148000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>

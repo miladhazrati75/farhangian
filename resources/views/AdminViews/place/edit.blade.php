@@ -76,6 +76,17 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label class="control-label mb-10"> نام معاون</label>
+                                            <input type="text" id="managerName" name="managerName" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label class="control-label mb-10">ظرفیت پذیرش</label>
                                             <input type="text" id="capacity" name="capacity" class="form-control" value="{{old('name',isset($place) ? $place->capacity : '')}}">
                                         </div>

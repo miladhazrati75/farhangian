@@ -223,7 +223,7 @@
             <li>
                 <a href="{{route('place-list')}}">
                     <div class="pull-left"><i class="zmdi zmdi-pin-drop mr-20" style="font-size:20px;"></i><span
-                            class="right-nav-text">لیست مدرسه ها</span></div>
+                            class="right-nav-text">لیست مدارس</span></div>
 
                     <div class="clearfix"></div>
                 </a>

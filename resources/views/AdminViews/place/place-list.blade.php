@@ -84,11 +84,14 @@
                                             <td><!--نام معاون--> </td>
                                             <td> {{$place->capacity}}</td>
                                             <td class="text-nowrap">
-                                                <a href="{{route('edit-get-place',[$place->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
+                                                <a href="{{route('edit-get-place',[$place->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
                                                     <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
                                                 </a>
-                                                <a href="{{route('delete.place',[$place->id])}}" data-toggle="tooltip" data-original-title="delete">
+                                                <a href="{{route('delete.place',[$place->id])}}"class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                     <i class="fa fa-close text-danger"></i>
+                                                </a>
+                                                <a data-toggle="tooltip" data-original-title="details">
+                                                    <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal" data-target="#exampleModal" style="color: orange;"></i>
                                                 </a>
                                             </td>
                                         {{$i++}}
@@ -98,6 +101,39 @@
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->
+
+                                <!--start modal details-->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">مشخصات استاد</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table table-striped mb-0">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>ردیف</th>
+                                                        <th>نام مدرسه</th>
+                                                        <th>نام مدیر</th>
+                                                        <th> نام معاون</th>
+                                                        <th> شماره تماس</th>
+                                                        <th>ظرفیت</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end modal details-->
+
                             </div>
                         </div>
                     </div>

@@ -82,6 +82,30 @@
                                         <div class="row mt-10">
                                             <div class="col-md-6">
                                                 <div class="form-group">
+                                                    <label class="control-label mb-10">شماره موبایل</label>
+                                                    <input type="text"  name="phone-number" class="form-control"
+                                                           placeholder="شماره موبایل دانشجو" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-10">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label mb-10">رشته</label>
+                                                    <input type="text"  name="reshte" class="form-control"
+                                                           placeholder="رشته دانشجو" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-10">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
                                                     <label class="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" class="form-control"
                                                            placeholder="ترم" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">

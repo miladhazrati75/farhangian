@@ -75,6 +75,17 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label class="control-label mb-10">گرایش</label>
+                                            <input type="text" id="National_Code" name="National_Code" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
                                             <input type="text" id="education" name="education" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->education : '')}}">
                                         </div>

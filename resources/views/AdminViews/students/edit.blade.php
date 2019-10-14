@@ -81,6 +81,30 @@
                                         <div class="row mt-10">
                                             <div class="col-md-6">
                                                 <div class="form-group">
+                                                    <label class="control-label mb-10">شماره موبایل</label>
+                                                    <input type="text"  name="phone-number" class="form-control"
+                                                           value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-10">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label mb-10">رشته</label>
+                                                    <input type="text"  name="reshte" class="form-control"
+                                                           value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-10">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
                                                     <label class="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" class="form-control"
                                                            value="{{old('name',isset($studentItem) ? $studentItem->term : '')}}">

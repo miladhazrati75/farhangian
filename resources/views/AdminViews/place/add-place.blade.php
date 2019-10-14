@@ -77,6 +77,17 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label class="control-label mb-10"> نام معاون</label>
+                                            <input type="text"  name="mName" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label class="control-label mb-10">ظرفیت پذیرش</label>
                                             <input type="text"  class="form-control" name="capacity" id="capacity" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>

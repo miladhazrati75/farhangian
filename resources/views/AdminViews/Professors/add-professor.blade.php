@@ -77,6 +77,17 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label class="control-label mb-10">گرایش</label>
+                                            <input type="text" name="education" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" id="firstName" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
                                             <input type="text" name="education" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" id="firstName" class="form-control">
                                         </div>

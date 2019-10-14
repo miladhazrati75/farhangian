@@ -70,7 +70,7 @@
                                         <th>نام و نام خانوادگی</th>
                                         <th>شناسه استاد</th>
                                         <th>شماره ملی</th>
-                                        <th>موارد دیگر</th>
+                                        <th>گرایش</th>
                                         <th>تحصیلات</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
@@ -84,14 +84,17 @@
                                                 <td>{{$professor->name}}{{' '}}{{$professor->family}}</td>
                                                 <td>{{$professor->Professor_Code}}</td>
                                                 <td>{{$professor->National_Code}}</td>
-                                                <td></td>
+                                                <td><!--بک اند گرایش--></td>
                                                 <td>{{$professor->education}}</td>
                                                 <td class="text-nowrap">
-                                                    <a href="{{route('edit-get-professor',[$professor->id])}}" class="mr-25" data-toggle="tooltip" data-original-title="Edit">
+                                                    <a href="{{route('edit-get-professor',[$professor->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
                                                         <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
                                                     </a>
-                                                    <a href="{{route('delete.professor',[$professor->id])}}" title="delete"  data-toggle="tooltip" data-original-title="delete">
+                                                    <a href="{{route('delete.professor',[$professor->id])}}"class="mr-10" title="delete"  data-toggle="tooltip" data-original-title="delete">
                                                         <i class="fa fa-close text-danger"></i>
+                                                    </a>
+                                                    <a data-toggle="tooltip" data-original-title="details">
+                                                        <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal" data-target="#exampleModal" style="color: orange;"></i>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -101,6 +104,38 @@
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->
+                                <!--start modal details-->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">مشخصات استاد</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table table-striped mb-0">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>ردیف</th>
+                                                        <th>نام و نام خانوادگی</th>
+                                                        <th>شناسه استاد</th>
+                                                        <th>شماره ملی</th>
+                                                        <th>شماره موبایل</th>
+                                                        <th>گرایش</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end modal details-->
+
                             </div>
                         </div>
                     </div>
