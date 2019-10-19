@@ -161,7 +161,7 @@
                             <a href="#" style="color:#ffffff"><span>دانشجو : </span><span>محمد شاددل</span> </a>
                         </li>
                         <li>
-                            <a href="{{route('profile-student')}}"><i class="zmdi zmdi-account"></i><span>پروفایل</span></a>
+                            <a href="{{route('profile-student')}}"><i class="zmdi zmdi-account"></i><span>ویرایش پروفایل</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="zmdi zmdi-email"></i><span>صندوق ورودی</span></a>
@@ -188,14 +188,14 @@
                 <i class="zmdi zmdi-more"></i>
             </li>
             <li>
-                <a class="active" href="#" data-toggle="collapse" data-target="#dashboard_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-file-add mr-20"></i><span class="right-nav-text">ثبت کارورزی</span>
+                <a class="active" href="{{route('darkhast-karvarzi')}}" data-toggle="collapse" data-target="#dashboard_dr">
+                    <div class="pull-left"><i class="zmdi zmdi-file-add mr-20"></i><span class="right-nav-text">ثبت درخواست کارورزی</span>
                     </div>
                 </a>
             </li>
             <li>
                 <a href="{{route('student-list')}}" data-toggle="collapse" data-target="#ecom_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست کارورزی ثبت شده</span>
+                    <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">کارورزی های ثبت شده</span>
                     </div>
                     <div class="pull-right"></div>
                     <div class="clearfix"></div>

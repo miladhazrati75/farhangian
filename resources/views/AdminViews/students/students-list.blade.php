@@ -94,8 +94,8 @@
                                                         <td>{{$student->name}}{{' '}}{{$student->family}}</td>
                                                         <td>{{$student->student_code}}</td>
                                                         <td>{{$student->National_Code}}</td>
-                                                        <td><!--بخش لاراول شماره موبایل--></td>
-                                                        <td><!--بخش لاراول رشته--></td>
+                                                        <td>{{$student->mobileNumber}}</td>
+                                                        <td>{{$student->reshte}}</td>
                                                         <td>{{$student->term}}</td>
                                                         <td class="text-nowrap">
                                                             <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
