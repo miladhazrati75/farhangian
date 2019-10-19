@@ -20,6 +20,8 @@ class StudentsInUni extends Migration
             $table->string('family');
             $table->string('password')->nullable();
             $table->string('National_Code', 10)->unique();
+            $table->string('mobileNumber');
+            $table->string('reshte');
             $table->string('term');
             $table->string('student_code', 20)->unique();
             $table->string('professor_name')->nullable();
