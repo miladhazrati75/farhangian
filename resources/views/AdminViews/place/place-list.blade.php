@@ -37,8 +37,17 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-4 col-sm-2 col-xs-4"></div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-10">
+                    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
+                        <a href="">
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
+                                    class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-5"></div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="row">
                             <div class="col-xs-2"></div>
                             <div class="col-xs-8">
