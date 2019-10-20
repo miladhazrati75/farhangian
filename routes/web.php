@@ -29,7 +29,7 @@ Route::get('/edit/student/{student_id}', 'Admin\StudentsController@editStudent')
 Route::post('/edit/student/{student_id}', 'Admin\StudentsController@updateStudent')->name('edit.post.student');
 
 //Route::post('/edit/student/{student_id}', 'Admin\StudentsController@updateStudent')->name('update.student');
-Route::get('/login','Admin\StudentsController@login');
+//Route::get('/login','Admin\StudentsController@login');
 
 
 //start teachers route

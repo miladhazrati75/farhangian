@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,22 +24,22 @@ class UsersController extends Controller
 
     public function doLogin(Request $request)
     {
+
         $credentials = [
             'name' => $request['name'],
             'password' => $request['password'],
         ];
-        if (Auth::attempt($credentials)) {
 
-            return response()->json('true');
+        if (Auth::attempt($credentials)) {
+            return redirect('/');
         } else {
-            return response()->json('false');
+            return redirect()->back()->with('loginError', 'نام کاربری یا گذرواژه شما نادرست می باشد');
         }
     }
 
     public function logout()
     {
         Auth::logout();
-        return response()->json('loggedOut');
+        return redirect()->route('login');
     }
-
 }
