@@ -205,7 +205,7 @@
                 <hr class="light-grey-hr mb-10"/>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="#ui_dr">
+                <a href="{{route('report')}}" data-toggle="collapse" data-target="#ui_dr">
                     <div class="pull-left"><i class="zmdi zmdi-calendar-check mr-20" style="font-size:20px;"></i><span class="right-nav-text">گزارش های کارورزی</span>
                     </div>
                     <div class="clearfix"></div>
