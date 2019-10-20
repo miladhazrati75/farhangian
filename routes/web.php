@@ -83,3 +83,5 @@ Route::get('/profile-student','Student\ProfileController@profileStudent')->name(
 Route::get('/darkhast-karvarzi','Student\Karvarzi_darkhastController@karvarzi')->name('darkhast-karvarzi');
 
 Route::get('/sabtshodeh-karvarzi','Student\Sabt_shodehController@sabt')->name('sabtshode-karvarzi');
+
+Route::get('/report-karvarzi','Student\ReportController@report')->name('report');
