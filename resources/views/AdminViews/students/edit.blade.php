@@ -83,7 +83,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره موبایل</label>
                                                     <input type="text"  name="phone-number" class="form-control"
-                                                           value="">
+                                                    value="{{old('name',isset($studentItem) ? $studentItem->mobileNumber : '')}}"
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -95,7 +95,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">رشته</label>
                                                     <input type="text"  name="reshte" class="form-control"
-                                                           value="">
+                                                    value="{{old('name',isset($studentItem) ? $studentItem->reshte : '')}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

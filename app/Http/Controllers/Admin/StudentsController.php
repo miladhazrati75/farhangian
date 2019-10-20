@@ -71,6 +71,8 @@ class StudentsController extends Controller
             'family' => request()->input('family'),
             'National_Code' => request()->input('National_Code'),
             'student_code' => request()->input('student_code'),
+            'mobileNumber' => request()->input('mobileNumber'),
+            'reshte' => request()->input('reshte'),
             'term' => request()->input('term'),
         ];
         $student = Student::find($student_id);
@@ -102,6 +104,8 @@ class StudentsController extends Controller
             'family' => request()->input('family'),
             'student_code' => request()->input('student_code'),
             'National_Code' => request()->input('National_Code'),
+            'mobileNumber' => request()->input('mobileNumber'),
+            'reshte' => request()->input('reshte'),
             'term' => request()->input('term'),
         ];
         $new_student_object = Student::create($student_data);
