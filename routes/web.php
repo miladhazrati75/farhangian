@@ -76,8 +76,12 @@ Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->n
 
 Route::get('/student-master','Student\DashboardController@dashboard')->name('student-masterpage');
 
+Route::get('/profile-student','Student\ProfileController@editStudent')->name('profile-student');
+Route::post('/profile-student','Student\ProfileController@updateUser')->name('edit-user');
 Route::get('/profile-student','Student\ProfileController@profileStudent')->name('profile-student');
 
 Route::get('/darkhast-karvarzi','Student\Karvarzi_darkhastController@karvarzi')->name('darkhast-karvarzi');
 
 Route::get('/sabtshodeh-karvarzi','Student\Sabt_shodehController@sabt')->name('sabtshode-karvarzi');
+
+Route::get('/report-karvarzi','Student\ReportController@report')->name('report');
