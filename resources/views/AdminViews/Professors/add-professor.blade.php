@@ -34,7 +34,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام</label>
-                                            <input type="text" name="name" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" class="form-control">
+                                            <input type="text" name="name" required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -45,7 +45,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام خانوادگی</label>
-                                            <input type="text" name="family" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" class="form-control">
+                                            <input type="text" name="family" required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -56,7 +56,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شناسه استاد</label>
-                                            <input type="text" required="" name="Professor_Code" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" class="form-control">
+                                            <input type="text" required="" name="Professor_Code" pattern="[\u06f0-\u06f9]{8}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -67,7 +67,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره ملی</label>
-                                            <input type="text" name="National_Code" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" class="form-control">
+                                            <input type="text" name="National_Code" required="" pattern="[\u06f0-\u06f9]{8}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -78,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
-                                            <input type="text" name="education" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" id="firstName" class="form-control">
+                                            <input type="text" name="education" required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -89,7 +89,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
-                                            <input type="text" name="education" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')" id="firstName" class="form-control">
+                                            <input type="text" name="education" required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
