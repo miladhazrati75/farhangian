@@ -33,7 +33,7 @@
                     <div class="panel-body">
                         <div class="table-wrap mt-5">
                             <div class="table-responsive">
-                                <!--start table list daneshjoyan-->
+                                <!--start table list gheibatha-->
                                 <table class="table table-striped mb-0">
                                     <thead>
                                     <tr>
@@ -41,20 +41,27 @@
                                         <th>تاریخ غیبت</th>
                                         <th>نام مدرسه</th>
                                         <th>دلیل غیبت</th>
-                                        <th>تعداد ساعت</th>
+                                        <th>تعداد ساعات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>98/08/23</td>
-                                        <td>شاهد</td>
-                                        <td>غیرموجه</td>
-                                        <td>2 ساعت</td>
-                                    </tr>
+                                    @if($gheibatha && count($gheibatha)>0)
+                                        {{$i=1}}
+                                        @foreach($gheibatha as $gheibat)
+
+                                            <tr>
+                                                <td>{{$i}}</td>
+                                                <td>{{$gheibat->date}}</td>
+                                                <td>{{$gheibat->school}}</td>
+                                                <td>{{$gheibat->reason}}</td>
+                                                <td>{{$gheibat->hours}}</td>
+                                                {{$i++}}
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
-                                <!--end table list daneshjoyan-->
+                                <!--end table list gheibatha-->
                                 <!--start modal details-->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
