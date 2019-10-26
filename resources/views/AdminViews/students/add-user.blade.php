@@ -59,7 +59,7 @@
                                                     <label class="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code"
                                                            class="form-control"
-                                                          required="" pattern="[\u06f0-\u06f9]{8}" title="فارسی تایپ کنید">
+                                                          required="" pattern="\d[0-9]{8}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
