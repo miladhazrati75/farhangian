@@ -202,7 +202,7 @@
                         <div class="table-wrap mt-5">
                             <div class="table-responsive">
                                 <!--start table list daneshjoyan-->
-                                <table class="table table-striped mb-0">
+                                <table class="table table-striped mb-0" id="table">
                                     <thead>
                                     <tr>
                                         <th>ردیف</th>
@@ -221,13 +221,13 @@
                                         @foreach($students as $student)
 
                                             <tr>
-                                                <td>{{$i}}</td>
-                                                <td>{{$student->name}}{{' '}}{{$student->family}}</td>
-                                                <td>{{$student->student_code}}</td>
-                                                <td>{{$student->National_Code}}</td>
-                                                <td>{{$student->mobileNumber}}</td>
-                                                <td>{{$student->reshte}}</td>
-                                                <td>{{$student->term}}</td>
+                                                <td id="radif">{{$i}}</td>
+                                                <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
+                                                <td id="daneshjoo_code">{{$student->student_code}}</td>
+                                                <td id="code_melli">{{$student->National_Code}}</td>
+                                                <td id="mobile">{{$student->mobileNumber}}</td>
+                                                <td id="reshte">{{$student->reshte}}</td>
+                                                <td id="student_term">{{$student->term}}</td>
                                                 <td class="text-nowrap">
                                                     <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="Edit">
@@ -357,6 +357,8 @@
 
 <script type="application/javascript">
     $(document).ready(function () {
+
+
         $(".details").click(function () {
             var userId = $(this).attr("id");
             var count = $(this).attr("count");
@@ -385,14 +387,29 @@
         $(".searchSubmit").click(function () {
 
             var searchInput = $(".searchInput").val();
-            // alert(searchInput);
 
+            var count;
             $.get('/search/student', {searchInput: searchInput}, function (data) {
-                console.log(data);
+                // console.log(data);
+
                 var name = data[0]["name"];
                 var family = data[0]["family"];
                 var National_Code = data[0]["National_Code"];
+                var student_code = data[0]["student_code"];
                 var term = data[0]["term"];
+                var subject = "مهندسی کامپیوتر";
+                var phone = "09921558293";
+
+
+                //set values in modal
+                $("#table").text(" ");
+                // $("#count").text(count);
+                $("#namvafamily").text(name + " " + family);
+                $("#daneshjoo_code").text(student_code);
+                $("#code_melli").text(National_Code);
+                $("#mobile").text("09921558293");
+                $("#reshte").text("مهندسی کامپیوتر");
+                $("#student_term").text(term);
 
 
             });
