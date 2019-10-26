@@ -18,6 +18,18 @@ Route::get('/list-student', 'Admin\StudentsController@allOfStudents')->name('stu
 
 Route::get('/delete/student/{student_id}', 'Admin\StudentsController@deleteStudent')->name('delete.student');
 
+Route::get('/details/student/', 'Admin\StudentsController@details')->name('details.student');
+Route::get('/search/student/', 'Admin\StudentsController@searchStudent');
+
+//Route::get('/xxx',function (Request $request){
+//    if (Request::ajax()){
+//        return $_GET['userId'];
+//    }
+//})->name('xxx');
+//
+
+
+
 Route::get('/delete/professor/{professor_id}', 'Admin\ProfessorsController@deleteProfessor')->name('delete.professor');
 
 Route::get('/download/student/info', 'Admin\StudentsController@studentInfo')->name('download.student.info');
