@@ -38,11 +38,6 @@
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
-                        <a href="">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
-                                    class="fa fa-plus"></i><span class="btn-text">افزودن</span>
-                            </div>
-                        </a>
                     </div>
 
                     <div class="col-lg-6 col-md-4 col-sm-2 col-xs-4"></div>
@@ -97,9 +92,6 @@
                                                 <td>98/08/23</td>
                                                 <td>24 ساعت</td>
                                                 <td class="text-nowrap">
-                                                    <a href="" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
-                                                        <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
-                                                    </a>
                                                     <a href="" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                         <i class="fa fa-close text-danger"></i>
                                                     </a>
