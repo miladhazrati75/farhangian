@@ -1,6 +1,6 @@
 @extends('StudentViews/layout/main')
 @section('title')
-    درخواست کارورزی
+    گزارش کارورزی
 @stop
 @section('content')
     <!--start row-->
@@ -9,12 +9,12 @@
         <div class="col-sm-12 mb-20">
             <div class="panel-heading">
                 <div class="pull-left">
-                    <h6 class="panel-title txt-dark">درخواست کارورزی</h6>
+                    <h6 class="panel-title txt-dark">گزارش کارورزی</h6>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('masterpage')}}">داشبورد</a></li>
-                        <li class="breadcrumb-item"><a href="{{route('darkhast-karvarzi')}}">درخواست کارورزی</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('report')}}">گزارش کارورزی</a></li>
                     </ol>
                 </nav>
             </div>

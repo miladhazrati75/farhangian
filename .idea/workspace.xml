@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +192,7 @@
       <workItem from="1571497508648" duration="3187000" />
       <workItem from="1571519677320" duration="866000" />
       <workItem from="1571588288456" duration="6954000" />
-      <workItem from="1572084122980" duration="19158000" />
+      <workItem from="1572084122980" duration="14543000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
@@ -279,14 +281,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۳" />
       <updated>1571520268135</updated>
     </task>
-    <task id="LOCAL-00014" summary="قرار دادن دکمه افزودن فایل اکسل">
-      <created>1572105856610</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1572105856611</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
