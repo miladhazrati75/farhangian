@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/helpprofessors/helpprofessor-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/helpprofessors/helpprofessor-list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/place/place-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/place/place-list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/StudentViews/site/report-karvarzi/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/StudentViews/site/report-karvarzi/report.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/StudentViews/site/sabt-shodeh/sabt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/StudentViews/site/sabt-shodeh/sabt.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,14 +135,14 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\xxxxxxx\farhangian\public\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\farhangian\app\Http\Controllers\Student" />
       <recent name="E:\xampp\htdocs\farhanghian\farhangian\app\Models" />
       <recent name="E:\xampp\htdocs\farhanghian\farhangian\resources\views\site\login" />
       <recent name="E:\xampp\htdocs\farhanghian\farhangian\resources\views\site\students" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\xxxxxxx\farhangian\public\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -280,7 +283,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۳" />
       <updated>1571520268135</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL‎۰۰۰۱۴" summary="افزودن مودال سرچ">
+      <created>1572111972348</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۴" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۴" />
+      <updated>1572111972348</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +325,7 @@
     <MESSAGE value="ستونها ،مودال جزئیات ،تغییرات جزئی" />
     <MESSAGE value="برداشتن پلیس هولدر ها در فرم" />
     <MESSAGE value="قرار دادن دکمه افزودن فایل اکسل" />
-    <option name="LAST_COMMIT_MESSAGE" value="قرار دادن دکمه افزودن فایل اکسل" />
+    <MESSAGE value="افزودن مودال سرچ" />
+    <option name="LAST_COMMIT_MESSAGE" value="افزودن مودال سرچ" />
   </component>
 </project>

@@ -56,13 +56,115 @@
                                 <div class="input-group mb-0 mt-5">
                                     <input type="text" id="example-input1-group4" name="example-input1-group4" class="form-control" placeholder="جستجو">
                                     <span class="input-group-btn">
-										<button type="submit" class="btn" id="span-btn"><i class="fa fa-search"></i></button>
+										<button type="submit" class="btn" id="span-btn"><i class="fa fa-search" data-toggle="modal" data-target="#exampleModalsearch"></i></button>
 									</span>
                                 </div>
                             </div>
                             <div class="col-xs-2"></div>
                         </div>
 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">لیست استاد راهنما</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="panel-wrapper collapse in">
+                                            <div class="panel-body">
+                                                <div class="table-wrap mt-5">
+                                                    <div class="table-responsive">
+                                                        <!--start table list daneshjoyan-->
+                                                        <table class="table table-striped mb-0">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>ردیف</th>
+                                                                <th>نام مدرسه</th>
+                                                                <th> ادرس مدرسه</th>
+                                                                <th> تلفن مدرسه</th>
+                                                                <th>نام مدیر</th>
+                                                                <th>نام معاون</th>
+                                                                <th>ظرفیت پذیرش</th>
+                                                                <th class="text-nowrap">عملیات</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td class="text-nowrap">
+                                                                            <a href="" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
+                                                                                <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
+                                                                            </a>
+                                                                            <a href=""class="mr-10" data-toggle="tooltip" data-original-title="delete">
+                                                                                <i class="fa fa-close text-danger"></i>
+                                                                            </a>
+                                                                            <a data-toggle="tooltip" data-original-title="details">
+                                                                                <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal" data-target="#exampleModal" style="color: orange;"></i>
+                                                                            </a>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                        <!--end table list daneshjoyan-->
+
+                                                        <!--start modal details-->
+                                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLabel"> مشخصات استاد راهنما</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table class="table table-striped mb-0">
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th>ردیف</th>
+                                                                                <th>نام مدرسه</th>
+                                                                                <th>نام مدیر</th>
+                                                                                <th> نام معاون</th>
+                                                                                <th> شماره تماس</th>
+                                                                                <th>ظرفیت</th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--end modal details-->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--modal search end -->
                     </div>
                 </div>
                 <div class="panel-wrapper collapse in">
@@ -99,6 +201,8 @@
 
     </div>
     <!-- /Row -->
+
+    <!-- start modal delete-->
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -128,4 +232,5 @@
             </div>
         </div>
     </div>
+    <!--end modal delete-->
 @stop
