@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -190,8 +188,6 @@
       <workItem from="1571519677320" duration="866000" />
       <workItem from="1571588288456" duration="6954000" />
       <workItem from="1572084122980" duration="14543000" />
-      <workItem from="1572127620807" duration="373000" />
-      <workItem from="1572176715900" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
@@ -280,13 +276,7 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۳" />
       <updated>1571520268135</updated>
     </task>
-    <task id="LOCAL‎۰۰۰۱۴" summary="مودال های سرچ و ریسپانسیو مودال های قبلی">
-      <created>1572127685767</created>
-      <option name="number" value="LOCAL‎۰۰۰۱۴" />
-      <option name="presentableId" value="LOCAL‎۰۰۰۱۴" />
-      <updated>1572127685767</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +312,6 @@
     <MESSAGE value="ستونها ،مودال جزئیات ،تغییرات جزئی" />
     <MESSAGE value="برداشتن پلیس هولدر ها در فرم" />
     <MESSAGE value="قرار دادن دکمه افزودن فایل اکسل" />
-    <MESSAGE value="مودال های سرچ و ریسپانسیو مودال های قبلی" />
-    <option name="LAST_COMMIT_MESSAGE" value="مودال های سرچ و ریسپانسیو مودال های قبلی" />
+    <option name="LAST_COMMIT_MESSAGE" value="قرار دادن دکمه افزودن فایل اکسل" />
   </component>
 </project>
