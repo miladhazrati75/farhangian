@@ -54,7 +54,7 @@
                                     <input type="text" id="example-input1-group4" name="example-input1-group4"
                                            class="form-control" placeholder="جستجو">
                                     <span class="input-group-btn">
-										<button type="submit" class="btn" id="span-btn"><i
+										<button type="submit" class="btn" id="span-btn" data-toggle="modal" data-target="#exampleModalsearch"><i
                                                 class="fa fa-search"></i></button>
 									</span>
                                 </div>
@@ -63,6 +63,94 @@
                         </div>
 
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Modal search -->
+                        <div class="modal fade" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">لیست اساتید</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="panel-wrapper collapse in">
+                                            <div class="panel-body">
+                                                <div class="table-wrap mt-5">
+                                                    <div class="table-responsive">
+                                                        <!--start table list daneshjoyan-->
+                                                        <table class="table table-striped mb-0">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>ردیف</th>
+                                                                <th>نام و نام خانوادگی</th>
+                                                                <th>شناسه استاد</th>
+                                                                <th>شماره ملی</th>
+                                                                <th>شماره موبایل</th>
+                                                                <th>گرایش</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end table list daneshjoyan-->
+
+
+
+                                    <!--start modal details-->
+                                    <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">مشخصات استاد</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-wrapper collapse in">
+                                                        <div class="panel-body">
+                                                            <div class="table-wrap mt-5">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-striped mb-0">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th>ردیف</th>
+                                                                            <th>نام و نام خانوادگی</th>
+                                                                            <th>شناسه استاد</th>
+                                                                            <th>شماره ملی</th>
+                                                                            <th>شماره موبایل</th>
+                                                                            <th>گرایش</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--modal search end -->
                 </div>
                 <div class="panel-wrapper collapse in">
                     <div class="panel-body">

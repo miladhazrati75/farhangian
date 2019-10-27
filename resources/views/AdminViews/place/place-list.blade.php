@@ -54,7 +54,7 @@
                                 <div class="input-group mb-0 mt-5">
                                     <input type="text" id="example-input1-group4" name="example-input1-group4" class="form-control" placeholder="جستجو">
                                     <span class="input-group-btn">
-                        <button type="submit" class="btn" id="span-btn"data-toggle="modal" data-target="#exampleModalsearch"><i class="fa fa-search"></i></button>
+                        <button type="submit" class="btn" id="span-btn" data-toggle="modal" data-target="#exampleModalsearch"><i class="fa fa-search"></i></button>
                         </span>
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">مشخصات استاد</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">مشخصات مدرسه</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
