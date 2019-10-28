@@ -34,7 +34,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام</label>
-                                                    <input class="form-control" type="text" name="name" id="name"  required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                    <input class="form-control" type="text" name="name" id="name"  required="" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -46,7 +46,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام خانوادگی</label>
                                                     <input type="text" id="family" name="family" class="form-control"
-                                                          required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                          required="" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -59,7 +59,7 @@
                                                     <label class="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code"
                                                            class="form-control"
-                                                          required="" pattern="\d[0-9]{8}" title="فارسی تایپ کنید">
+                                                          required="" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

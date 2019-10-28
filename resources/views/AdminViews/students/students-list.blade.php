@@ -34,6 +34,41 @@
                 });
             });
 
+
+            $(".searchSubmit").click(function () {
+
+                var searchInput = $(".searchInput").val();
+                var count;
+                $.get('/search/student', {searchInput: searchInput}, function (data) {
+                    console.log(data);
+
+                    var name = data[0]["name"];
+                    var family = data[0]["family"];
+                    var National_Code = data[0]["National_Code"];
+                    var student_code = data[0]["student_code"];
+                    var term = data[0]["term"];
+                    var subject = "مهندسی کامپیوتر";
+                    var phone = "09921558293";
+
+
+                    //set values in modal
+                    // $("#table").text(" ");
+                    // $("#radifCount").text(count);
+                    $("#namvafamily").text(name + " " + family);
+                    $("#daneshjoo_code").text(student_code);
+                    $("#code_melli").text(National_Code);
+                    $("#mobile").text("09921558293");
+                    $("#reshte").text("مهندسی کامپیوتر");
+                    $("#student_term").text(term);
+
+
+                });
+
+            });
+
+
+
+
         });
     </script>
 
@@ -108,7 +143,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <!-- Modal search -->
-                        <div class="modal fade" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -133,42 +168,21 @@
                                                                 <th>شماره موبایل</th>
                                                                 <th>رشته</th>
                                                                 <th>ترم</th>
-                                                                <th class="text-nowrap">عملیات</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
-                                                            @if($students && count($students)>0)
-                                                                {{$i=1}}
-                                                                @foreach($students as $student)
+
 
                                                                     <tr>
-                                                                        <td>{{$i}}</td>
-                                                                        <td>{{$student->name}}{{' '}}{{$student->family}}</td>
-                                                                        <td>{{$student->student_code}}</td>
-                                                                        <td>{{$student->National_Code}}</td>
-                                                                        <td>{{$student->mobileNumber}}</td>
-                                                                        <td>{{$student->reshte}}</td>
-                                                                        <td>{{$student->term}}</td>
-                                                                        <td class="text-nowrap">
-                                                                            <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
-                                                                               data-toggle="tooltip" data-original-title="Edit">
-                                                                                <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
-                                                                            </a>
-                                                                            <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
-                                                                               data-toggle="tooltip" data-original-title="delete">
-                                                                                <i class="fa fa-close text-danger"></i>
-                                                                            </a>
-                                                                            <a id="{{$student->id}}" count="{{$i}}" class="details"
-                                                                               data-toggle="tooltip"
-                                                                               data-original-title="details">
-                                                                                <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
-                                                                                   data-target="#exampleModaldetails" style="color: orange;"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                        {{$i++}}
+                                                                        <td id="radifCount"></td>
+                                                                        <td id="namvafamily"></td>
+                                                                        <td id="daneshjoo_code"></td>
+                                                                        <td id="code_melli"></td>
+                                                                        <td id="mobile"></td>
+                                                                        <td id="reshte"></td>
+                                                                        <td id="student_term"></td>
+{{--                                                                        {{$i++}}--}}
                                                                     </tr>
-                                                                @endforeach
-                                                            @endif
                                                             </tbody>
                                                         </table>
                                                         <!--end table list daneshjoyan-->
