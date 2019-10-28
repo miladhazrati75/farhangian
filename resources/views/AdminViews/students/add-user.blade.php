@@ -34,7 +34,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام</label>
-                                                    <input class="form-control" type="text" name="name" id="name"  required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                    <input class="form-control" type="text" name="name" id="name"  required="" {{--pattern="[\u0621-\u06cc]{0,}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -46,7 +46,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام خانوادگی</label>
                                                     <input type="text" id="family" name="family" class="form-control"
-                                                          required="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                          required="" {{--pattern="[\u0621-\u06cc]{0,}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -59,7 +59,7 @@
                                                     <label class="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code"
                                                            class="form-control"
-                                                          required="" pattern="\d[0-9]{8}" title="فارسی تایپ کنید">
+                                                          required="" {{--pattern="\d[0-9]{8}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -72,7 +72,7 @@
                                                     <label class="control-label mb-10">شماره ملی</label>
                                                     <input type="text" id="National_Code" name="National_Code"
                                                            class="form-control"
-                                                          required="" pattern="[\u06f0-\u06f9]{10}" title="فارسی تایپ کنید">
+                                                          required="" {{--pattern="[\u06f0-\u06f9]{10}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -84,7 +84,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره موبایل</label>
                                                     <input type="text"  name="mobileNumber" class="form-control"
-                                                           value="" pattern="[\u06f0-\u06f9]{11}" title="فارسی تایپ کنید">
+                                                           value="" {{--pattern="[\u06f0-\u06f9]{11}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -96,7 +96,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">رشته</label>
                                                     <input type="text"  name="reshte" class="form-control"
-                                                          value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                          value="" {{--pattern="[\u0621-\u06cc]{0,}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -108,7 +108,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" class="form-control"
-                                                            required="" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
+                                                            required="" {{--pattern="[\u06f1-\u06f8]{1}"--}} title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

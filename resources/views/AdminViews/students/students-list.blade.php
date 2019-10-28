@@ -353,11 +353,11 @@
     </div>
     <!-- /Main Content -->
 @stop
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
 
+
+<script src="/js/jquery-3.3.1.slim.min.js"></script>
 <script type="application/javascript">
     $(document).ready(function () {
-
 
         $(".details").click(function () {
             var userId = $(this).attr("id");
@@ -418,6 +418,5 @@
 
 
     });
-
 
 </script>
