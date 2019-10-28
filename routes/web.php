@@ -21,6 +21,12 @@ Route::get('/delete/student/{student_id}', 'Admin\StudentsController@deleteStude
 Route::get('/details/student/', 'Admin\StudentsController@details')->name('details.student');
 Route::get('/search/student/', 'Admin\StudentsController@searchStudent');
 
+Route::get('/details/professor/', 'Admin\ProfessorsController@details')->name('details.professor');
+Route::get('/search/professor/', 'Admin\ProfessorsController@searchProfessor');
+
+Route::get('/details/place/', 'Admin\PlaceController@details')->name('details.place');
+Route::get('/search/place/', 'Admin\PlaceController@searchPlace');
+
 //Route::get('/xxx',function (Request $request){
 //    if (Request::ajax()){
 //        return $_GET['userId'];
