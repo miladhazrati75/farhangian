@@ -6,6 +6,37 @@
     <!-- Main Content -->
     <!--start row-->
     @include('partials.success')
+<script src="/js/myJq.js"></script>
+    <script>
+        $(document).ready(function(){
+            alert(2);
+            $(".details").click(function () {
+                var userId = $(this).attr("id");
+                var count = $(this).attr("count");
+                $.get('/details/student', {userId: userId}, function (data) {
+
+                    //Getting nformations from server
+                    var name = data["name"];
+                    var family = data["family"];
+                    var National_Code = data["National_Code"];
+                    var term = data["term"];
+                    var student_code = data["student_code"];
+
+                    //set values in modal
+                    $("#count").text(count);
+                    $("#name").text(name + " " + family);
+                    $("#student_code").text(student_code);
+                    $("#national_code").text(National_Code);
+                    $("#phone").text("09921558293");
+                    $("#subject").text("مهندسی کامپیوتر");
+                    $("#term").text(term);
+
+                });
+            });
+
+        });
+    </script>
+
 
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
@@ -282,6 +313,9 @@
 
                                                     </tr>
 
+
+                                                    </thead>
+                                                    <tbody>
                                                     <tr>
                                                         <th id="count"></th>
                                                         <th id="name"></th>
@@ -293,8 +327,6 @@
                                                     </tr>
 
 
-                                                    </thead>
-                                                    <tbody>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -356,73 +388,7 @@
 
     <!-- /Main Content -->
 @stop
-<!--
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
-
-<script type="application/javascript">
-    $(document).ready(function () {
 
 
-        $(".details").click(function () {
-            var userId = $(this).attr("id");
-            var count = $(this).attr("count");
-            $.get('/details/student', {userId: userId}, function (data) {
-
-                //Getting nformations from server
-                var name = data["name"];
-                var family = data["family"];
-                var National_Code = data["National_Code"];
-                var term = data["term"];
-                var student_code = data["student_code"];
-
-                //set values in modal
-                $("#count").text(count);
-                $("#name").text(name + " " + family);
-                $("#student_code").text(student_code);
-                $("#national_code").text(National_Code);
-                $("#phone").text("09921558293");
-                $("#subject").text("مهندسی کامپیوتر");
-                $("#term").text(term);
-
-            });
-        });
 
 
-        $(".searchSubmit").click(function () {
-
-            var searchInput = $(".searchInput").val();
-
-            var count;
-            $.get('/search/student', {searchInput: searchInput}, function (data) {
-                // console.log(data);
-
-                var name = data[0]["name"];
-                var family = data[0]["family"];
-                var National_Code = data[0]["National_Code"];
-                var student_code = data[0]["student_code"];
-                var term = data[0]["term"];
-                var subject = "مهندسی کامپیوتر";
-                var phone = "09921558293";
-
-
-                //set values in modal
-                $("#table").text(" ");
-                // $("#count").text(count);
-                $("#namvafamily").text(name + " " + family);
-                $("#daneshjoo_code").text(student_code);
-                $("#code_melli").text(National_Code);
-                $("#mobile").text("09921558293");
-                $("#reshte").text("مهندسی کامپیوتر");
-                $("#student_term").text(term);
-
-
-            });
-
-        })
-
-
-    });
-
-
-</script>
--->
