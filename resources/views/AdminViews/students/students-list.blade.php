@@ -151,7 +151,7 @@
 
 
                                     <!--start modal details-->
-                                    <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -318,6 +318,7 @@
 
     </div>
     <!-- /Row -->
+    <!--start modal hazf-->
     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -351,8 +352,11 @@
             </div>
         </div>
     </div>
+    <!--end modal hazf-->
+
     <!-- /Main Content -->
 @stop
+<!--
 <script src="/js/jquery-3.3.1.slim.min.js"></script>
 
 <script type="application/javascript">
@@ -421,3 +425,4 @@
 
 
 </script>
+-->
