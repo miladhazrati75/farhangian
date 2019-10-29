@@ -38,6 +38,7 @@ return array(
     'App\\Models\\Gheibat' => $baseDir . '/app/Models/Gheibat.php',
     'App\\Models\\Place' => $baseDir . '/app/Models/Place.php',
     'App\\Models\\Professor' => $baseDir . '/app/Models/Professor.php',
+    'App\\Models\\Report' => $baseDir . '/app/Models/Report.php',
     'App\\Models\\Student' => $baseDir . '/app/Models/Student.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

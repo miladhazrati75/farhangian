@@ -509,6 +509,7 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'App\\Models\\Gheibat' => __DIR__ . '/../..' . '/app/Models/Gheibat.php',
         'App\\Models\\Place' => __DIR__ . '/../..' . '/app/Models/Place.php',
         'App\\Models\\Professor' => __DIR__ . '/../..' . '/app/Models/Professor.php',
+        'App\\Models\\Report' => __DIR__ . '/../..' . '/app/Models/Report.php',
         'App\\Models\\Student' => __DIR__ . '/../..' . '/app/Models/Student.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
