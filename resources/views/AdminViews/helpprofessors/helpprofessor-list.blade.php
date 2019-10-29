@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
-                        <a href="{{route('add-get-professor')}}">
+                        <a href="{{route('add-get-helpprofessor')}}">
                             <div class="btn btn-danger btn-rounded btn-anim mt-5"> <i class="fa fa-plus"></i><span class="btn-text">افزودن</span>
                             </div>
                         </a>

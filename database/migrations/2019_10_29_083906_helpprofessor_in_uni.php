@@ -16,7 +16,7 @@ class HelpprofessorInUni extends Migration
         Schema::create('helpprofessors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('famillyname');
+            $table->string('familyname');
             $table->string('password')->nullable();
             $table->string('personalCode');
             $table->string('NationalCode');
