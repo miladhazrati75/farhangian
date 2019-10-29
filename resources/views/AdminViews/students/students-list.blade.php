@@ -9,7 +9,6 @@
 <script src="/js/myJq.js"></script>
     <script>
         $(document).ready(function(){
-            alert(2);
             $(".details").click(function () {
                 var userId = $(this).attr("id");
                 var count = $(this).attr("count");

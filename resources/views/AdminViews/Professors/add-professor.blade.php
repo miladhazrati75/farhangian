@@ -34,7 +34,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام</label>
-                                            <input class="form-control" type="text" name="name" required="" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" name="name" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -45,7 +45,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام خانوادگی</label>
-                                            <input class="form-control" type="text" name="family" required="" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" name="family" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -56,7 +56,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شناسه استاد</label>
-                                            <input class="form-control" type="text" required="" name="Professor_Code" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" required="" name="Professor_Code">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -67,7 +67,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره ملی</label>
-                                            <input class="form-control" type="text" name="National_Code" required="" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" name="National_Code" required="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -78,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
-                                            <input class="form-control" type="text" name="education" required="" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" name="education" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -89,13 +89,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
-                                            <input class="form-control" type="text" name="education" required="" title="فارسی تایپ کنید">
+                                            <input class="form-control" type="text" name="education" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
 
                                     </div>
                                 </div>
+
+
                                 <div class="form-actions mt-20">
                                     <button class="btn btn-success btn-icon left-icon mr-10 pull-left"> <i class="fa fa-check"></i> <span>افزودن</span></button>
                                     <a href="{{route('Professors-list')}}">

@@ -506,6 +506,7 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Gheibat' => __DIR__ . '/../..' . '/app/Models/Gheibat.php',
         'App\\Models\\Place' => __DIR__ . '/../..' . '/app/Models/Place.php',
         'App\\Models\\Professor' => __DIR__ . '/../..' . '/app/Models/Professor.php',
         'App\\Models\\Student' => __DIR__ . '/../..' . '/app/Models/Student.php',

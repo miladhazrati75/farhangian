@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Professor;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 
 class ProfessorsController extends Controller
@@ -19,7 +20,23 @@ class ProfessorsController extends Controller
     {
         return view('AdminViews/Professors/add-professor');
     }
+    public function details(Request $request)
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
 
+            $profId = $_GET["profId"];
+            $profItem = Professor::find($profId);
+            return $profItem;
+        }
+    }
+    public function searchProfessor()
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
+            $searchValue = $_GET["searchInput"];
+            $currentValue = DB::table('professors')->where('Professor_Code', $searchValue)->get();
+            return $currentValue;
+        }
+    }
     public function createProfessor(Request $request)
     {
 
