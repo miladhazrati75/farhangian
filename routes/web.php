@@ -83,7 +83,7 @@ Route::post('/edit/place/{place_id}','Admin\PlaceController@updatePlace')->name(
 //end place route
 
 //start helpprofessors route
-Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
+Route::get('/helpprofessor-list','Admin\HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
 //start helpprofessors route
 
 
