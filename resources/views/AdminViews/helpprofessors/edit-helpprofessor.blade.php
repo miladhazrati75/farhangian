@@ -34,7 +34,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام</label>
-                                            <input class="form-control" type="text" name="name" id="name"  required="">
+                                            <input class="form-control" type="text" name="name" id="name" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->name : '')}}"  required="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -45,7 +45,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام خانوادگی</label>
-                                            <input type="text" id="family" name="family" class="form-control"
+                                            <input type="text" id="family" name="family" class="form-control" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->familyname : '')}}"
                                                    required="" >
                                         </div>
                                     </div>
@@ -57,7 +57,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">پسورد</label>
-                                            <input type="text" id="password" name="password"
+                                            <input type="text" id="password" name="password" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->password : '')}}"
                                                    class="form-control"
                                                    required="" >
                                         </div>
@@ -70,7 +70,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره پرسنلی</label>
-                                            <input type="text" id="personal_code" name="personal_code"
+                                            <input type="text" id="personal_code" name="personal_code" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->personalCode : '')}}"
                                                    class="form-control"
                                                    required="" >
                                         </div>
@@ -83,7 +83,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره ملی</label>
-                                            <input type="text" id="National_Code" name="National_Code"
+                                            <input type="text" id="National_Code" name="National_Code" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->NationalCode : '')}}"
                                                    class="form-control"
                                                    required="" >
                                         </div>
@@ -96,8 +96,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
-                                            <input type="text"  name="gherayesh" class="form-control"
-                                                   value="" >
+                                            <input type="text" name="gherayesh" class="form-control" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->gerayesh : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -108,8 +107,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
-                                            <input type="text" name="tahsilat" class="form-control"
-                                                   value="">
+                                            <input type="text" name="tahsilat" class="form-control" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->tahsilat : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

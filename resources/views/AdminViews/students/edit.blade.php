@@ -35,7 +35,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام</label>
                                                     <input type="text" id="name" name="name" class="form-control"
-                                                           value="{{old('name',isset($studentItem) ? $studentItem->name : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->name : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -47,7 +47,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">نام خانوادگی</label>
                                                     <input type="text" id="family" name="family" class="form-control"
-                                                           value="{{old('name',isset($studentItem) ? $studentItem->family : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->family : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -59,7 +59,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره دانشجویی</label>
                                                     <input type="text" id="student_code" name="student_code" class="form-control"
-                                                           value="{{old('name',isset($studentItem) ? $studentItem->student_code : '')}}" pattern="[\u06f0-\u06f9]{8}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->student_code : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -71,7 +71,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره ملی</label>
                                                     <input type="text" id="National_Code" name="National_Code" class="form-control"
-                                                           value="{{old('name',isset($studentItem) ? $studentItem->National_Code : '')}}" pattern="[\u0621-\u06cc]{10}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->National_Code : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -83,7 +83,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره موبایل</label>
                                                     <input type="text"  name="phone-number" class="form-control"
-                                                    value="{{old('name',isset($studentItem) ? $studentItem->mobileNumber : '')}}"  pattern="[\u06f0-\u06f9]{11}" title="فارسی تایپ کنید">
+                                                    value="{{old('name',isset($studentItem) ? $studentItem->mobileNumber : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -95,7 +95,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">رشته</label>
                                                     <input type="text"  name="reshte" class="form-control"
-                                                    value="{{old('name',isset($studentItem) ? $studentItem->reshte : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                                    value="{{old('name',isset($studentItem) ? $studentItem->reshte : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -107,7 +107,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ترم</label>
                                                     <input type="text" id="term" name="term" class="form-control"
-                                                           value="{{old('name',isset($studentItem) ? $studentItem->term : '')}}" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->term : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

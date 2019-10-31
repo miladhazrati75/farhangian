@@ -36,4 +36,32 @@ class HelpprofessorController extends Controller
             return redirect()->route('helpprofessor-list');
         }
     }
+
+    public function editHelpprofessor($helpprofessor_id)
+    {
+        if ($helpprofessor_id && ctype_digit($helpprofessor_id)){
+            $helpprofessorItem = Helpprofessor::find($helpprofessor_id);
+            if ($helpprofessorItem && $helpprofessorItem instanceof Helpprofessor){
+               return view('AdminViews/helpprofessors/edit-helpprofessor',compact('helpprofessorItem'));
+            }
+        }
+    }
+
+    public function updateHelpprofessor($helpprofessor_id)
+    {
+        $helpprofessor_data = [
+            'name'=>request()->input('name'),
+            'familyname'=>request()->input('family'),
+            'password'=>request()->input('password'),
+            'personalCode'=>request()->input('personal_code'),
+            'NationalCode'=>request()->input('National_Code'),
+            'gerayesh'=>request()->input('gherayesh'),
+            'tahsilat'=>request()->input('tahsilat')
+        ];
+        $helpprofessor=Helpprofessor::find($helpprofessor_id);
+        $helpprofessor->update($helpprofessor_data);
+        if ($helpprofessor){
+            return redirect()->route('helpprofessor-list')->with('success','استاد راهنمای مورد نظر شما با موفقیت به روز رسانی شد');
+        }
+    }
 }

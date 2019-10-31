@@ -193,7 +193,7 @@
                                             <td>{{$helpprofessor->gerayesh}}</td>
                                             <td>{{$helpprofessor->tahsilat}}</td>
                                             <td class="text-nowrap">
-                                                <a href="" class="mr-10"
+                                                <a href="{{ route('edit-get-helpprofessor',[$helpprofessor->id]) }}" class="mr-10"
                                                    data-toggle="tooltip" data-original-title="Edit">
                                                     <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
                                                 </a>

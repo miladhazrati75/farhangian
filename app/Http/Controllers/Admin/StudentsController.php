@@ -45,29 +45,8 @@ class StudentsController extends Controller
         }
     }
 
-    public function addStudent()
-    {
-        return view('AdminViews/students/add-user');
-    }
-
     public function updateStudent($student_id)
     {
-        //dd
-        $this->validate(request(), [
-            'name' => 'required',
-            'family' => 'required',
-            'student_code' => 'required',
-            'National_Code' => 'required',
-            'term' => 'required',
-        ], [
-            'name.required' => 'لطفا نام کامل را وارد نمایید.',
-            'family.required' => 'لطفا نام خانوادگی کامل را وارد نمایید.',
-            'student_code.required' => 'لطفا شماره دانشجویی را بصورت صحیح وارد نمایید.',
-            'National_Code.required' => 'لطفا کدملی دانشجو را بصورت صحیح وارد نمایید.',
-            'term.required' => 'لطفا ترم تحصیلی دانشجو را وارد نمایید.',
-        ]);
-
-
         $student_data = [
             'name' => request()->input('name'),
             'family' => request()->input('family'),
@@ -84,23 +63,13 @@ class StudentsController extends Controller
         }
     }
 
+    public function addStudent()
+    {
+        return view('AdminViews/students/add-user');
+    }
+
     public function createStudent(Request $request)
     {
-        /*$this->validate(request(), [
-            'name' => 'required',
-            'family' => 'required',
-            'student_code' => 'required',
-            'National_Code' => 'required',
-            'term' => 'required',
-        ], [
-            'name.required' => 'لطفا نام کامل را وارد نمایید.',
-
-            'family.required' => 'لطفا نام خانوادگی کامل را وارد نمایید.',
-            'student_code.required' => 'لطفا شماره دانشجویی را بصورت صحیح وارد نمایید.',
-            'National_Code.required' => 'لطفا کدملی دانشجو را بصورت صحیح وارد نمایید.',
-            'term.required' => 'لطفا ترم تحصیلی دانشجو را وارد نمایید.',
-        ]);*/
-
         $student_data = [
             'name' => request()->input('name'),
             'family' => request()->input('family'),
