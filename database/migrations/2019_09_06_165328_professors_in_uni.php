@@ -19,7 +19,7 @@ class ProfessorsInUni extends Migration
             $table->string('name');
             $table->string('family');
             $table->string('National_Code')->nullable();
-            $table->string('Professor_Code', 10)->unique();
+            $table->string('Professor_Code')->unique();
             $table->string('education')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');

@@ -123,6 +123,23 @@ class StudentsController extends Controller
         $allOfStudents = Student::all();
         $filename = 'studentsInfo.csv';
         $handle = fopen($filename, 'w+');
+        fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'mobileNumber', 'reshte', 'term'));
+        foreach ($allOfStudents as $rows) {
+            fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['mobileNumber'], $rows['reshte'], $rows['term']));
+        }
+        fclose($handle);
+        $headers = array(
+            'Content-Type' => 'text/csv'
+        );
+
+        return \Illuminate\Support\Facades\Response::download($filename, 'studentsInfo.csv', $headers);
+    }
+    public function importInfo()
+    {
+//        $allOfStudents=Student::join();
+        // $allOfStudents = Student::all();
+        $filename = 'studentsInfo.csv';
+        $handle = fopen($filename, 'w+');
         fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'term'));
         foreach ($allOfStudents as $rows) {
             fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['term']));
