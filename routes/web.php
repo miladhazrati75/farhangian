@@ -87,6 +87,9 @@ Route::get('/helpprofessor-list','Admin\HelpprofessorController@helpprofessorlis
 
 Route::get('/add/helpprofessor','Admin\HelpprofessorController@addHelpproferssor')->name('add-get-helpprofessor');
 Route::post('/add/helpprofessor','Admin\HelpprofessorController@createHelpprofessor')->name('add-post-helpprofessor');
+
+Route::get('/edit/helpprofessor','Admin\HelpprofessorController@editHelpprofessor')->name('edit-get-helpprofessor');
+//Route::post('/edit/helpprofessor{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //start helpprofessors route
 
 

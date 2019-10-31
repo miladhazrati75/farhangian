@@ -36,4 +36,14 @@ class HelpprofessorController extends Controller
             return redirect()->route('helpprofessor-list');
         }
     }
+
+    public function editHelpprofessor()
+    {
+        return view('AdminViews/helpprofessors/edit-helpprofessor');
+    }
+
+    public function updateHelpprofessor($helpprofessor_id)
+    {
+
+    }
 }

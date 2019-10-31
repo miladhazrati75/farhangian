@@ -12,7 +12,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                <li class="breadcrumb-item"><a href="{{route('add-get-helpprofessor')}}">لیست استاد راهنمایان</a></li>
+                <li class="breadcrumb-item"><a href="{{route('add-get-helpprofessor')}}">لیست اساتید راهنما</a></li>
                 <li class="breadcrumb-item active">افزودن</li>
             </ol>
         </nav>
