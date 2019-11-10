@@ -12,7 +12,6 @@ class UsersController extends Controller
     //
     public function login()
     {
-//        print 2;
         return view('AdminViews.login.login');
 
     }
@@ -24,7 +23,6 @@ class UsersController extends Controller
 
     public function doLogin(Request $request)
     {
-
         $credentials = [
             'name' => $request['name'],
             'password' => $request['password'],

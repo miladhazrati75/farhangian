@@ -106,8 +106,7 @@ Route::post('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorControl
 
 
 
-//////////////////////student CMS
-
+//////////////////////Start student CMS
 Route::get('/student-master','Student\DashboardController@dashboard')->name('student-masterpage');
 
 Route::get('/profile-student','Student\ProfileController@editStudent')->name('profile-student');
@@ -120,3 +119,16 @@ Route::get('/sabtshodeh-karvarzi','Student\Sabt_shodehController@sabt')->name('s
 
 Route::get('/report-karvarzi','Student\ReportController@report')->name('report');
 Route::get('/gheibat-karvarzi','Student\GheibatController@list')->name('gheibatha');
+//////////////////////End student CMS
+
+
+//////////////////////Start Ostad CMS
+Route::get('/ostad-master','Ostad\DashboardController@Dashboard')->name('ostad-master');
+
+//////////////////////Start Ostad CMS
+
+
+//////////////////////Start School CMS
+Route::get('/school-master','School\DashboardController@Dashboard')->name('School-master');
+
+//////////////////////Start School CMS
