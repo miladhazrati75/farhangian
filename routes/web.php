@@ -21,6 +21,12 @@ Route::get('/delete/student/{student_id}', 'Admin\StudentsController@deleteStude
 Route::get('/details/student/', 'Admin\StudentsController@details')->name('details.student');
 Route::get('/search/student/', 'Admin\StudentsController@searchStudent');
 
+Route::get('/details/professor/', 'Admin\ProfessorsController@details')->name('details.professor');
+Route::get('/search/professor/', 'Admin\ProfessorsController@searchProfessor');
+
+Route::get('/details/place/', 'Admin\PlaceController@details')->name('details.place');
+Route::get('/search/place/', 'Admin\PlaceController@searchPlace');
+
 //Route::get('/xxx',function (Request $request){
 //    if (Request::ajax()){
 //        return $_GET['userId'];
@@ -32,7 +38,15 @@ Route::get('/search/student/', 'Admin\StudentsController@searchStudent');
 
 Route::get('/delete/professor/{professor_id}', 'Admin\ProfessorsController@deleteProfessor')->name('delete.professor');
 
-Route::get('/download/student/info', 'Admin\StudentsController@studentInfo')->name('download.student.info');
+Route::get('/download/student/info', 'ExportController@exportStudents')->name('download.student.info');
+Route::get('/download/professor/info', 'ExportController@exportProfessors')->name('download.professor.info');
+Route::get('/download/helpprofessor/info', 'ExportController@exportHelpprofessors')->name('download.helpprofessor.info');
+Route::get('/download/place/info', 'ExportController@exportPlaces')->name('download.place.info');
+
+Route::post('/import/student/info', 'ImportController@importStudents')->name('import.student.info');
+Route::post('/import/professor/info', 'ImportController@importProfessors')->name('import.professor.info');
+Route::post('/import/place/info', 'ImportController@importPlaces')->name('import.place.info');
+Route::post('/import/helpprofessor/info', 'ImportController@importHelpprofessors')->name('import.helpprofessor.info');
 
 Route::get('/add/student/', 'Admin\StudentsController@addStudent')->name('add.get.student');
 Route::post('/add/student/', 'Admin\StudentsController@createStudent')->name('add.post.student');
@@ -77,7 +91,15 @@ Route::post('/edit/place/{place_id}','Admin\PlaceController@updatePlace')->name(
 //end place route
 
 //start helpprofessors route
-Route::get('/helpprofessor-list','HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
+Route::get('/helpprofessor-list','Admin\HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
+Route::get('/delete/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@deleteHelpprofessor')->name('delete.helpprofessor');
+
+Route::get('/add/helpprofessor','Admin\HelpprofessorController@addHelpproferssor')->name('add-get-helpprofessor');
+Route::post('/add/helpprofessor','Admin\HelpprofessorController@createHelpprofessor')->name('add-post-helpprofessor');
+
+Route::get('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@editHelpprofessor')->name('edit-get-helpprofessor');
+Route::post('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
+//Route::post('/edit/helpprofessor{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //start helpprofessors route
 
 

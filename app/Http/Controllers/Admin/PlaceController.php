@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Place;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class PlaceController extends Controller
@@ -18,7 +19,24 @@ class PlaceController extends Controller
     {
         return view('AdminViews/place/add-place');
     }
+    public function details(Request $request)
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
 
+            $placeId = $_GET["placeId"];
+            $placeItem = Place::find($placeId);
+            return $placeItem;
+        }
+    }
+
+    public function searchPlace()
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
+            $searchValue = $_GET["searchInput"];
+            $currentValue = DB::table('places')->where('nameSchool', $searchValue)->get();
+            return $currentValue;
+        }
+    }
     public function createPlace(Request $request)
     {
         $place_data = [

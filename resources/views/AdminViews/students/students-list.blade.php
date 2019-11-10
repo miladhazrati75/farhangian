@@ -108,8 +108,10 @@
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
-                        <a href="">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
+                        <a class="import"
+                            data-toggle="tooltip"
+                            data-original-title="import">
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport" data-toggle="modal"><i
                                     class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
                             </div>
                         </a>
@@ -358,6 +360,43 @@
                                     </div>
                                 </div>
                                 <!--end modal details-->
+                                <!--start modal import-->
+                                <div class="modal fade" id="exampleModalimport" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="panel-wrapper collapse in">
+                                            <div class="panel-body">
+                                                <div class="table-wrap mt-5">
+                                                    <div class="table-responsive">
+                                                        <form action="{{ route('import.student.info') }}" method="post" enctype="multipart/form-data">
+                                                        {{csrf_field()}}
+                                                            <div class="form-group">
+                                                                <label class="control-label mb-10">انتخاب کنید:</label>
+                                                                <input class="form-control" type="file" name="file" id="file"  required="">
+                                                            </div>
+                                                            <br>
+                                                            <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
+                                                                class="fa fa-check"></i> <span>آپلود</span></button>
+                                                        </form>
+                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                </div>
+                                </div>
+                                <!--end modal import-->
 
                             </div>
                         </div>
