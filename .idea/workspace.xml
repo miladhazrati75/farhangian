@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +194,7 @@
       <workItem from="1572207145671" duration="3510000" />
       <workItem from="1572260077751" duration="1204000" />
       <workItem from="1572265346278" duration="4355000" />
+      <workItem from="1573377767177" duration="1732000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
