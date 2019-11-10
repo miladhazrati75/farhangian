@@ -169,6 +169,7 @@
                                                                 <th>شماره موبایل</th>
                                                                 <th>رشته</th>
                                                                 <th>ترم</th>
+                                                                
                                                             </tr>
                                                             </thead>
                                                             <tbody>
@@ -182,6 +183,7 @@
                                                                         <td id="mobile"></td>
                                                                         <td id="reshte"></td>
                                                                         <td id="student_term"></td>
+                                                                        <td></td>
 {{--                                                                        {{$i++}}--}}
                                                                     </tr>
                                                             </tbody>
@@ -214,7 +216,6 @@
                                                                     <table class="table table-striped mb-0">
                                                                         <thead>
                                                                         <tr>
-                                                                            <th>ردیف</th>
                                                                             <th>نام و نام خانوادگی</th>
                                                                             <th>شناسه استاد</th>
                                                                             <th>شماره ملی</th>
@@ -316,33 +317,38 @@
                                                             <div class="table-responsive">
                                                 <table class="table table-striped mb-0">
                                                     <thead>
-
                                                     <tr>
-                                                        <th>ردیف</th>
-                                                        <th>نام و نام خانوادگی</th>
-                                                        <th>شماره دانشجویی</th>
-                                                        <th>شماره ملی</th>
-                                                        <th>شماره موبایل</th>
-                                                        <th>رشته</th>
-                                                        <th>ترم</th>
-
+                                                        <td class="header-table">نام و نام خانوادگی</td>
+                                                        <td id="name"></td>
                                                     </tr>
-
-
-                                                    </thead>
-                                                    <tbody>
                                                     <tr>
-                                                        <th id="count"></th>
-                                                        <th id="name"></th>
-                                                        <th id="student_code"></th>
-                                                        <th id="national_code"></th>
-                                                        <th id="phone"></th>
-                                                        <th id="subject"></th>
-                                                        <th id="term"></th>
+                                                        <td class="header-table">شماره دانشجویی</td>
+                                                        <td id="student_code"></td>
                                                     </tr>
-
-
-                                                    </tbody>
+                                                    <tr>
+                                                        <td class="header-table">شماره ملی</td>
+                                                        <td id="national_code"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">شماره موبایل</td>
+                                                        <td id="phone"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">رشته</td>
+                                                        <td id="subject"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">ترم</td>
+                                                        <td id="term"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">پسورد</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">اردس</td>
+                                                        <td></td>
+                                                    </tr>
                                                 </table>
                                             </div>
                                                         </div>
