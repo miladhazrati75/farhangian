@@ -294,6 +294,7 @@
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->
+
                                 <!--start modal details-->
                                 <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
                                      aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -312,33 +313,36 @@
                                                         <div class="table-wrap mt-5">
                                                             <div class="table-responsive">
                                                 <table class="table table-striped mb-0">
-                                                    <thead>
 
-                                                        <tr>
-                                                            <th>ردیف</th>
-                                                            <th>نام مدرسه</th>
-                                                            <th> ادرس مدرسه</th>
-                                                            <th>تلفن مدرسه</th>
-                                                            <th>نام مدیر</th>
-                                                            <th>نام معاون</th>
-                                                            <th>ظرفیت پذیرش</th>
-                                                        </tr>
-
-
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <th id="count"></th>
-                                                        <th id="name"></th>
-                                                        <th id="adres"></th>
-                                                        <th id="telephone"></th>
-                                                        <th id="modir"></th>
-                                                        <th id="moaven"></th>
-                                                        <th id="zarfiat"></th>
+                                                <tr>
+                                                        <td class="header-table">نام مدرسه</td>
+                                                        <td id="name"></td>
                                                     </tr>
-
-
-                                                    </tbody>
+                                                    <tr>
+                                                        <td class="header-table"> ادرس مدرسه</td>
+                                                        <td id="adres"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">تلفن مدرسه</td>
+                                                        <td id="telephone"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">نام مدیر</td>
+                                                        <td id="modir"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">نام معاون</td>
+                                                        <td id=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">ظرفیت پذیرش</td>
+                                                        <td id=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">تعداد پایه ها </td>
+                                                        <td id=""></td>
+                                                    </tr>
+                                                    
                                                 </table>
                                             </div>
                                                         </div>

@@ -77,25 +77,47 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label class="control-label mb-10">تحصیلات</label>
+                                            <input class="form-control" type="text" name="National_Code" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
                                             <input class="form-control" type="text" name="education" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-
                                     </div>
                                 </div>
-                                <div class="row mt-10">
+                                    <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">تحصیلات</label>
+                                            <label class="control-label mb-10">شماره تماس</label>
                                             <input class="form-control" type="text" name="education" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
 
                                     </div>
-                                </div>
+                                    </div>
+
+                                    <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">پسورد</label>
+                                            <input class="form-control" type="text" name="education" required="" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                    </div>
 
 
                                 <div class="form-actions mt-20">

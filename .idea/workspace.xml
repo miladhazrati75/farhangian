@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/Professors/Professors-list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -195,6 +197,7 @@
       <workItem from="1572260077751" duration="1204000" />
       <workItem from="1572265346278" duration="4355000" />
       <workItem from="1573377767177" duration="1732000" />
+      <workItem from="1573384992876" duration="1103000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
@@ -289,7 +292,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۱۴" />
       <updated>1572210670216</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL‎۰۰۰۱۵" summary="مودال جزئیات دانشجو و صفحه ادیت و افزودن مربوطه">
+      <created>1573385288724</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۵" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۵" />
+      <updated>1573385288724</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +335,7 @@
     <MESSAGE value="برداشتن پلیس هولدر ها در فرم" />
     <MESSAGE value="قرار دادن دکمه افزودن فایل اکسل" />
     <MESSAGE value="درست کردن بهم ریختگی ها و صفحه گزارش کارورزی" />
-    <option name="LAST_COMMIT_MESSAGE" value="درست کردن بهم ریختگی ها و صفحه گزارش کارورزی" />
+    <MESSAGE value="مودال جزئیات دانشجو و صفحه ادیت و افزودن مربوطه" />
+    <option name="LAST_COMMIT_MESSAGE" value="مودال جزئیات دانشجو و صفحه ادیت و افزودن مربوطه" />
   </component>
 </project>

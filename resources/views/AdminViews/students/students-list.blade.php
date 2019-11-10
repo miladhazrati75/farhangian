@@ -316,7 +316,6 @@
                                                         <div class="table-wrap mt-5">
                                                             <div class="table-responsive">
                                                 <table class="table table-striped mb-0">
-                                                    <thead>
                                                     <tr>
                                                         <td class="header-table">نام و نام خانوادگی</td>
                                                         <td id="name"></td>

@@ -7,7 +7,7 @@
             <!-- Title -->
             <div class="row heading-bg" id="head-row">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h5 class="txt-dark">ویرایش اطلاعات دانشجو</h5>
+                    <h5 class="txt-dark"> افزودن دانشجوی جدید</h5>
                 </div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -120,7 +120,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">پسورد</label>
                                                     <input type="text" id="term" name="term" class="form-control"
-                                                            required="" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
+                                                            >
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
