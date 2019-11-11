@@ -1,6 +1,6 @@
 @extends('OstadViews.layout.main')
 @section('title')
-    لیست دانشجویان|دانشگاه فرهنگیان
+    ثبت کارورزی
 @stop
 @section('content')
     <!-- Main Content -->
