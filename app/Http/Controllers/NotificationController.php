@@ -9,6 +9,6 @@ class NotificationController extends Controller
 {
     public function index(Request $request)
     {
-        $count = Notification::where('studentID', $request->input('studentID'))->count();
+        //$count = Notification::where('studentID', $request->input())->count();
     }
 }

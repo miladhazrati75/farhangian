@@ -56,7 +56,7 @@
                 <li class="dropdown alert-drp">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="zmdi zmdi-notifications top-nav-icon"></i><span
-                    class="top-nav-icon-badge">{{$count}}</span></a>
+                    class="top-nav-icon-badge">5</span></a>
                     <ul class="dropdown-menu alert-dropdown" data-dropdown-in="bounceIn" data-dropdown-out="bounceOut">
                         <li>
                             <div class="notification-box-head-wrap">
@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <div class="streamline message-nicescroll-bar">
-                                @foreach ($notifications as $notification)
+
 
                                 <div class="sl-item">
                                     <a href="#">
@@ -76,16 +76,9 @@
                                             <i class="zmdi zmdi-flag"></i>
                                         </div>
                                         <div class="sl-content">
-                                            @if($notification->isApproved == 'approved')
 												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
                                                 درخواست شما تایید شد</span>
-                                            @elseif($notification->isApproved == 'unapproved')
-												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
-                                                درخواست شما رد شد</span>
-                                            @elseif($notification->isApproved == 'waiting')
-												<span class="inline-block capitalize-font  pull-left truncate head-notifications">
-                                                درخواست شما در حال بررسی است</span>
-                                            @endif
+
                                             <span class="inline-block font-11  pull-right notifications-time">2pm</span>
                                             <div class="clearfix"></div>
                                             <p class="truncate">برای جزئیات بیشتر کلیک کنید</p>
@@ -93,7 +86,6 @@
                                     </a>
                                 </div>
                                 <hr class="light-grey-hr ma-0"/>
-                                @endforeach
 
                             </div>
                         </li>
