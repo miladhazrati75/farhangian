@@ -6,7 +6,7 @@
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h5 class="txt-dark"> ویرایش اطلاعات قبلی </h5>
+            <h5 class="txt-dark"> ویرایش اطلاعات مدرسه </h5>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -89,6 +89,17 @@
                                         <div class="form-group">
                                             <label class="control-label mb-10">ظرفیت پذیرش</label>
                                             <input type="text" id="capacity" name="capacity" class="form-control" value="{{old('name',isset($place) ? $place->capacity : '')}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">تعداد پایه ها</label>
+                                            <input type="text" id="capacity" name="capacity" class="form-control" value="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

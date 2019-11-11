@@ -6,7 +6,7 @@
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h5 class="txt-dark">افزودن استاد جدید </h5>
+            <h5 class="txt-dark">ویرایش اطلاعات استاد</h5>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -53,7 +53,7 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">شماره استادی</label>
+                                            <label class="control-label mb-10">شناسه استاد</label>
                                             <input type="text" id="Professor_Code" name="Professor_Code" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->Professor_Code : '')}}">
                                         </div>
                                     </div>
@@ -66,6 +66,18 @@
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره ملی</label>
                                             <input type="text" id="National_Code" name="National_Code" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->National_Code : '')}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">تحصیلات</label>
+                                            <input type="text" id="education" name="education" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->education : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -86,8 +98,19 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">تحصیلات</label>
-                                            <input type="text" id="education" name="education" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->education : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                            <label class="control-label mb-10">شماره تماس</label>
+                                            <input type="text" id="education" name="education" class="form-control" value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">پسورد</label>
+                                            <input type="text" id="education" name="education" class="form-control" value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

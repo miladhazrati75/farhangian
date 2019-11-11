@@ -304,30 +304,36 @@
                                                         <div class="table-wrap mt-5">
                                                             <div class="table-responsive">
                                                 <table class="table table-striped mb-0">
-                                                    <thead>
-
-                                                    <tr>
-                                                        <th>ردیف</th>
-                                                        <th>نام و نام خانوادگی</th>
-                                                        <th>شناسه استاد</th>
-                                                        <th>شماره ملی</th>
-                                                        <th>تحصیلات</th>
-
+                                                <tr>
+                                                        <td class="header-table">نام و نام خانوادگی</td>
+                                                        <td id="name"></td>
                                                     </tr>
-
-
-                                                    </thead>
-                                                    <tbody>
                                                     <tr>
-                                                        <th id="count"></th>
-                                                        <th id="name"></th>
-                                                        <th id="professor_code"></th>
-                                                        <th id="national_code"></th>
-                                                        <th id="education"></th>
+                                                        <td class="header-table">شناسه استاد</td>
+                                                        <td id="professor_code"></td>
                                                     </tr>
-
-
-                                                    </tbody>
+                                                    <tr>
+                                                        <td class="header-table">شماره ملی</td>
+                                                        <td id="national_code"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">تحصیلات</td>
+                                                        <td id="education"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">شماره تماس</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">پسورد</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="header-table">گرایش</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                    
                                                 </table>
                                             </div>
                                                         </div>
