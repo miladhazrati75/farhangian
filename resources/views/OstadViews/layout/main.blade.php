@@ -188,8 +188,8 @@
                 <i class="zmdi zmdi-more"></i>
             </li>
             <li>
-                <a class="active" href="{{route('darkhast-karvarzi')}}" data-toggle="collapse" data-target="#dashboard_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-file-add mr-20"></i><span class="right-nav-text">ثبت درخواست کارورزی</span>
+                <a class="active" href="{{route('ostad-darkhast-karvarzi-list')}}" data-toggle="collapse" data-target="#dashboard_dr">
+                    <div class="pull-left"><i class="zmdi zmdi-file-add mr-20"></i><span class="right-nav-text">ثبت کارورزی</span>
                     </div>
                 </a>
             </li>
