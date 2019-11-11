@@ -12,7 +12,7 @@
 */
 //Route::get('/', 'Admin\StudentsController@masterpage')->name('masterpage');
 
-Route::get('/','DashboardController@Dashbord')->name('masterpage');
+Route::get('/', 'DashboardController@Dashbord')->name('masterpage');
 
 Route::get('/list-student', 'Admin\StudentsController@allOfStudents')->name('student-list');
 
@@ -59,46 +59,46 @@ Route::post('/edit/student/{student_id}', 'Admin\StudentsController@updateStuden
 
 
 //start teachers route
-Route::get('/list-Professors','Admin\ProfessorsController@ProfessorsList')->name('Professors-list');
+Route::get('/list-Professors', 'Admin\ProfessorsController@ProfessorsList')->name('Professors-list');
 //end teachers route
 
 //Start Auth
-Route::get('/login','UsersController@login')->name('login');
-Route::post('/login','UsersController@doLogin')->name('post-login');
-Route::get('/logout','UsersController@logout')->name('logout');
+Route::get('/login', 'UsersController@login')->name('login');
+Route::post('/login', 'UsersController@doLogin')->name('post-login');
+Route::get('/logout', 'UsersController@logout')->name('logout');
 //End Auth
 
 //start add list professor
-Route::get('/add/professor','Admin\ProfessorsController@addProfessor')->name('add-get-professor');
-Route::post('/add/professor','Admin\ProfessorsController@createProfessor')->name('add-post-professor');
+Route::get('/add/professor', 'Admin\ProfessorsController@addProfessor')->name('add-get-professor');
+Route::post('/add/professor', 'Admin\ProfessorsController@createProfessor')->name('add-post-professor');
 //end add list professor
 
 //start edit list professor
-Route::get('/edit/professor/{professor_id}','Admin\ProfessorsController@editProfessor')->name('edit-get-professor');
-Route::post('/edit/professor/{professor_id}','Admin\ProfessorsController@updateProfessor')->name('edit-post-professor');
+Route::get('/edit/professor/{professor_id}', 'Admin\ProfessorsController@editProfessor')->name('edit-get-professor');
+Route::post('/edit/professor/{professor_id}', 'Admin\ProfessorsController@updateProfessor')->name('edit-post-professor');
 //end edit list professor
 
 //start place route
-Route::get('/list-place','Admin\PlaceController@placeList')->name('place-list');
+Route::get('/list-place', 'Admin\PlaceController@placeList')->name('place-list');
 
-Route::get('/add/place','Admin\PlaceController@addPlace')->name('add-get-place');
-Route::post('/add/place','Admin\PlaceController@createPlace')->name('add-post-place');
+Route::get('/add/place', 'Admin\PlaceController@addPlace')->name('add-get-place');
+Route::post('/add/place', 'Admin\PlaceController@createPlace')->name('add-post-place');
 
-Route::get('/delete/place/{place_id}','Admin\PlaceController@deletePlace')->name('delete.place');
+Route::get('/delete/place/{place_id}', 'Admin\PlaceController@deletePlace')->name('delete.place');
 
-Route::get('/edit/place/{place_id}','Admin\PlaceController@editPlace')->name('edit-get-place');
-Route::post('/edit/place/{place_id}','Admin\PlaceController@updatePlace')->name('edit-post-place');
+Route::get('/edit/place/{place_id}', 'Admin\PlaceController@editPlace')->name('edit-get-place');
+Route::post('/edit/place/{place_id}', 'Admin\PlaceController@updatePlace')->name('edit-post-place');
 //end place route
 
 //start helpprofessors route
-Route::get('/helpprofessor-list','Admin\HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
-Route::get('/delete/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@deleteHelpprofessor')->name('delete.helpprofessor');
+Route::get('/helpprofessor-list', 'Admin\HelpprofessorController@helpprofessorlist')->name('helpprofessor-list');
+Route::get('/delete/helpprofessor/{helpprofessor_id}', 'Admin\HelpprofessorController@deleteHelpprofessor')->name('delete.helpprofessor');
 
-Route::get('/add/helpprofessor','Admin\HelpprofessorController@addHelpproferssor')->name('add-get-helpprofessor');
-Route::post('/add/helpprofessor','Admin\HelpprofessorController@createHelpprofessor')->name('add-post-helpprofessor');
+Route::get('/add/helpprofessor', 'Admin\HelpprofessorController@addHelpproferssor')->name('add-get-helpprofessor');
+Route::post('/add/helpprofessor', 'Admin\HelpprofessorController@createHelpprofessor')->name('add-post-helpprofessor');
 
-Route::get('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@editHelpprofessor')->name('edit-get-helpprofessor');
-Route::post('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
+Route::get('/edit/helpprofessor/{helpprofessor_id}', 'Admin\HelpprofessorController@editHelpprofessor')->name('edit-get-helpprofessor');
+Route::post('/edit/helpprofessor/{helpprofessor_id}', 'Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //Route::post('/edit/helpprofessor{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //start helpprofessors route
 
@@ -107,31 +107,31 @@ Route::post('/edit/helpprofessor/{helpprofessor_id}','Admin\HelpprofessorControl
 
 
 //////////////////////Start student CMS
-Route::get('/student-master','Student\DashboardController@dashboard')->name('student-masterpage');
+Route::get('/student-master', 'Student\DashboardController@dashboard')->name('student-masterpage');
 
-Route::get('/profile-student','Student\ProfileController@editStudent')->name('profile-student');
-Route::post('/profile-student','Student\ProfileController@updateUser')->name('edit-user');
-Route::get('/profile-student','Student\ProfileController@profileStudent')->name('profile-student');
+Route::get('/profile-student', 'Student\ProfileController@editStudent')->name('profile-student');
+Route::post('/profile-student', 'Student\ProfileController@updateUser')->name('edit-user');
+Route::get('/profile-student', 'Student\ProfileController@profileStudent')->name('profile-student');
 
-Route::get('/darkhast-karvarzi','Student\Karvarzi_darkhastController@karvarzi')->name('darkhast-karvarzi');
+Route::get('/darkhast-karvarzi', 'Student\Karvarzi_darkhastController@karvarzi')->name('darkhast-karvarzi');
 
-Route::get('/sabtshodeh-karvarzi','Student\Sabt_shodehController@sabt')->name('sabtshode-karvarzi');
+Route::get('/sabtshodeh-karvarzi', 'Student\Sabt_shodehController@sabt')->name('sabtshode-karvarzi');
 
-Route::get('/report-karvarzi','Student\ReportController@report')->name('report');
-Route::get('/gheibat-karvarzi','Student\GheibatController@list')->name('gheibatha');
+Route::get('/report-karvarzi', 'Student\ReportController@report')->name('report');
+Route::get('/gheibat-karvarzi', 'Student\GheibatController@list')->name('gheibatha');
 //////////////////////End student CMS
 
 
 //////////////////////Start Ostad CMS
-Route::get('/ostad-master','Ostad\DashboardController@Dashboard')->name('ostad-master');
-Route::get('/ostad/darkhast-karvarzi','Ostad\Karvarzi_darkhastController@karvarzi')->name('ostad-darkhast-karvarzi');
-Route::get('/ostad/list-darkhast-karvarzi','Ostad\Karvarzi_darkhastController@sabt_karvarzi')->name('ostad-darkhast-karvarzi-list');
-Route::get('/ostad/nahaii-darkhast-karvarzi','Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
+Route::get('/ostad-master', 'Ostad\DashboardController@Dashboard')->name('ostad-master');
+Route::get('/ostad/darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@karvarzi')->name('ostad-darkhast-karvarzi');
+Route::get('/ostad/list-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@sabt_karvarzi')->name('ostad-darkhast-karvarzi-list');
+Route::get('/ostad/nahaii-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
 
 //////////////////////Start Ostad CMS
 
 
 //////////////////////Start School CMS
-Route::get('/school-master','School\DashboardController@Dashboard')->name('School-master');
+Route::get('/school-master', 'School\DashboardController@Dashboard')->name('School-master');
 
-//////////////////////Start School CMS
+//////////////////////end School CMS
