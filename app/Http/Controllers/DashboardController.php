@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function Dashbord()
     {
         $count = Notification::all()->count();
-        $notifs = Notification::all();
+        $notifications = Notification::all();
         return view('site/directory/dashboard', compact('notifications', 'count'));
     }
 }

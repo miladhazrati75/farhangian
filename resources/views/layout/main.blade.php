@@ -136,12 +136,6 @@
                 <i class="zmdi zmdi-more"></i>
             </li>
             <li>
-                <a class="active" href="#" data-toggle="collapse" data-target="#dashboard_dr">
-                    <div class="pull-left"><i class="zmdi zmdi-file-add mr-20"></i><span class="right-nav-text">ثبت کارورزی</span>
-                    </div>
-                </a>
-            </li>
-            <li>
                 <a href="{{route('student-list')}}" data-toggle="collapse" data-target="#ecom_dr">
                     <div class="pull-left"><i class="zmdi zmdi-comment-text-alt mr-20"></i><span class="right-nav-text">لیست دانشجویان</span>
                     </div>
