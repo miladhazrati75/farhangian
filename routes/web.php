@@ -128,6 +128,7 @@ Route::get('/ostad/darkhast-karvarzi', 'Ostad\InternshipController@index')->name
 Route::get('/ostad/list-darkhast-karvarzi', 'InternshipController@index')->name('ostad-darkhast-karvarzi-list');
 Route::get('/ostad/nahaii-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
 
+Route::get('/ostad/sabtshodeh-karvarzi','Ostad\Sabt_shodehController@sabt')->name('ostad-master');
 //////////////////////Start Ostad CMS
 
 
