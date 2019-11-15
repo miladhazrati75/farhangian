@@ -124,8 +124,8 @@ Route::get('/gheibat-karvarzi', 'Student\GheibatController@list')->name('gheibat
 
 //////////////////////Start Ostad CMS
 Route::get('/ostad-master', 'Ostad\DashboardController@Dashboard')->name('ostad-master');
-Route::get('/ostad/darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@karvarzi')->name('ostad-darkhast-karvarzi');
-Route::get('/ostad/list-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@sabt_karvarzi')->name('ostad-darkhast-karvarzi-list');
+Route::get('/ostad/darkhast-karvarzi', 'Ostad\InternshipController@index')->name('ostad-darkhast-karvarzi');
+Route::get('/ostad/list-darkhast-karvarzi', 'InternshipController@index')->name('ostad-darkhast-karvarzi-list');
 Route::get('/ostad/nahaii-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
 
 //////////////////////Start Ostad CMS

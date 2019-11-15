@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class School extends Model
 {
     ////////
     //    protected $connection = 'mysql-utf8';
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
 
-    public function school()
+    public function student()
     {
-        return $this->belongsTo('App\Models\School', 'schoolID');
+        return $this->hasMany('App\Models\Student', 'schoolID');
     }
-    public function professor()
+    public function city()
     {
-        return $this->belongsTo('App\Models\Professor', 'professorID');
+        return $this->belongsTo('App\Models\City', 'cityID');
     }
 }

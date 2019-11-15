@@ -33,7 +33,7 @@ class StudentsController extends Controller
         }
     }
 
-    public function editStudent($student_id)//Request $request)
+    public function editStudent($student_id) //Request $request)
     {
         //$student_id = $request->input('id');
         if ($student_id && ctype_digit($student_id)) {
@@ -83,12 +83,11 @@ class StudentsController extends Controller
         if ($new_student_object && $new_student_object instanceof Student) {
             return redirect()->route('student-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
         }
-
     }
 
     public function studentInfo()
     {
-//        $allOfStudents=Student::join();
+        //        $allOfStudents=Student::join();
         $allOfStudents = Student::all();
         $filename = 'studentsInfo.csv';
         $handle = fopen($filename, 'w+');
@@ -105,7 +104,7 @@ class StudentsController extends Controller
     }
     public function importInfo()
     {
-//        $allOfStudents=Student::join();
+        //        $allOfStudents=Student::join();
         // $allOfStudents = Student::all();
         $filename = 'studentsInfo.csv';
         $handle = fopen($filename, 'w+');
@@ -145,4 +144,3 @@ class StudentsController extends Controller
         }
     }
 }
-
