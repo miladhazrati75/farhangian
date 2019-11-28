@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Professor;
+use App\Models\Student;
+use App\Models\School;
 
 class Internship extends Model
 {
@@ -13,14 +16,14 @@ class Internship extends Model
 
     public function student()
     {
-        return $this->belongsTo('App\Models\Student', 'studentID');
+        return $this->belongsTo(Student::class, 'studentID');
     }
     public function school()
     {
-        return $this->belongsTo('App\Models\School', 'schoolID');
+        return $this->belongsTo(School::class, 'schoolID');
     }
     public function professor()
     {
-        return $this->belongsTo('App\Models\Professor', 'professorID');
+        return $this->belongsTo(Professor::class, 'professorID');
     }
 }

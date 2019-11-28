@@ -40,12 +40,24 @@ class SchoolsController extends Controller
             }
         }
     }
-
+    public function getSchools()
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
+            $cityID = $_GET["cityID"];
+            $schools = School::where('cityID', $cityID)->get();
+            return $schools;
+        }
+    }
     public function updateSchool($school_id)
     {
         $school_data = [
-            'provinceID' => request()->input('provinceID'),
-            'title' => request()->input('title'),
+            'userID' => request()->input('userID'),
+            'cityID' => request()->input('cityID'),
+            'school_code' => request()->input('school_code'),
+            'username' => request()->input('username'),
+            'password' => request()->input('password'),
+            'school_name' => request()->input('school_name'),
+            'school_address' => request()->input('school_address'),
         ];
         $school = School::find($school_id);
         $school->update($school_data);
@@ -62,8 +74,13 @@ class SchoolsController extends Controller
     public function createSchool(Request $request)
     {
         $school_data = [
-            'provinceID' => request()->input('provinceID'),
-            'title' => request()->input('title'),
+            'userID' => request()->input('userID'),
+            'cityID' => request()->input('cityID'),
+            'school_code' => request()->input('school_code'),
+            'username' => request()->input('username'),
+            'password' => request()->input('password'),
+            'school_name' => request()->input('school_name'),
+            'school_address' => request()->input('school_address'),
         ];
         $new_School_object = School::create($school_data);
         if ($new_School_object && $new_School_object instanceof School) {

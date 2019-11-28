@@ -6,9 +6,6 @@
     <!-- Main Content -->
     <!--start row-->
     @include('partials.success')
-    <script src="/js/myJq.js"></script>
-
-
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -97,6 +94,7 @@
 
                                                             </tr>
                                                             </thead>
+
                                                             <tbody>
 
 
@@ -190,16 +188,25 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                        @if($students && count($students)>0)
+                                        {{$i=1}}
+                                        @foreach ($students as $student)
+
 
 
                                             <tr>
                                                 <td id="radif">1</td>
-                                                <td id="namvafamily">محمد شاددل</td>
-                                                <td id="daneshjoo_code">1234567876</td>
-                                                <td id="code_melli">234567865</td>
-                                                <td id="reshte">ریاضی</td>
-                                                <td id="student_term">6</td>
-                                                <td id="mobile">شیروان</td>
+                                                <td id="namvafamily">{{$student->name}}{{" "}}{{$student->family}}</td>
+                                                <td id="daneshjoo_code">{{$student->student_code}}</td>
+                                                <td id="code_melli">{{$student->National_Code}}</td>
+                                                <td id="reshte">{{$student->reshte}}</td>
+                                            <td id="student_term">{{$student->term}}</td>
+                                                <td id="mobile">@if (isset($student->school->city))
+                                                    {{$student->school->city->title}}
+                                                @else
+                                                --
+
+                                                @endif</td>
                                                 <td class="text-nowrap">
                                                     <a href="{{route('ostad-darkhast-karvarzi-nahaii')}}" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="ثبت">
@@ -217,6 +224,9 @@
                                                     </a>
                                                 </td>
                                             </tr>
+                                            {{$i++}}
+                                            @endforeach
+                                            @endif
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->

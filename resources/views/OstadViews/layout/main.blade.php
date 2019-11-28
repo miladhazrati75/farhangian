@@ -8,6 +8,7 @@
     <meta name="keywords"
           content="admin, admin dashboard, admin template, cms, crm, Philbert Admin, Philbertadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application"/>
     <meta name="author" content="hencework"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 @yield('meta')
 <!-- Custom CSS -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">

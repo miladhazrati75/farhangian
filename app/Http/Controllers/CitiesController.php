@@ -17,6 +17,14 @@ class CitiesController extends Controller
         $cities = City::all();
         return view('AdminViews/students/students-list', compact('cities'));
     }
+    public function getCities()
+    {
+        if (\Illuminate\Support\Facades\Request::ajax()) {
+            $provinceID = $_GET["provinceID"];
+            $cities = City::where('provinceID', $provinceID)->get();
+            return $cities;
+        }
+    }
 
     public function deleteCity($city_id)
     {

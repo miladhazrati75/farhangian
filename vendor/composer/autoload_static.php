@@ -81,6 +81,7 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -192,6 +193,7 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         array (
             'Cron\\' => 5,
             'Complex\\' => 8,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -435,6 +437,10 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         array (
             0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -478,7 +484,6 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
     );
 
     public static $classMap = array (
-        'App\\City' => __DIR__ . '/../..' . '/app/Models/City.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Exports\\HelpprofessorsExport' => __DIR__ . '/../..' . '/app/Exports/HelpprofessorsExport.php',
@@ -503,8 +508,10 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'App\\Http\\Controllers\\NotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotificationController.php',
         'App\\Http\\Controllers\\Ostad\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/DashboardController.php',
         'App\\Http\\Controllers\\Ostad\\Karvarzi_darkhastController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/Karvarzi_darkhastController.php',
+        'App\\Http\\Controllers\\Ostad\\Sabt_shodehController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/Sabt_shodehController.php',
         'App\\Http\\Controllers\\ProvincesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProvincesController.php',
         'App\\Http\\Controllers\\School\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/School/DashboardController.php',
+        'App\\Http\\Controllers\\SchoolsController' => __DIR__ . '/../..' . '/app/Http/Controllers/SchoolsController.php',
         'App\\Http\\Controllers\\Student\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Student/DashboardController.php',
         'App\\Http\\Controllers\\Student\\GheibatController' => __DIR__ . '/../..' . '/app/Http/Controllers/Student/GheibatController.php',
         'App\\Http\\Controllers\\Student\\Karvarzi_darkhastController' => __DIR__ . '/../..' . '/app/Http/Controllers/Student/Karvarzi_darkhastController.php',
@@ -526,21 +533,22 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'App\\Imports\\ProfessorsImport' => __DIR__ . '/../..' . '/app/Imports/ProfessorsImport.php',
         'App\\Imports\\StudentsImport' => __DIR__ . '/../..' . '/app/Imports/StudentsImport.php',
         'App\\Imports\\UsersImport' => __DIR__ . '/../..' . '/app/Imports/UsersImport.php',
-        'App\\Internship' => __DIR__ . '/../..' . '/app/Models/Internship.php',
+        'App\\Models\\City' => __DIR__ . '/../..' . '/app/Models/City.php',
         'App\\Models\\Gheibat' => __DIR__ . '/../..' . '/app/Models/Gheibat.php',
         'App\\Models\\Helpprofessor' => __DIR__ . '/../..' . '/app/Models/Helpprofessor.php',
+        'App\\Models\\Internship' => __DIR__ . '/../..' . '/app/Models/Internship.php',
         'App\\Models\\Notification' => __DIR__ . '/../..' . '/app/Models/Notification.php',
         'App\\Models\\Place' => __DIR__ . '/../..' . '/app/Models/Place.php',
+        'App\\Models\\Professor' => __DIR__ . '/../..' . '/app/Models/Professor.php',
+        'App\\Models\\Province' => __DIR__ . '/../..' . '/app/Models/Province.php',
         'App\\Models\\Report' => __DIR__ . '/../..' . '/app/Models/Report.php',
+        'App\\Models\\School' => __DIR__ . '/../..' . '/app/Models/School.php',
         'App\\Models\\Student' => __DIR__ . '/../..' . '/app/Models/Student.php',
-        'App\\Professor' => __DIR__ . '/../..' . '/app/Models/Professor.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\Province' => __DIR__ . '/../..' . '/app/Models/Provinces.php',
-        'App\\School' => __DIR__ . '/../..' . '/app/Models/School.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
@@ -576,6 +584,13 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Complex\\Complex' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Complex.php',
         'Complex\\Exception' => __DIR__ . '/..' . '/markbaker/complex/classes/src/Exception.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
