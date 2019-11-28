@@ -60,23 +60,23 @@
                                 {{csrf_field()}}
                                 <div class="row mb-30">
                                     <div class="col-md-3">
-                                        <span>نام و نام خانوادگی : </span><span>محمد شاددل</span>
+                                    <span>نام و نام خانوادگی : </span><span>{{$studentItem->name}}{{" "}}{{$studentItem->family}}</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <span>شماره دانشجویی : </span><span>1258898765</span>
+                                        <span>شماره دانشجویی : </span><span>{{$studentItem->student_code}}</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <span>رشته : </span><span>آموزش ابتدایی</span>
+                                        <span>رشته : </span><span>{{$studentItem->reshte}}</span>
                                     </div>
                                     <div class="col-md-3">
-                                        <span>ترم : </span><span>6</span>
+                                        <span>ترم : </span><span>{{$studentItem->term}}</span>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
-                                            <select  name="" id="provinces" class="form-control">
+                                            <select  name="province" id="provinces" class="form-control">
                                                 <option value="" disabled="">--انتخاب کنید--</option>
                                                 @foreach ($provinces as $province)
                                                 <option value="{{$province->id}}">{{$province->title}}</option>
@@ -87,7 +87,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شهر</label>
-                                            <select id="cities" class="form-control">
+                                            <select name="city" id="cities" class="form-control">
+                                                <option value="">--انتخاب کنید--</option>
                                             </select>
                                         </div>
                                     </div>
@@ -96,7 +97,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام دبستان</label>
-                                            <select id="schools" class="form-control">
+                                            <select name="school" id="schools" class="form-control">
+                                                <option value="">--انتخاب کنید--</option>
                                             </select>
                                         </div>
                                     </div>
@@ -117,7 +119,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تاریخ</label><br>
-                                            <input type="date">
+                                            <input name="startDate" class="form-control" type="date">
                                         </div>
                                     </div>
                                 </div>

@@ -208,7 +208,7 @@
 
                                                 @endif</td>
                                                 <td class="text-nowrap">
-                                                    <a href="{{route('ostad-darkhast-karvarzi-nahaii')}}" class="mr-10"
+                                                    <a href="{{route('ostad-darkhast-karvarzi-nahaii',[$student->id])}}" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="ثبت">
                                                         <i class="fa fa-check" style="color:#2ecd99;"></i>
                                                     </a>
