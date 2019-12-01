@@ -131,8 +131,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ادرس</label>
-                                                    <input type="text" id="term" name="term" class="form-control"
-                                                            required="" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
+                                                    <input type="text" id="term" name="term" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

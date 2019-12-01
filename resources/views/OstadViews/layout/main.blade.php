@@ -11,6 +11,7 @@
 @yield('meta')
 <!-- Custom CSS -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/jquery.toast.min.css">
     @yield('stylesheet')
 </head>
 <body>
@@ -591,6 +592,8 @@
     </div>
     <!-- /Main Content -->
 </div>
+
+<div class="jq-toast-wrap top-right"><div class="jq-toast-single jq-has-icon jq-icon-success" style="text-align: left; display: none;"><span class="jq-toast-loader jq-toast-loaded" style="-webkit-transition: width 3.1s ease-in;                       -o-transition: width 3.1s ease-in;                       transition: width 3.1s ease-in;                       background-color: #f0c541;"></span><span class="close-jq-toast-single">×</span><h2 class="jq-toast-heading">به Philbert خوش آمدید</h2>ترجمه و راستچینی توسط ملت وب</div></div>
 <!-- /#wrapper -->
 <!-- jQuery -->
 <script src="/js/jquery.min.js"></script>
@@ -604,6 +607,9 @@
 <!-- Init JavaScript -->
 <script src="/js/init.js"></script>
 <script src="/js/dashboard-data.js"></script>
+<script src="/js/jquery.toast.min.js"></script>
 @yield('script')
+
+
 </body>
 </html>

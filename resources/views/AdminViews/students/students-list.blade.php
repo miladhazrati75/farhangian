@@ -6,9 +6,9 @@
     <!-- Main Content -->
     <!--start row-->
     @include('partials.success')
-<script src="/js/myJq.js"></script>
+    <script src="/js/myJq.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".details").click(function () {
                 var userId = $(this).attr("id");
                 var count = $(this).attr("count");
@@ -66,8 +66,6 @@
             });
 
 
-
-
         });
     </script>
 
@@ -109,9 +107,10 @@
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                         <a class="import"
-                            data-toggle="tooltip"
-                            data-original-title="import">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport" data-toggle="modal"><i
+                           data-toggle="tooltip"
+                           data-original-title="import">
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport"
+                                 data-toggle="modal"><i
                                     class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
                             </div>
                         </a>
@@ -131,7 +130,8 @@
                                     <input type="text" id="example-input1-group4" name="example-input1-group4"
                                            class="form-control searchInput" placeholder="جستجو">
                                     <span class="input-group-btn">
-										<button type="submit" class="btn searchSubmit" id="span-btn" data-toggle="modal" data-target="#exampleModalsearch"><i
+										<button type="submit" class="btn searchSubmit" id="span-btn" data-toggle="modal"
+                                                data-target="#exampleModalsearch"><i
                                                 class="fa fa-search"></i></button>
 									</span>
                                 </div>
@@ -144,7 +144,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <!-- Modal search -->
-                        <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -169,23 +170,23 @@
                                                                 <th>شماره موبایل</th>
                                                                 <th>رشته</th>
                                                                 <th>ترم</th>
-                                                                
+
                                                             </tr>
                                                             </thead>
                                                             <tbody>
 
 
-                                                                    <tr>
-                                                                        <td id="radifCount"></td>
-                                                                        <td id="namvafamily"></td>
-                                                                        <td id="daneshjoo_code"></td>
-                                                                        <td id="code_melli"></td>
-                                                                        <td id="mobile"></td>
-                                                                        <td id="reshte"></td>
-                                                                        <td id="student_term"></td>
-                                                                        <td></td>
-{{--                                                                        {{$i++}}--}}
-                                                                    </tr>
+                                                            <tr>
+                                                                <td id="radifCount"></td>
+                                                                <td id="namvafamily"></td>
+                                                                <td id="daneshjoo_code"></td>
+                                                                <td id="code_melli"></td>
+                                                                <td id="mobile"></td>
+                                                                <td id="reshte"></td>
+                                                                <td id="student_term"></td>
+                                                                <td></td>
+                                                                {{--                                                                        {{$i++}}--}}
+                                                            </tr>
                                                             </tbody>
                                                         </table>
                                                         <!--end table list daneshjoyan-->
@@ -197,14 +198,15 @@
                                     <!--end table list daneshjoyan-->
 
 
-
                                     <!--start modal details-->
-                                    <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="exampleModalLabel">مشخصات دانشجو</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
@@ -288,7 +290,8 @@
                                                        data-toggle="tooltip"
                                                        data-original-title="details">
                                                         <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
-                                                           data-target="#exampleModaldetails" style="color: orange;"></i>
+                                                           data-target="#exampleModaldetails"
+                                                           style="color: orange;"></i>
                                                     </a>
                                                 </td>
                                                 {{$i++}}
@@ -315,41 +318,41 @@
                                                     <div class="panel-body">
                                                         <div class="table-wrap mt-5">
                                                             <div class="table-responsive">
-                                                <table class="table table-striped mb-0">
-                                                    <tr>
-                                                        <td class="header-table">نام و نام خانوادگی</td>
-                                                        <td id="name"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">شماره دانشجویی</td>
-                                                        <td id="student_code"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">شماره ملی</td>
-                                                        <td id="national_code"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">شماره موبایل</td>
-                                                        <td id="phone"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">رشته</td>
-                                                        <td id="subject"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">ترم</td>
-                                                        <td id="term"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">پسورد</td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="header-table">اردس</td>
-                                                        <td></td>
-                                                    </tr>
-                                                </table>
-                                            </div>
+                                                                <table class="table table-striped mb-0">
+                                                                    <tr>
+                                                                        <td class="header-table">نام و نام خانوادگی</td>
+                                                                        <td id="name"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">شماره دانشجویی</td>
+                                                                        <td id="student_code"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">شماره ملی</td>
+                                                                        <td id="national_code"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">شماره موبایل</td>
+                                                                        <td id="phone"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">رشته</td>
+                                                                        <td id="subject"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">ترم</td>
+                                                                        <td id="term"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">پسورد</td>
+                                                                        <td id="password"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">آدرس</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -361,39 +364,45 @@
                                 <!--end modal details-->
                                 <!--start modal import-->
                                 <div class="modal fade" id="exampleModalimport" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
-                                        <button type="button" class="close" data-dismiss="modal"
-                                                aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="panel-wrapper collapse in">
-                                            <div class="panel-body">
-                                                <div class="table-wrap mt-5">
-                                                    <div class="table-responsive">
-                                                        <form action="{{ route('import.student.info') }}" method="post" enctype="multipart/form-data">
-                                                        {{csrf_field()}}
-                                                            <div class="form-group">
-                                                                <label class="control-label mb-10">انتخاب کنید:</label>
-                                                                <input class="form-control" type="file" name="file" id="file"  required="">
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="panel-wrapper collapse in">
+                                                    <div class="panel-body">
+                                                        <div class="table-wrap mt-5">
+                                                            <div class="table-responsive">
+                                                                <form action="{{ route('import.student.info') }}"
+                                                                      method="post" enctype="multipart/form-data">
+                                                                    {{csrf_field()}}
+                                                                    <div class="form-group">
+                                                                        <label class="control-label mb-10">انتخاب
+                                                                            کنید:</label>
+                                                                        <input class="form-control" type="file"
+                                                                               name="file" id="file" required="">
+                                                                    </div>
+                                                                    <br>
+                                                                    <button
+                                                                        class="btn btn-success btn-icon left-icon mr-10 pull-left">
+                                                                        <i
+                                                                            class="fa fa-check"></i> <span>آپلود</span>
+                                                                    </button>
+                                                                </form>
                                                             </div>
-                                                            <br>
-                                                            <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
-                                                                class="fa fa-check"></i> <span>آپلود</span></button>
-                                                        </form>
-                                    </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
-
-                                </div>
-                                </div>
                                 </div>
                                 <!--end modal import-->
 

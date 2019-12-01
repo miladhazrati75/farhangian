@@ -365,6 +365,5 @@
         </div>
     </div>
     <!--end modal hazf-->
-
     <!-- /Main Content -->
 @stop
