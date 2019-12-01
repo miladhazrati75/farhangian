@@ -171,14 +171,17 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @if($internships && count($internships)>0)
+                                        {{$i=1}}
+                                        @foreach ($internships as $internship)
                                     <tr>
                                         <td>1</td>
-                                        <td>محمد شاددل</td>
-                                        <td>4564566544</td>
-                                        <td>آموزش ابتدایی</td>
-                                        <td>5</td>
-                                        <td>بجنورد</td>
-                                        <td>دبستان شاهد</td>
+                                    <td>{{$internship->student->name}}{{" "}}{{$internship->student->family}}</td>
+                                        <td>{{$internship->student->student_code}}</td>
+                                        <td>{{$internship->student->reshte}}</td>
+                                        <td>{{$internship->student->term}}</td>
+                                        <td>{{$internship->school->city->title}}</td>
+                                        <td>{{$internship->school->school_name}}</td>
                                         <td class="text-nowrap">
                                             <a href="" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                 <i class="fa fa-close text-danger"></i>
@@ -187,8 +190,10 @@
                                                 <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal" data-target="#exampleModal" style="color: orange;"></i>
                                             </a>
                                         </td>
-
+                                        {{$i++}}
                                     </tr>
+                                    @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                                 <!--end table list daneshjoyan-->

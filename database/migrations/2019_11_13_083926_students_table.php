@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class StudentsInUni extends Migration
+class StudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -24,12 +24,12 @@ class StudentsInUni extends Migration
             $table->string('reshte');
             $table->string('term');
             $table->string('student_code', 20)->unique();
-            $table->string('professor_name')->nullable();
-            $table->date('start_of_internship')->nullable();
-            $table->date('end_of_internship')->nullable();
-            $table->text('school_address_of_internship')->nullable();
+            $table->bigInteger('professorID')->unsigned()->nullable();
+            $table->bigInteger('schoolID')->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('schoolID')->references('id')->on('schools');
+            $table->foreign('professorID')->references('id')->on('professors');
         });
     }
 

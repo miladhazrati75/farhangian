@@ -16,7 +16,7 @@ Route::get('/', 'DashboardController@Dashbord')->name('masterpage');
 
 Route::get('/list-student', 'Admin\StudentsController@allOfStudents')->name('student-list');
 
-Route::get('/delete/student/{student_id}', 'Admin\StudentsController@deleteStudent')->name('delete.student');
+Route::post('/delete/student', 'Admin\StudentsController@deleteStudent')->name('delete.student');
 
 Route::get('/details/student/', 'Admin\StudentsController@details')->name('details.student');
 Route::get('/search/student/', 'Admin\StudentsController@searchStudent');
@@ -124,13 +124,15 @@ Route::get('/gheibat-karvarzi', 'Student\GheibatController@list')->name('gheibat
 
 //////////////////////Start Ostad CMS
 Route::get('/ostad-master', 'Ostad\DashboardController@Dashboard')->name('ostad-master');
-Route::get('/ostad/darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@karvarzi')->name('ostad-darkhast-karvarzi');
+Route::get('/ostad/darkhast-karvarzi', 'Ostad\InternshipController@index')->name('ostad-darkhast-karvarzi');
 Route::get('/ostad/list-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@sabt_karvarzi')->name('ostad-darkhast-karvarzi-list');
-Route::get('/ostad/nahaii-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
+Route::get('/ostad/nahaii-darkhast-karvarzi/{student_id}', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
+Route::post('/ostad/nahaii-darkhast-karvarzi/{student_id}', 'Ostad\Karvarzi_darkhastController@sabtnahaii_karvarzi')->name('ostad-darkhast-karvarzi-sabtnahaii');
 
-Route::get('/ostad/sabtshodeh-karvarzi','Ostad\Sabt_shodehController@sabt')->name('ostad-master');
-//////////////////////Start Ostad CMS
-
+Route::get('/ostad/sabtshodeh-karvarzi', 'Ostad\Sabt_shodehController@sabt')->name('ostad-sabtshodeh');
+//////////////////////end Ostad CMS
+Route::get('/getCities', 'CitiesController@getCities')->name('get-cities');
+Route::get('/getSchools', 'SchoolsController@getSchools')->name('get-schools');
 
 //////////////////////Start School CMS
 Route::get('/school-master', 'School\DashboardController@Dashboard')->name('School-master');
