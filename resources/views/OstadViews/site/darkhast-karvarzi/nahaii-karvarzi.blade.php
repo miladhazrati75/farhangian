@@ -118,7 +118,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">تاریخ</label><br>
+                                            <label class="control-label mb-10">از تاریخ</label><br>
                                             <input name="startDate" class="form-control" type="date">
                                         </div>
                                     </div>

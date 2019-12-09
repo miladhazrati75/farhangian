@@ -175,7 +175,7 @@
                                         {{$i=1}}
                                         @foreach ($internships as $internship)
                                     <tr>
-                                        <td>1</td>
+                                        <td>{{$i}}</td>
                                     <td>{{$internship->student->name}}{{" "}}{{$internship->student->family}}</td>
                                         <td>{{$internship->student->student_code}}</td>
                                         <td>{{$internship->student->reshte}}</td>
@@ -183,7 +183,7 @@
                                         <td>{{$internship->school->city->title}}</td>
                                         <td>{{$internship->school->school_name}}</td>
                                         <td class="text-nowrap">
-                                            <a href="" class="mr-10" data-toggle="tooltip" data-original-title="delete">
+                                        <a href="{{route('ostad-delete-karvarzi',[$internship->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                 <i class="fa fa-close text-danger"></i>
                                             </a>
                                             <a data-toggle="tooltip" data-original-title="details">

@@ -3,6 +3,35 @@
     درخواست کارورزی
 @stop
 @section('content')
+<script src="/js/myJq.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#provinces").change(function (elem) {
+                var provinceID = $('#provinces option:selected').val();
+                console.log(provinceID);
+                $.get('/getCities', {provinceID: provinceID}, function (data) {
+                    var cityOptions = '<option value="">--انتخاب کنید--</option>'
+                    data.forEach(element => {
+                        cityOptions+='<option value="'+element.id+'">'+element.title+'</option>'
+                    });
+                    $("#cities").html(cityOptions);
+                });
+            });
+            $("#cities").change(function (elem) {
+                var cityID = $('#cities option:selected').val();
+                console.log(cityID);
+                $.get('/getSchools', {cityID: cityID}, function (data) {
+                    console.log(data);
+                    var schoolOptions = '<option value="">--انتخاب کنید--</option>'
+                    data.forEach(element => {
+                        schoolOptions+='<option value="'+element.id+'">'+element.school_name+'</option>'
+                    });
+                    $("#schools").html(schoolOptions);
+                });
+            });
+        });
+    </script>
+
     <!--start row-->
     <!-- Title -->
     <div class="row">
@@ -35,28 +64,19 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="" selected disabled>--انتخاب کنید--</option>
-                                                <option value="shomali">خراسان شمالی</option>
-                                                <option value="tehran">تهران</option>
-                                                <option value="tabriz">تبریز</option>
-                                                <option value="mazandaran">مازندران</option>
-                                                <option value="razavi">مشهد</option>
-                                                <option value="fars">فارس</option>
+                                            <select name="" id="provinces" class="form-control">
+                                                <option value="" disabled="">--انتخاب کنید--</option>
+                                                @foreach ($provinces as $province)
+                                                <option value="{{$province->id}}">{{$province->title}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شهر</label>
-                                            <select name="" id="" class="form-control">
+                                            <select name="" id="cities" class="form-control">
                                                 <option value="" selected disabled>--انتخاب کنید--</option>
-                                                <option value="bojnord">بجنورد</option>
-                                                <option value="esfarayen">اسفراین</option>
-                                                <option value="shirvan">شیروان</option>
-                                                <option value="ashkhane">آشخانه</option>
-                                                <option value="manesemelghan">مانه سملقان</option>
-                                                <option value="razjarghalan">رازجرگلان</option>
                                             </select>
                                         </div>
                                     </div>
@@ -65,14 +85,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام دبستان</label>
-                                            <select name="" id="" class="form-control">
+                                            <select name="" id="schools" class="form-control">
                                                 <option value="" selected disabled>--انتخاب کنید--</option>
-                                                <option value="">دبستان امید</option>
-                                                <option value="">دبستان پارسا</option>
-                                                <option value="">دبستان آرمیتا</option>
-                                                <option value="">دبستان شاهد</option>
-                                                <option value="">دبستان دانش</option>
-                                                <option value="">دبستان تلاش</option>
                                             </select>
                                         </div>
                                     </div>
