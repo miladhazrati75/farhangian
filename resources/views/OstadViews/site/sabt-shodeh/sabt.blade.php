@@ -163,10 +163,10 @@
                                         <th>ردیف</th>
                                         <th>نام و نام خانوادگی</th>
                                         <th>شماره دانشجویی</th>
-                                        <th>رشته</th>
                                         <th>ترم</th>
                                         <th>شهر</th>
                                         <th>نام مدرسه</th>
+                                        <th>وضعیت</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
                                     </thead>
@@ -178,10 +178,16 @@
                                         <td>{{$i}}</td>
                                     <td>{{$internship->student->name}}{{" "}}{{$internship->student->family}}</td>
                                         <td>{{$internship->student->student_code}}</td>
-                                        <td>{{$internship->student->reshte}}</td>
                                         <td>{{$internship->student->term}}</td>
                                         <td>{{$internship->school->city->title}}</td>
                                         <td>{{$internship->school->school_name}}</td>
+                                        <td>
+                                            @if ($internship->status == "ok")
+                                                <span class="badge badge-success">قطعی</span>
+                                            @else
+                                                <span class="badge badge-info">درخواست شده</span>
+                                            @endif
+                                        </td>
                                         <td class="text-nowrap">
                                         <a href="{{route('ostad-delete-karvarzi',[$internship->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                 <i class="fa fa-close text-danger"></i>

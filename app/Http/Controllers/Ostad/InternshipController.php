@@ -25,10 +25,11 @@ class InternshipController extends Controller
             'professorID' => 1,
             'schoolID' => request()->input('school'),
             'startDate' => request()->input('startDate'),
+            'status' => 'ok'
         ];
         $new_internship_object = Internship::create($internship_data);
         if ($new_internship_object && $new_internship_object instanceof Internship) {
-            return redirect()->route('ostad-sabtshodeh')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('ostad-sabtshodeh')->with('success', 'کارورزی دانشجوی مورد نظر با موفقیت اضافه شد');
         }
     }
 

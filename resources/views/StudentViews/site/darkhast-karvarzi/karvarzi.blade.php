@@ -60,12 +60,13 @@
                     <div class="panel-body">
                         <div class="form-wrap">
                             <form action="" method="post" style="padding: 22px">
+                                {{csrf_field()}}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
-                                            <select name="" id="provinces" class="form-control">
-                                                <option value="" disabled="">--انتخاب کنید--</option>
+                                            <select name="province" id="provinces" class="form-control">
+                                                <option value="">--انتخاب کنید--</option>
                                                 @foreach ($provinces as $province)
                                                 <option value="{{$province->id}}">{{$province->title}}</option>
                                                 @endforeach
@@ -75,7 +76,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شهر</label>
-                                            <select name="" id="cities" class="form-control">
+                                            <select name="city" id="cities" class="form-control">
                                                 <option value="" selected disabled>--انتخاب کنید--</option>
                                             </select>
                                         </div>
@@ -85,9 +86,15 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">نام دبستان</label>
-                                            <select name="" id="schools" class="form-control">
+                                            <select name="school" id="schools" class="form-control">
                                                 <option value="" selected disabled>--انتخاب کنید--</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">زمان پیشنهادی</label>
+                                            <input type="date" name="startDate" id="startDate" class="form-control">
                                         </div>
                                     </div>
                                 </div>

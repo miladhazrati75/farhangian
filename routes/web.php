@@ -114,6 +114,7 @@ Route::post('/profile-student', 'Student\ProfileController@updateUser')->name('e
 Route::get('/profile-student', 'Student\ProfileController@profileStudent')->name('profile-student');
 
 Route::get('/darkhast-karvarzi', 'Student\Karvarzi_darkhastController@karvarzi')->name('darkhast-karvarzi');
+Route::post('/darkhast-karvarzi', 'Student\Karvarzi_darkhastController@saveInternship')->name('darkhast-karvarzi');
 
 Route::get('/sabtshodeh-karvarzi', 'Student\Sabt_shodehController@sabt')->name('sabtshode-karvarzi');
 

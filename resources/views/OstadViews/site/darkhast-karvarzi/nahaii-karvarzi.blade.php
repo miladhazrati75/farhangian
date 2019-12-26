@@ -77,7 +77,7 @@
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
                                             <select  name="province" id="provinces" class="form-control">
-                                                <option value="" disabled="">--انتخاب کنید--</option>
+                                                <option value="">--انتخاب کنید--</option>
                                                 @foreach ($provinces as $province)
                                                 <option value="{{$province->id}}">{{$province->title}}</option>
                                                 @endforeach

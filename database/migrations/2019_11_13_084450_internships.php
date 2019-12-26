@@ -19,6 +19,7 @@ class Internships extends Migration
             $table->bigInteger('professorID')->unsigned();
             $table->bigInteger('schoolID')->unsigned();
             $table->string('startDate');
+            $table->string('status');
             $table->timestamps();
             $table->foreign('studentID')->references('id')->on('students');
             $table->foreign('professorID')->references('id')->on('professors');

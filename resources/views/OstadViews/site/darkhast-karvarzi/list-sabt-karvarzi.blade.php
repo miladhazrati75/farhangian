@@ -181,34 +181,41 @@
                                         <th>نام و نام خانوادگی</th>
                                         <th>شماره دانشجویی</th>
                                         <th>شماره ملی</th>
-                                        <th>رشته</th>
                                         <th>ترم</th>
                                         <th>شهر درخواستی</th>
+                                        <th>وضعیت</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        @if($students && count($students)>0)
+                                        @if($internships && count($internships)>0)
                                         {{$i=1}}
-                                        @foreach ($students as $student)
+                                        @foreach ($internships as $internship)
 
 
 
                                             <tr>
-                                                <td id="radif">1</td>
-                                                <td id="namvafamily">{{$student->name}}{{" "}}{{$student->family}}</td>
-                                                <td id="daneshjoo_code">{{$student->student_code}}</td>
-                                                <td id="code_melli">{{$student->National_Code}}</td>
-                                                <td id="reshte">{{$student->reshte}}</td>
-                                            <td id="student_term">{{$student->term}}</td>
-                                                <td id="mobile">@if (isset($student->school->city))
-                                                    {{$student->school->city->title}}
-                                                @else
-                                                --
-
-                                                @endif</td>
+                                                <td id="radif">{{$i}}</td>
+                                                <td id="namvafamily">{{$internship->student->name}}{{" "}}{{$internship->student->family}}</td>
+                                                <td id="daneshjoo_code">{{$internship->student->student_code}}</td>
+                                                <td id="code_melli">{{$internship->student->National_Code}}</td>
+                                                <td id="student_term">{{$internship->student->term}}</td>
+                                                <td id="city">
+                                                    @if (isset($internship->school->city))
+                                                        {{$internship->school->city->title}}
+                                                    @else
+                                                    --
+                                                    @endif
+                                                </td>
+                                                <td id="status">
+                                                    @if ($internship->status == "requested")
+                                                        <span class="badge badge-info">درخواست شده</span>
+                                                    @else
+                                                        <span class="badge badge-success">قطعی</span>
+                                                    @endif
+                                                </td>
                                                 <td class="text-nowrap">
-                                                    <a href="{{route('ostad-darkhast-karvarzi-nahaii',[$student->id])}}" class="mr-10"
+                                                    <a href="{{route('ostad-darkhast-karvarzi-nahaii',[$internship->student->id])}}" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="ثبت">
                                                         <i class="fa fa-check" style="color:#2ecd99;"></i>
                                                     </a>

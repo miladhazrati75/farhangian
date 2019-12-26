@@ -13,8 +13,10 @@ class Karvarzi_darkhastController extends Controller
     public function sabt_karvarzi()
     {
         $professorID = 1;
-        $students = Student::where('professorID', $professorID)->get();
-        return view('OstadViews/site/darkhast-karvarzi/list-sabt-karvarzi', compact('students'));
+        //$students = Student::where('professorID', $professorID)->get();
+        $internships = Internship::with('school.city')->with('student')->where("professorID", $professorID)->get();
+        //dd($internships);
+        return view('OstadViews/site/darkhast-karvarzi/list-sabt-karvarzi', compact('internships'));
     }
     public function karvarzi()
     {
@@ -34,10 +36,11 @@ class Karvarzi_darkhastController extends Controller
             'professorID' => 1,
             'schoolID' => request()->input('school'),
             'startDate' => request()->input('startDate'),
+            'status' => 'ok'
         ];
-        $new_internship_object = Internship::create($internship_data);
+        $new_internship_object = Internship::where("studentID", $student_id)->update($internship_data);
         if ($new_internship_object && $new_internship_object instanceof Internship) {
-            return redirect()->route('ostad-sabtshodeh')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('ostad-sabtshodeh')->with('success', 'کارورزی دانشجوی مورد نظر با موفقیت قطعی شد');
         }
     }
 }
