@@ -130,7 +130,7 @@ Route::post('/ostad/darkhast-karvarzi', 'Ostad\InternshipController@saveInternsh
 Route::get('/ostad/list-darkhast-karvarzi', 'Ostad\Karvarzi_darkhastController@sabt_karvarzi')->name('ostad-darkhast-karvarzi-list');
 Route::get('/ostad/nahaii-darkhast-karvarzi/{student_id}', 'Ostad\Karvarzi_darkhastController@nahaii_karvarzi')->name('ostad-darkhast-karvarzi-nahaii');
 Route::post('/ostad/nahaii-darkhast-karvarzi/{student_id}', 'Ostad\Karvarzi_darkhastController@sabtnahaii_karvarzi')->name('ostad-darkhast-karvarzi-sabtnahaii');
-Route::get('/ostad/delete-karvarzi/{internshipID}', 'Ostad\InternshipController@deleteInternship')->name('ostad-delete-karvarzi');
+Route::get('/ostad/delete-karvarzi/{studentID}/{internshipID}', 'Ostad\InternshipController@deleteInternship')->name('ostad-delete-karvarzi');
 Route::get('/ostad/sabtshodeh-karvarzi', 'Ostad\Sabt_shodehController@sabt')->name('ostad-sabtshodeh');
 //////////////////////end Ostad CMS
 Route::get('/getCities', 'CitiesController@getCities')->name('get-cities');

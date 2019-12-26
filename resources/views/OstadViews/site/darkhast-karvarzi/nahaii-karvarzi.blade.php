@@ -124,7 +124,10 @@
                                     </div>
                                 </div>
                                 <div class="form-actions mt-20">
-                                    <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i class="fa fa-check"></i> <span>ثبت درخواست</span></button>
+                                    <button class="btn btn-success btn-icon left-icon mr-10 pull-left">
+                                        <i class="fa fa-check"></i>
+                                        <span>ثبت درخواست</span>
+                                    </button>
                                     <a href="{{route('ostad-darkhast-karvarzi-list')}}">
                                         <button type="button" class="btn btn-warning pull-left">لغو</button>
                                     </a>

@@ -507,6 +507,7 @@ class ComposerStaticInit62f55baa9b18b57af08cc6d0e4c9ac7a
         'App\\Http\\Controllers\\InternshipController' => __DIR__ . '/../..' . '/app/Http/Controllers/InternshipController.php',
         'App\\Http\\Controllers\\NotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/NotificationController.php',
         'App\\Http\\Controllers\\Ostad\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/DashboardController.php',
+        'App\\Http\\Controllers\\Ostad\\InternshipController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/InternshipController.php',
         'App\\Http\\Controllers\\Ostad\\Karvarzi_darkhastController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/Karvarzi_darkhastController.php',
         'App\\Http\\Controllers\\Ostad\\Sabt_shodehController' => __DIR__ . '/../..' . '/app/Http/Controllers/Ostad/Sabt_shodehController.php',
         'App\\Http\\Controllers\\ProvincesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProvincesController.php',

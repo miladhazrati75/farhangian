@@ -29,6 +29,7 @@ return array(
     'App\\Http\\Controllers\\InternshipController' => $baseDir . '/app/Http/Controllers/InternshipController.php',
     'App\\Http\\Controllers\\NotificationController' => $baseDir . '/app/Http/Controllers/NotificationController.php',
     'App\\Http\\Controllers\\Ostad\\DashboardController' => $baseDir . '/app/Http/Controllers/Ostad/DashboardController.php',
+    'App\\Http\\Controllers\\Ostad\\InternshipController' => $baseDir . '/app/Http/Controllers/Ostad/InternshipController.php',
     'App\\Http\\Controllers\\Ostad\\Karvarzi_darkhastController' => $baseDir . '/app/Http/Controllers/Ostad/Karvarzi_darkhastController.php',
     'App\\Http\\Controllers\\Ostad\\Sabt_shodehController' => $baseDir . '/app/Http/Controllers/Ostad/Sabt_shodehController.php',
     'App\\Http\\Controllers\\ProvincesController' => $baseDir . '/app/Http/Controllers/ProvincesController.php',

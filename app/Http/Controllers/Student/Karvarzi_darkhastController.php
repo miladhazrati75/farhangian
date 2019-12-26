@@ -6,13 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Province;
 use App\Models\Internship;
+use App\Models\StudentNotification;
 
 class Karvarzi_darkhastController extends Controller
 {
     public function karvarzi()
     {
         $provinces = Province::all();
-        return view('StudentViews/site/darkhast-karvarzi/karvarzi', compact("provinces"));
+        $studentID = 1;
+        $count = StudentNotification::where("studentID", $studentID)->count();
+        $notifications = StudentNotification::where("studentID", $studentID)->get();
+        return view('StudentViews/site/darkhast-karvarzi/karvarzi', compact("provinces","notifications", "count"));
     }
     public function saveInternship()
     {

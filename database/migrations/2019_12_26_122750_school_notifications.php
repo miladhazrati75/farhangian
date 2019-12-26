@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Notifications extends Migration
+class SchoolNotifications extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class Notifications extends Migration
      */
     public function up()
     {
-        Schema::create('studentNotifications', function (Blueprint $table) {
+        Schema::create('schoolNotifications', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('studentID')->unsigned();
+            $table->bigInteger('schoolID')->unsigned();
             $table->string('body');
             $table->string('type');
             $table->timestamps();
-            $table->foreign('studentID')->references('id')->on('students');
+            $table->foreign('schoolID')->references('id')->on('schools');
         });
     }
 
@@ -30,6 +30,6 @@ class Notifications extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studentNotifications');
+        Schema::dropIfExists('schoolNotifications');
     }
 }

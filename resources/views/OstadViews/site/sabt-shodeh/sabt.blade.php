@@ -189,7 +189,7 @@
                                             @endif
                                         </td>
                                         <td class="text-nowrap">
-                                        <a href="{{route('ostad-delete-karvarzi',[$internship->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="delete">
+                                        <a href="{{route('ostad-delete-karvarzi',[$internship->student->id,$internship->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="delete">
                                                 <i class="fa fa-close text-danger"></i>
                                             </a>
                                             <a data-toggle="tooltip" data-original-title="details">

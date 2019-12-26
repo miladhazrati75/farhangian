@@ -53,7 +53,7 @@
                 <li class="dropdown alert-drp">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
                             class="zmdi zmdi-notifications top-nav-icon"></i><span
-                            class="top-nav-icon-badge">5</span></a>
+                    class="top-nav-icon-badge">{{$count}}</span></a>
                     <ul class="dropdown-menu alert-dropdown" data-dropdown-in="bounceIn" data-dropdown-out="bounceOut">
                         <li>
                             <div class="notification-box-head-wrap">
@@ -65,82 +65,49 @@
                         </li>
                         <li>
                             <div class="streamline message-nicescroll-bar">
+                                @foreach ($notifications as $notification)
+                                @if ($notification->type == "internship")
                                 <div class="sl-item">
                                     <a href="#">
                                         <div class="icon bg-green">
                                             <i class="zmdi zmdi-flag"></i>
                                         </div>
                                         <div class="sl-content">
-                                       <span class="inline-block capitalize-font  pull-left truncate head-notifications">
-                                       اشتراک جدید ایجاد شد</span>
+                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications">
+                                                {{$notification->body}}
+                                            </span>
                                             <span class="inline-block font-11  pull-right notifications-time">2pm</span>
                                             <div class="clearfix"></div>
-                                            <p class="truncate">مشتری شما برای طرح پایه مشترک شده است. مشتری 25 دلار در
+                                            <p class="truncate">
+                                                مشتری شما برای طرح پایه مشترک شده است. مشتری 25 دلار در
                                                 ماه پرداخت خواهد کرد.
                                             </p>
                                         </div>
                                     </a>
                                 </div>
                                 <hr class="light-grey-hr ma-0"/>
+                                @else
                                 <div class="sl-item">
                                     <a href="#">
-                                        <div class="icon bg-yellow">
-                                            <i class="zmdi zmdi-trending-down"></i>
+                                        <div class="icon bg-green">
+                                            <i class="zmdi zmdi-flag"></i>
                                         </div>
                                         <div class="sl-content">
-                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">سرور # 2 پاسخ نمی دهد</span>
-                                            <span class="inline-block font-11 pull-right notifications-time">1pm</span>
+                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications">
+                                                {{$notification->body}}
+                                            </span>
+                                            <span class="inline-block font-11  pull-right notifications-time">2pm</span>
                                             <div class="clearfix"></div>
-                                            <p class="truncate">برخی از خطاهای فنی رخ داده باید حل شوند</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <hr class="light-grey-hr ma-0"/>
-                                <div class="sl-item">
-                                    <a href="#">
-                                        <div class="icon bg-blue">
-                                            <i class="zmdi zmdi-email"></i>
-                                        </div>
-                                        <div class="sl-content">
-                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications">2 پیام جدید</span>
-                                            <span class="inline-block font-11  pull-right notifications-time">4pm</span>
-                                            <div class="clearfix"></div>
-                                            <p class="truncate"> آخرین پرداختی برای اشتراک G Suite Basic شما انجام
-                                                نشد
+                                            <p class="truncate">
+                                                مشتری شما برای طرح پایه مشترک شده است. مشتری 25 دلار در
+                                                ماه پرداخت خواهد کرد.
                                             </p>
                                         </div>
                                     </a>
                                 </div>
                                 <hr class="light-grey-hr ma-0"/>
-                                <div class="sl-item">
-                                    <a href="#">
-                                        <div class="sl-avatar">
-                                            <img class="img-responsive" src="/img/download.jpg" alt="avatar"/>
-                                        </div>
-                                        <div class="sl-content">
-                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications">متن ساختگی</span>
-                                            <span class="inline-block font-11  pull-right notifications-time">1pm</span>
-                                            <div class="clearfix"></div>
-                                            <p class="truncate">متن ساختگی با تولید سادگی از صنعت چاپ و با از گرافیک
-                                                است.
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <hr class="light-grey-hr ma-0"/>
-                                <div class="sl-item">
-                                    <a href="#">
-                                        <div class="icon bg-red">
-                                            <i class="zmdi zmdi-storage"></i>
-                                        </div>
-                                        <div class="sl-content">
-                                            <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-danger">99٪ فضای سرور اشغال شده است</span>
-                                            <span class="inline-block font-11  pull-right notifications-time">1pm</span>
-                                            <div class="clearfix"></div>
-                                            <p class="truncate">متن ساختگی</p>
-                                        </div>
-                                    </a>
-                                </div>
+                                @endif
+                                @endforeach
                             </div>
                         </li>
                         <li>
