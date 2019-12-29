@@ -2430,7 +2430,8 @@ button.fc-agendaWeek-button, .fc-prev-button, .fc-next-button, .fc-today-button 
       color: #212121;
       padding: 7px 15px; }
       .fixed-sidebar-left .side-nav > li > a:hover {
-        background: rgba(33, 33, 33, 0.05); }
+        background: rgba(33, 33, 33, 0.05);
+      }
       .fixed-sidebar-left .side-nav > li > a:focus, .fixed-sidebar-left .side-nav > li > a:active {
         background: rgba(33, 33, 33, 0.05);
         color: #212121; }
