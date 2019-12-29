@@ -77,7 +77,7 @@
                                         <div class="form-group">
                                             <label class="control-label mb-10">استان</label>
                                             <select  name="province" id="provinces" class="form-control">
-                                                <option value="" disabled="">--انتخاب کنید--</option>
+                                                <option value="">--انتخاب کنید--</option>
                                                 @foreach ($provinces as $province)
                                                 <option value="{{$province->id}}">{{$province->title}}</option>
                                                 @endforeach
@@ -124,7 +124,10 @@
                                     </div>
                                 </div>
                                 <div class="form-actions mt-20">
-                                    <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i class="fa fa-check"></i> <span>ثبت درخواست</span></button>
+                                    <button class="btn btn-success btn-icon left-icon mr-10 pull-left">
+                                        <i class="fa fa-check"></i>
+                                        <span>ثبت درخواست</span>
+                                    </button>
                                     <a href="{{route('ostad-darkhast-karvarzi-list')}}">
                                         <button type="button" class="btn btn-warning pull-left">لغو</button>
                                     </a>

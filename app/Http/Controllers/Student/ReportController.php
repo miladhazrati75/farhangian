@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Report;
+use App\Models\StudentNotification;
 
 class ReportController extends Controller
 {
     public function report()
     {
-        return view('StudentViews/site/report-karvarzi/report');
+        $studentID = 1;
+        $count = StudentNotification::where("studentID", $studentID)->count();
+        $notifications = StudentNotification::where("studentID", $studentID)->get();
+        return view('StudentViews/site/report-karvarzi/report', compact('notifications', 'count'));
     }
     public function createReport()
     {
