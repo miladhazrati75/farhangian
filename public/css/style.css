@@ -993,7 +993,7 @@ ul.uo-list {
 button.fc-month-button.fc-state-default.fc-corner-left,
 button.fc-agendaWeek-button, .fc-prev-button, .fc-next-button, .fc-today-button {
   color: #fff;
-  padding: 10px 25px;
+  padding: 7px 22px;
   text-transform: capitalize;
   border-radius: 2px;
   outline: none;
