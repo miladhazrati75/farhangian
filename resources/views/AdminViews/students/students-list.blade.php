@@ -68,8 +68,6 @@
 
         });
     </script>
-
-
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -83,7 +81,6 @@
         </nav>
     </div>
     <!-- /Title -->
-
     <!--end row-->
     <!-- Row -->
     <div class="row">
@@ -94,14 +91,14 @@
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                         <a href="{{route('download.student.info')}}">
                             <div class="btn btn-warning btn-rounded btn-anim mt-5"><i
-                                    class="fa fa-download"></i><span class="btn-text">دانلود</span>
+                                    class="fa fa-download"></i><span class="btn-text font-13">دانلود</span>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                         <a href="{{route('add.get.student')}}">
                             <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
-                                    class="fa fa-plus"></i><span class="btn-text">افزودن</span>
+                                    class="fa fa-plus"></i><span class="btn-text font-13">افزودن</span>
                             </div>
                         </a>
                     </div>
@@ -111,34 +108,28 @@
                            data-original-title="import">
                             <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport"
                                  data-toggle="modal"><i
-                                    class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
+                                    class="fa fa-plus"></i><span class="btn-text font-13">اکسل +</span>
                             </div>
                         </a>
                     </div>
-
                     <div class="col-lg-5"></div>
-
-
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="row">
                             <div class="col-xs-2">
-
                             </div>
-
                             <div class="col-xs-8">
                                 <div class="input-group mb-0 mt-5">
                                     <input type="text" id="example-input1-group4" name="example-input1-group4"
                                            class="form-control searchInput" placeholder="جستجو">
                                     <span class="input-group-btn">
-										<button type="submit" class="btn searchSubmit" id="span-btn" data-toggle="modal"
-                                                data-target="#exampleModalsearch"><i
-                                                class="fa fa-search"></i></button>
-									</span>
+                        <button type="submit" class="btn searchSubmit" id="span-btn" data-toggle="modal"
+                                data-target="#exampleModalsearch"><i
+                                class="fa fa-search"></i></button>
+                        </span>
                                 </div>
                             </div>
                             <div class="col-xs-2"></div>
                         </div>
-
                     </div>
                 </div>
                 <div class="row">
@@ -163,21 +154,17 @@
                                                         <table class="table table-striped mb-0">
                                                             <thead>
                                                             <tr>
-                                                                <th>ردیف</th>
+
                                                                 <th>نام و نام خانوادگی</th>
                                                                 <th>شماره دانشجویی</th>
                                                                 <th>شماره ملی</th>
                                                                 <th>شماره موبایل</th>
                                                                 <th>رشته</th>
                                                                 <th>ترم</th>
-
                                                             </tr>
                                                             </thead>
                                                             <tbody>
-
-
                                                             <tr>
-                                                                <td id="radifCount"></td>
                                                                 <td id="namvafamily"></td>
                                                                 <td id="daneshjoo_code"></td>
                                                                 <td id="code_melli"></td>
@@ -196,8 +183,6 @@
                                         </div>
                                     </div>
                                     <!--end table list daneshjoyan-->
-
-
                                     <!--start modal details-->
                                     <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -229,12 +214,9 @@
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
-
                                                             </div>
-
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +227,6 @@
                     </div>
                     <!--modal search end -->
                 </div>
-
                 <div class="panel-wrapper collapse in">
                     <div class="panel-body">
                         <div class="table-wrap mt-5">
@@ -268,7 +249,6 @@
                                     @if($students && count($students)>0)
                                         {{$i=1}}
                                         @foreach($students as $student)
-
                                             <tr>
                                                 <td id="radif">{{$i}}</td>
                                                 <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
@@ -279,16 +259,125 @@
                                                 <td id="student_term">{{$student->term}}</td>
                                                 <td class="text-nowrap">
                                                     <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
-                                                       data-toggle="tooltip" data-original-title="Edit">
+                                                       data-toggle="tooltip" data-original-title="ویرایش">
                                                         <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
                                                     </a>
-                                                    <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
-                                                       data-toggle="tooltip" data-original-title="delete">
-                                                        <i class="fa fa-close text-danger"></i>
-                                                    </a>
+                                                    <button type="submit" class="deleteItembtn" id="" data-toggle="modal"
+                                                            data-target="#exampleModaldeleteItem">
+                                                            <i class="fa fa-close text-danger"></i>
+                                                        <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
+                                                           data-toggle="tooltip" data-original-title="حذف">
+                                                        </a>
+                                                    </button>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <!--start modal hazf-->
+                                                            <div class="modal fade" id="exampleModaldeleteItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                                 aria-hidden="true">
+                                                                <div class="modal-dialog" style="width: 438px" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header modal-header-delete">
+                                                                            <h5 class="modal-title modal-title-delete" id="exampleModalLabel" style="">آیا می خواهید حذف کنید؟</h5>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <form method="post" action="#">
+                                                                                <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
+                                                                                      aria-expanded="true" style="">
+                                                                                    <div class="input-group">
+                                                                                        <label></label>
+                                                                                    </div>
+                                                                                </form>
+                                                                                <div class="modal-footer" style="margin-right: auto;display: table;">
+                                                                                    <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
+                                                                                       data-toggle="tooltip" data-original-title="حذف">
+                                                                                        <button type="submit" class="btn btn-danger btn-anim">
+                                                                                            <i class="fa fa-recycle" aria-hidden="true"></i>
+                                                                                            <span class="btn-text">حذف</span>
+                                                                                        </button>
+                                                                                    </a>
+
+                                                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">بستن</button>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--end modal hazf-->
+
+
+                                                            <!-- Modal search -->
+                                                            <div class="modal fade bd-example-modal-lg" id="" tabindex="-1" role="dialog"
+                                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">آیا برای حذف دانشجو مطمئن هستید؟</h5>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="panel-wrapper collapse in">
+                                                                                <div class="panel-body">
+                                                                                    <div class="mt-5">
+                                                                                        <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
+                                                                                           data-toggle="tooltip" data-original-title="حذف">
+                                                                                        بله حذف کن
+                                                                                        </a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--end table list daneshjoyan-->
+                                                                        <!--start modal details-->
+                                                                        <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog"
+                                                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                            <div class="modal-dialog" role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">مشخصات دانشجو</h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                                                aria-label="Close">
+                                                                                            <span aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="panel-wrapper collapse in">
+                                                                                            <div class="panel-body">
+                                                                                                <div class="table-wrap mt-5">
+                                                                                                    <div class="table-responsive">
+                                                                                                        <table class="table table-striped mb-0">
+                                                                                                            <thead>
+                                                                                                            <tr>
+                                                                                                                <th>نام و نام خانوادگی</th>
+                                                                                                                <th>شناسه استاد</th>
+                                                                                                                <th>شماره ملی</th>
+                                                                                                                <th>شماره موبایل</th>
+                                                                                                                <th>گرایش</th>
+                                                                                                            </tr>
+                                                                                                            </thead>
+                                                                                                            <tbody>
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!--modal search end -->
+                                                    </div>
+
                                                     <a id="{{$student->id}}" count="{{$i}}" class="details"
                                                        data-toggle="tooltip"
-                                                       data-original-title="details">
+                                                       data-original-title="جزئیات">
                                                         <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
                                                            data-target="#exampleModaldetails"
                                                            style="color: orange;"></i>
@@ -357,7 +446,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -400,12 +488,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                                 <!--end modal import-->
-
                             </div>
                         </div>
                     </div>
@@ -413,7 +499,6 @@
             </div>
         </div>
         <!-- /Bordered Table -->
-
     </div>
     <!-- /Row -->
     <!--start modal hazf-->
@@ -421,13 +506,11 @@
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
                 <div class="modal-body">
                     <form method="post" action="#">
                         <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
@@ -436,8 +519,6 @@
                                 <label>آیا می خواهید حذف کنید؟</label>
                             </div>
                         </form>
-
-
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-danger btn-anim" data-dismiss="modal"><i
                                     class="fa fa-recycle" aria-hidden="true"></i><span class="btn-text">delete</span>
@@ -446,15 +527,9 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
     <!--end modal hazf-->
-
     <!-- /Main Content -->
 @stop
-
-
-
-

@@ -108,13 +108,13 @@
                                                                 <td></td>
                                                                 <td></td>
                                                                 <td class="text-nowrap">
-                                                                    <a href="" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
+                                                                    <a href="" class="mr-10" data-toggle="tooltip" data-original-title="ویرایش">
                                                                         <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
                                                                     </a>
-                                                                    <a href=""class="mr-10" data-toggle="tooltip" data-original-title="delete">
+                                                                    <a href=""class="mr-10" data-toggle="tooltip" data-original-title="حذف">
                                                                         <i class="fa fa-close text-danger"></i>
                                                                     </a>
-                                                                    <a data-toggle="tooltip" data-original-title="details">
+                                                                    <a data-toggle="tooltip" data-original-title="جزئیات">
                                                                         <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal" data-target="#exampleModal" style="color: orange;"></i>
                                                                     </a>
                                                                 </td>
@@ -194,16 +194,16 @@
                                             <td>{{$helpprofessor->tahsilat}}</td>
                                             <td class="text-nowrap">
                                                 <a href="{{ route('edit-get-helpprofessor',[$helpprofessor->id]) }}" class="mr-10"
-                                                   data-toggle="tooltip" data-original-title="Edit">
+                                                   data-toggle="tooltip" data-original-title="ویرایش">
                                                     <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
                                                 </a>
                                             <a href="{{ route('delete.helpprofessor',[$helpprofessor->id]) }}" class="mr-10"
-                                                   data-toggle="tooltip" data-original-title="delete">
+                                                   data-toggle="tooltip" data-original-title="حذف">
                                                     <i class="fa fa-close text-danger"></i>
                                                 </a>
                                                 <a id="" class="details"
                                                    data-toggle="tooltip"
-                                                   data-original-title="details">
+                                                   data-original-title="جزئیات">
                                                     <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
                                                        data-target="#exampleModaldetails" style="color: orange;"></i>
                                                 </a>
