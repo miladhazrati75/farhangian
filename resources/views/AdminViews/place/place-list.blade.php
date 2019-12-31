@@ -156,43 +156,68 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="panel-wrapper collapse in">
-                                            <div class="panel-body">
-                                                <div class="table-wrap mt-5">
-                                                    <div class="table-responsive">
-                                                        <!--start table list daneshjoyan-->
-                                                        <table class="table table-striped mb-0">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>نام مدرسه</th>
-                                                                    <th> ادرس مدرسه</th>
-                                                                    <th>تلفن مدرسه</th>
-                                                                    <th>نام مدیر</th>
-                                                                    <th>نام معاون</th>
-                                                                    <th>ظرفیت پذیرش</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                                    <div class="panel-wrapper collapse in">
+                                        <div class="panel-body">
+                                            <div class="table-wrap mt-5">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped mb-0">
+                                                        <tr>
+                                                            <td class="header-table">نام مدرسه
+                                                            </td>
+                                                            <td id="nameSchool"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">ادرس مدرسه</td>
+                                                            <td id="address"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">تلفن مدرسه</td>
+                                                            <td id="tel"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">نام مدیر</td>
+                                                            <td id="manager"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">نام معاون</td>
+                                                            <td id="assistant"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">ظرفیت پذیرش</td>
+                                                            <td id="capacity"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="header-table">پسورد</td>
+                                                            <td></td>
+                                                        </tr>
 
-
-                                                                <tr>
-                                                                    <th id="nameSchool"></th>
-                                                                    <th id="address"></th>
-                                                                    <th id="tel"></th>
-                                                                    <th id="manager"></th>
-                                                                    <th id="assistant"></th>
-                                                                    <th id="capacity"></th>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <!--end table list daneshjoyan-->
-                                                    </div>
+                                                        <tr>
+                                                            <td class="header-table">عملیات</td>
+                                                            <td>
+                                                                <a href="" class="mr-10" data-toggle="tooltip"
+                                                                    data-original-title="Edit">
+                                                                    <i class="fa fa-pencil text-inverse"
+                                                                        style="color:#2ecd99;"></i>
+                                                                </a>
+                                                                <a href="" class="mr-10" data-toggle="tooltip"
+                                                                    data-original-title="delete">
+                                                                    <i class="fa fa-close text-danger"></i>
+                                                                </a>
+                                                                <a id="" class="details" data-toggle="tooltip"
+                                                                    data-original-title="details">
+                                                                    <i class="fa fa-calendar-check-o m-l-10"
+                                                                        data-toggle="modal"
+                                                                        data-target="#exampleModaldetails"
+                                                                        style="color: orange;"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--end table list daneshjoyan-->
-
+                                </div>
 
 
                                     <!--start modal details-->

@@ -55,7 +55,7 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">شناسه استاد</label>
+                                            <label class="control-label mb-10">کد پرسنلی</label>
                                             <input class="form-control" type="text" required="" name="Professor_Code">
                                         </div>
                                     </div>

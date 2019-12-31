@@ -53,7 +53,7 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">شناسه استاد</label>
+                                            <label class="control-label mb-10">کد پرسنلی</label>
                                             <input type="text" id="Professor_Code" name="Professor_Code" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->Professor_Code : '')}}">
                                         </div>
                                     </div>
