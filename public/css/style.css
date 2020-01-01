@@ -7652,6 +7652,17 @@ h1,p,b,h2,body,h3,h4,h6{font-family:CodeAdvance!important}
 .modal-body .table  .header-table{
   color: #171515c5;
 }
+.deleteItembtn{
+    border: none;
+    background: none;
+}
+.modal-header-delete{
+    border-bottom: none;
+}
+.modal-title-delete{
+    margin-top: 15px;
+    margin-right: 19px;
+}
 
 /**************************admin panel style******************************/
 .my-btn-close{

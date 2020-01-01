@@ -295,15 +295,15 @@
                                                 <td><!--نام معاون--> </td>
                                                 <td> {{$place->capacity}}</td>
                                                 <td class="text-nowrap">
-                                                    <a href="{{route('edit-get-place',[$place->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="Edit">
+                                                    <a href="{{route('edit-get-place',[$place->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="ویرایش">
                                                         <i class="fa fa-pencil text-inverse m-r-10" style="color:#2ecd99;"></i>
                                                     </a>
-                                                    <a href="{{route('delete.place',[$place->id])}}"class="mr-10" data-toggle="tooltip" data-original-title="delete">
+                                                    <a href="{{route('delete.place',[$place->id])}}"class="mr-10" data-toggle="tooltip" data-original-title="حذف">
                                                         <i class="fa fa-close text-danger"></i>
                                                     </a>
                                                     <a id="{{$place->id}}" count="{{$i}}" class="details"
                                                         data-toggle="tooltip"
-                                                        data-original-title="details">
+                                                        data-original-title="جزئیات">
                                                          <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
                                                             data-target="#exampleModaldetails" style="color: orange;"></i>
                                                      </a>
