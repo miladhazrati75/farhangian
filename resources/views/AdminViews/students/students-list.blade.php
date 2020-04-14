@@ -183,6 +183,14 @@
                                                                <td id="student_term"></td>
                                                             </tr>
                                                             <tr>
+                                                               <td class="header-table">پسورد</td>
+                                                               <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td class="header-table">ادرس</td>
+                                                               <td></td>
+                                                            </tr>
+                                                            <tr>
                                                             <td class="header-table">عملیات</td>
                                     <td>
                                                                 <a href=""
@@ -196,13 +204,7 @@
                                                                     data-original-title="delete">
                                                                     <i class="fa fa-close text-danger"></i>
                                                                 </a>
-                                                                <a id=""  class="details" data-toggle="tooltip"
-                                                                    data-original-title="details">
-                                                                    <i class="fa fa-calendar-check-o m-l-10"
-                                                                        data-toggle="modal"
-                                                                        data-target="#exampleModaldetails"
-                                                                        style="color: orange;"></i>
-                                                                </a>
+                                                        
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -278,6 +280,57 @@
                             <!--------------------end table list daneshjoyan--------------------->
 
                             <!-----------------------start modal details------------------------->
+<<<<<<< HEAD
+                            <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header row no-margin">
+                                    <h5 class="modal-title col-md-8" id="exampleModalLabel">مشخصات دانشجو</h5>
+                                    <button type="button" class="close my-btn-close col-md-2" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                        <div class="modal-body">
+                                            <div class="panel-wrapper collapse in">
+                                                <div class="panel-body">
+                                                    <div class="table-wrap mt-5">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped mb-0">
+                                                                <tr>
+                                                                    <td class="header-table">نام و نام خانوادگی</td>
+                                                                    <td id="name"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">شماره دانشجویی</td>
+                                                                    <td id="student_code"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">شماره ملی</td>
+                                                                    <td id="national_code"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">شماره موبایل</td>
+                                                                    <td id="phone"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">رشته</td>
+                                                                    <td id="subject"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">ترم</td>
+                                                                    <td id="term"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">پسورد</td>
+                                                                    <td id="password"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="header-table">آدرس</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </table>
+=======
                                 <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
                                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -329,6 +382,7 @@
                                                                     </tr>
                                                                 </table>
                                                             </div>
+>>>>>>> 3b8dc86d5400abba31758e128b3b615c777a3332
                                                         </div>
                                                     </div>
                                                 </div>

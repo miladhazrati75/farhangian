@@ -145,16 +145,18 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <!-- Modal search -->
+                        <!------------------------------ Modal search --------------------------------->
                         <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">لیست مدارس</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
+                                <div class="modal-header row no-margin">
+                                    <h5 class="modal-title col-md-8" id="exampleModalLabel">لیست اساتید
+                                    </h5>
+                                    <button type="button" class="close my-btn-close col-md-2" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
                                     <div class="modal-body">
                                     <div class="panel-wrapper collapse in">
                                         <div class="panel-body">
@@ -203,13 +205,7 @@
                                                                     data-original-title="delete">
                                                                     <i class="fa fa-close text-danger"></i>
                                                                 </a>
-                                                                <a id="" class="details" data-toggle="tooltip"
-                                                                    data-original-title="details">
-                                                                    <i class="fa fa-calendar-check-o m-l-10"
-                                                                        data-toggle="modal"
-                                                                        data-target="#exampleModaldetails"
-                                                                        style="color: orange;"></i>
-                                                                </a>
+                                                                
                                                             </td>
                                                         </tr>
                                                     </table>

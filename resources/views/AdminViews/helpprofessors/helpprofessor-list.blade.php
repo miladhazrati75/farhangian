@@ -173,13 +173,6 @@
                                                                     data-original-title="delete">
                                                                     <i class="fa fa-close text-danger"></i>
                                                                 </a>
-                                                                <a id="" class="details" data-toggle="tooltip"
-                                                                    data-original-title="details">
-                                                                    <i class="fa fa-calendar-check-o m-l-10"
-                                                                        data-toggle="modal"
-                                                                        data-target="#exampleModaldetails"
-                                                                        style="color: orange;"></i>
-                                                                </a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -257,7 +250,7 @@
             <div class="modal-body">
                 <form method="post" action="#">
                     <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
-                        aria-expanded="true" style="">
+                        aria-expanded="true">
                         <div class="input-group">
                             <label>آیا می خواهید حذف کنید؟</label>
                         </div>
