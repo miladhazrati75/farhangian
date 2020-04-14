@@ -9,16 +9,17 @@ use App\Http\Controllers\Controller;
 
 class PlaceController extends Controller
 {
-   public function placeList()
-   {
-        $places= Place::all();
-        return view('AdminViews/place/place-list',compact('places'));
+    public function placeList()
+    {
+        $places = Place::paginate(10);
+        return view('AdminViews/place/place-list', compact('places'));
     }
 
     public function addPlace()
     {
         return view('AdminViews/place/add-place');
     }
+
     public function details(Request $request)
     {
         if (\Illuminate\Support\Facades\Request::ajax()) {
@@ -37,17 +38,18 @@ class PlaceController extends Controller
             return $currentValue;
         }
     }
+
     public function createPlace(Request $request)
     {
         $place_data = [
             'nameSchool' => request()->input('name'),
-            'address' => request()-> input('address'),
-            'phone' => request()-> input('phone'),
-            'managerName' => request()-> input('managerName'),
-            'capacity' => request()-> input('capacity')
+            'address' => request()->input('address'),
+            'phone' => request()->input('phone'),
+            'managerName' => request()->input('managerName'),
+            'capacity' => request()->input('capacity')
         ];
         $new_place_object = Place::create($place_data);
-        if ($new_place_object && $new_place_object instanceof Place){
+        if ($new_place_object && $new_place_object instanceof Place) {
             return redirect()->route('place-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
         }
     }
@@ -76,26 +78,26 @@ class PlaceController extends Controller
 
     public function editPlace($place_id)
     {
-        if($place_id && ctype_digit($place_id)){
-            $place=Place::find($place_id);
-            if ($place && $place instanceof Place){
-                return view('AdminViews/place/edit',compact('place'));
+        if ($place_id && ctype_digit($place_id)) {
+            $place = Place::find($place_id);
+            if ($place && $place instanceof Place) {
+                return view('AdminViews/place/edit', compact('place'));
             }
         }
     }
 
     public function updatePlace($place_id)
     {
-        $place_data=[
-          'nameSchool' =>request()->input('nameSchool'),
-          'address' =>request()->input('address'),
-          'phone' =>request()->input('phone'),
-          'managerName' =>request()->input('managerName'),
-          'capacity' =>request()->input('capacity')
+        $place_data = [
+            'nameSchool' => request()->input('nameSchool'),
+            'address' => request()->input('address'),
+            'phone' => request()->input('phone'),
+            'managerName' => request()->input('managerName'),
+            'capacity' => request()->input('capacity')
         ];
         $place = Place::find($place_id);
         $place->update($place_data);
-        if($place){
+        if ($place) {
             return redirect()->route('place-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }

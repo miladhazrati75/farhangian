@@ -10,7 +10,7 @@ class HelpprofessorController extends Controller
 {
 
     public function helpprofessorlist(){
-        $helpprofessors = Helpprofessor::all();
+        $helpprofessors = Helpprofessor::paginate(10);
         return view('AdminViews/helpprofessors/helpprofessor-list',compact('helpprofessors'));
     }
 

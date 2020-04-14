@@ -318,6 +318,9 @@
                                     @endif
                                     </tbody>
                                 </table>
+                                <div>
+                                    {{$places->links()}}
+                                </div>
                                 <!--end table list daneshjoyan-->
 
                                 <!--start modal details-->
@@ -367,7 +370,7 @@
                                                         <td class="header-table">تعداد پایه ها </td>
                                                         <td id=""></td>
                                                     </tr>
-                                                    
+
                                                 </table>
                                             </div>
                                                         </div>

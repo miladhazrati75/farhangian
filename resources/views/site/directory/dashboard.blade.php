@@ -1,6 +1,6 @@
 @extends('layout/main')
 @section('title')
-    لیست اساتید راهنما|دانشگاه فرهنگیان
+    سیستم مدیریتی دانشگاه
 @stop
 @section('content')
     <!--start row-->

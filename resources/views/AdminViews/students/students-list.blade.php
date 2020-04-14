@@ -272,6 +272,9 @@
                                     @endif
                                 </tbody>
                             </table>
+                                <div>
+                                    {{$students->links()}}
+                                </div>
                             <!--------------------end table list daneshjoyan--------------------->
 
                             <!-----------------------start modal details------------------------->

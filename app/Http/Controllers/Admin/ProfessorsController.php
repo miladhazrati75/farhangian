@@ -12,7 +12,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Reference\Url;
 class ProfessorsController extends Controller
 {
     public function ProfessorsList(){
-        $professors = Professor::all();
+        $professors = Professor::paginate(10);
         return view('AdminViews/Professors/Professors-list',compact('professors'));
     }
 
@@ -29,6 +29,7 @@ class ProfessorsController extends Controller
             return $profItem;
         }
     }
+
     public function searchProfessor()
     {
         if (\Illuminate\Support\Facades\Request::ajax()) {
@@ -37,6 +38,7 @@ class ProfessorsController extends Controller
             return $currentValue;
         }
     }
+
     public function createProfessor(Request $request)
     {
 

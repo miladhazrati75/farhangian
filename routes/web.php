@@ -35,7 +35,6 @@ Route::get('/search/place/', 'Admin\PlaceController@searchPlace');
 //
 
 
-
 Route::get('/delete/professor/{professor_id}', 'Admin\ProfessorsController@deleteProfessor')->name('delete.professor');
 
 Route::get('/download/student/info', 'ExportController@exportStudents')->name('download.student.info');
@@ -101,9 +100,6 @@ Route::get('/edit/helpprofessor/{helpprofessor_id}', 'Admin\HelpprofessorControl
 Route::post('/edit/helpprofessor/{helpprofessor_id}', 'Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //Route::post('/edit/helpprofessor{helpprofessor_id}','Admin\HelpprofessorController@updateHelpprofessor')->name('edit-post-helpprofessor');
 //start helpprofessors route
-
-
-
 
 
 //////////////////////Start student CMS

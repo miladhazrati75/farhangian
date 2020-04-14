@@ -114,6 +114,9 @@
                                     @endif
                                 </tbody>
                             </table>
+                            <div>
+                                {{$helpprofessors->links()}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +160,7 @@
                                                             <td class="header-table">تحصیلات</td>
                                                             <td id="education"></td>
                                                         </tr>
-                                                        
+
                                                         <tr>
                                                             <td class="header-table">عملیات</td>
                                                             <td>
@@ -228,7 +231,7 @@
                                                             <td class="header-table">تحصیلات</td>
                                                             <td id="education"></td>
                                                         </tr>
-                                                       
+
                                                     </table>
                                                 </div>
                                             </div>

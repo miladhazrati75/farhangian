@@ -18,7 +18,7 @@ class StudentsController extends Controller
 
     public function allOfStudents()
     {
-        $students = Student::all();
+        $students = Student::paginate(10);
         return view('AdminViews/students/students-list', compact('students'));
     }
 
@@ -33,7 +33,7 @@ class StudentsController extends Controller
         }
     }
 
-    public function editStudent($student_id) //Request $request)
+    public function editStudent($student_id)
     {
         //$student_id = $request->input('id');
         if ($student_id && ctype_digit($student_id)) {

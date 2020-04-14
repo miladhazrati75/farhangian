@@ -1,4 +1,4 @@
-@extends('StudentViews/layout/main')
+@extends('OstadViews/layout/main')
 @section('title')
     ثبت کارورزی
 @stop
