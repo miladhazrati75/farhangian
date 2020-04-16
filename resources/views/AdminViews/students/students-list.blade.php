@@ -1,73 +1,73 @@
 @extends('layout.main')
 @section('title')
-لیست دانشجویان|دانشگاه فرهنگیان
+    لیست دانشجویان|دانشگاه فرهنگیان
 @stop
 @section('content')
-<!-- Main Content -->
-<!--start row-->
-@include('partials.success')
-<script src="/js/myJq.js"></script>
-<script>
-    $(document).ready(function () {
-        $(".details").click(function () {
-            var userId = $(this).attr("id");
-            var count = $(this).attr("count");
-            $.get('/details/student', {
-                userId: userId
-            }, function (data) {
+    <!-- Main Content -->
+    <!--start row-->
+    @include('partials.success')
+    <script src="/js/myJq.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".details").click(function () {
+                var userId = $(this).attr("id");
+                var count = $(this).attr("count");
+                $.get('/details/student', {
+                    userId: userId
+                }, function (data) {
 
-                //Getting nformations from server
-                var name = data["name"];
-                var family = data["family"];
-                var National_Code = data["National_Code"];
-                var term = data["term"];
-                var student_code = data["student_code"];
+                    //Getting nformations from server
+                    var name = data["name"];
+                    var family = data["family"];
+                    var National_Code = data["National_Code"];
+                    var term = data["term"];
+                    var student_code = data["student_code"];
 
-                //set values in modal
-                $("#count").text(count);
-                $("#name").text(name + " " + family);
-                $("#student_code").text(student_code);
-                $("#national_code").text(National_Code);
-                $("#phone").text("09921558293");
-                $("#subject").text("مهندسی کامپیوتر");
-                $("#term").text(term);
+                    //set values in modal
+                    $("#count").text(count);
+                    $("#name").text(name + " " + family);
+                    $("#student_code").text(student_code);
+                    $("#national_code").text(National_Code);
+                    $("#phone").text("09921558293");
+                    $("#subject").text("مهندسی کامپیوتر");
+                    $("#term").text(term);
 
-            });
-        });
-
-
-        $(".searchSubmit").click(function () {
-
-            var searchInput = $(".searchInput").val();
-            var count;
-            $.get('/search/student', {
-                searchInput: searchInput
-            }, function (data) {
-                console.log(data);
-
-                var name = data[0]["name"];
-                var family = data[0]["family"];
-                var National_Code = data[0]["National_Code"];
-                var student_code = data[0]["student_code"];
-                var term = data[0]["term"];
-                var subject = "مهندسی کامپیوتر";
-                var phone = "09921558293";
-
-
-                //set values in modal
-                // $("#table").text(" ");
-                // $("#radifCount").text(count);
-                $("#namvafamily").text(name + " " + family);
-                $("#daneshjoo_code").text(student_code);
-                $("#code_melli").text(National_Code);
-                $("#mobile").text("09921558293");
-                $("#reshte").text("مهندسی کامپیوتر");
-                $("#student_term").text(term);
-
-
+                });
             });
 
-        });
+
+            $(".searchSubmit").click(function () {
+
+                var searchInput = $(".searchInput").val();
+                var count;
+                $.get('/search/student', {
+                    searchInput: searchInput
+                }, function (data) {
+                    console.log(data);
+
+                    var name = data[0]["name"];
+                    var family = data[0]["family"];
+                    var National_Code = data[0]["National_Code"];
+                    var student_code = data[0]["student_code"];
+                    var term = data[0]["term"];
+                    var subject = "مهندسی کامپیوتر";
+                    var phone = "09921558293";
+
+
+                    //set values in modal
+                    // $("#table").text(" ");
+                    // $("#radifCount").text(count);
+                    $("#namvafamily").text(name + " " + family);
+                    $("#daneshjoo_code").text(student_code);
+                    $("#code_melli").text(National_Code);
+                    $("#mobile").text("09921558293");
+                    $("#reshte").text("مهندسی کامپیوتر");
+                    $("#student_term").text(term);
+
+
+                });
+
+            });
 
 
         });
@@ -133,102 +133,104 @@
                                 </div>
                             </div>
                             <div class="col-xs-2"></div>
-                        </div></div>
-            </div>
-            <!------------------------------------ Modal search -------------------------------->
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header row no-margin">
-                                    <h5 class="modal-title col-md-8" id="exampleModalLabel">لیست دانشجویان</h5>
-                                    <button type="button" class="close my-btn-close col-md-2" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="panel-wrapper collapse in">
-                                        <div class="panel-body">
-                                            <div class="table-wrap mt-5">
-                                                <div class="table-responsive">
-                                                    <table class="table table-striped mb-0">
+                        </div>
+                    </div>
+                </div>
+                <!------------------------------------ Modal search -------------------------------->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalsearch" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header row no-margin">
+                                        <h5 class="modal-title col-md-8" id="exampleModalLabel">مشخصات دانشجو</h5>
+                                        <button type="button" class="close my-btn-close col-md-2" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="panel-wrapper collapse in">
+                                            <div class="panel-body">
+                                                <div class="table-wrap mt-5">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped mb-0">
                                                             <tr>
                                                                 <td class="header-table">نام و نام خانوادگی</td>
                                                                 <td id="namvafamily"></td>
                                                             </tr>
                                                             <tr>
-                                                               <td class="header-table">شماره دانشجویی</td>
-                                                               <td id="daneshjoo_code"></td>
+                                                                <td class="header-table">شماره دانشجویی</td>
+                                                                <td id="daneshjoo_code"></td>
                                                             </tr>
 
                                                             <tr>
-                                                               <td class="header-table">شماره ملی</td>
-                                                               <td id="code_melli"></td>
+                                                                <td class="header-table">شماره ملی</td>
+                                                                <td id="code_melli"></td>
                                                             </tr>
 
                                                             <tr>
-                                                               <td class="header-table">شماره موبایل</td>
-                                                               <td id="mobile"></td>
+                                                                <td class="header-table">شماره موبایل</td>
+                                                                <td id="mobile"></td>
                                                             </tr>
 
                                                             <tr>
-                                                               <td class="header-table">رشته</td>
-                                                               <td id="reshte"></td>
+                                                                <td class="header-table">رشته</td>
+                                                                <td id="reshte"></td>
                                                             </tr>
 
                                                             <tr>
-                                                               <td class="header-table">ترم</td>
-                                                               <td id="student_term"></td>
+                                                                <td class="header-table">ترم</td>
+                                                                <td id="student_term"></td>
                                                             </tr>
                                                             <tr>
-                                                               <td class="header-table">پسورد</td>
-                                                               <td></td>
+                                                                <td class="header-table">پسورد</td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
-                                                               <td class="header-table">ادرس</td>
-                                                               <td></td>
+                                                                <td class="header-table">ادرس</td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
-                                                            <td class="header-table">عملیات</td>
-                                    <td>
-                                                                <a href=""
-                                                                    class="mr-10" data-toggle="tooltip"
-                                                                    data-original-title="Edit">
-                                                                    <i class="fa fa-pencil text-inverse"
-                                                                        style="color:#2ecd99;"></i>
-                                                                </a>
-                                                                <a href=""
-                                                                    class="mr-10" data-toggle="tooltip"
-                                                                    data-original-title="delete">
-                                                                    <i class="fa fa-close text-danger"></i>
-                                                                </a>
-                                                        
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                                <td class="header-table">عملیات</td>
+                                                                <td>
+                                                                    <a href=""
+                                                                       class="mr-10" data-toggle="tooltip"
+                                                                       data-original-title="Edit">
+                                                                        <i class="fa fa-pencil text-inverse"
+                                                                           style="color:#2ecd99;"></i>
+                                                                    </a>
+                                                                    <a href=""
+                                                                       class="mr-10" data-toggle="tooltip"
+                                                                       data-original-title="delete">
+                                                                        <i class="fa fa-close text-danger"></i>
+                                                                    </a>
+
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                 <!-----------------------end modal search---------------------------->
-                 <!-----------------------start table list daneshjoyan---------------->
+                <!-----------------------end modal search---------------------------->
+                <!-----------------------start table list daneshjoyan---------------->
                 <div class="panel-wrapper collapse in">
                     <div class="panel-body">
                         <div class="table-wrap mt-5">
                             <div class="table-responsive">
 
-                            <table class="table table-striped mb-0" id="table">
-                                <thead>
+                                <table class="table table-striped mb-0" id="table">
+                                    <thead>
                                     <tr>
                                         <th>ردیف</th>
                                         <th>نام و نام خانوادگی</th>
@@ -239,106 +241,57 @@
                                         <th>ترم</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
-                                </thead>
-                                <tbody>
+                                    </thead>
+                                    <tbody>
                                     @if($students && count($students)>0)
-                                    {{$i=1}}
-                                    @foreach($students as $student)
+                                        {{$i=1}}
+                                        @foreach($students as $student)
 
-                                    <tr>
-                                        <td id="radif">{{$i}}</td>
-                                        <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
-                                        <td id="daneshjoo_code">{{$student->student_code}}</td>
-                                        <td id="code_melli">{{$student->National_Code}}</td>
-                                        <td id="mobile">{{$student->mobileNumber}}</td>
-                                        <td id="reshte">{{$student->reshte}}</td>
-                                        <td id="student_term">{{$student->term}}</td>
-                                        <td class="text-nowrap">
-                                            <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
-                                                data-toggle="tooltip" data-original-title="Edit">
-                                                <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
-                                            </a>
-                                            <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
-                                                data-toggle="tooltip" data-original-title="delete">
-                                                <i class="fa fa-close text-danger"></i>
-                                            </a>
-                                            <a id="{{$student->id}}" count="{{$i}}" class="details"
-                                                data-toggle="tooltip" data-original-title="details">
-                                                <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
-                                                    data-target="#exampleModaldetails" style="color: orange;"></i>
-                                            </a>
-                                        </td>
-                                        {{$i++}}
-                                    </tr>
-                                    @endforeach
+                                            <tr>
+                                                <td id="radif">{{$i}}</td>
+                                                <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
+                                                <td id="daneshjoo_code">{{$student->student_code}}</td>
+                                                <td id="code_melli">{{$student->National_Code}}</td>
+                                                <td id="mobile">{{$student->mobileNumber}}</td>
+                                                <td id="reshte">{{$student->reshte}}</td>
+                                                <td id="student_term">{{$student->term}}</td>
+                                                <td class="text-nowrap">
+                                                    <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
+                                                       data-toggle="tooltip" data-original-title="Edit">
+                                                        <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
+                                                    </a>
+                                                    <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
+                                                       data-toggle="tooltip" data-original-title="delete">
+                                                        <i class="fa fa-close text-danger"></i>
+                                                    </a>
+                                                    <a id="{{$student->id}}" count="{{$i}}" class="details"
+                                                       data-toggle="tooltip" data-original-title="details">
+                                                        <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
+                                                           data-target="#exampleModaldetails"
+                                                           style="color: orange;"></i>
+                                                    </a>
+                                                </td>
+                                                {{$i++}}
+                                            </tr>
+                                        @endforeach
                                     @endif
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
                                 <div>
                                     {{$students->links()}}
                                 </div>
-                            <!--------------------end table list daneshjoyan--------------------->
+                                <!--------------------end table list daneshjoyan--------------------->
 
-                            <!-----------------------start modal details------------------------->
-<<<<<<< HEAD
-                            <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                    <div class="modal-header row no-margin">
-                                    <h5 class="modal-title col-md-8" id="exampleModalLabel">مشخصات دانشجو</h5>
-                                    <button type="button" class="close my-btn-close col-md-2" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                        <div class="modal-body">
-                                            <div class="panel-wrapper collapse in">
-                                                <div class="panel-body">
-                                                    <div class="table-wrap mt-5">
-                                                        <div class="table-responsive">
-                                                            <table class="table table-striped mb-0">
-                                                                <tr>
-                                                                    <td class="header-table">نام و نام خانوادگی</td>
-                                                                    <td id="name"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">شماره دانشجویی</td>
-                                                                    <td id="student_code"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">شماره ملی</td>
-                                                                    <td id="national_code"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">شماره موبایل</td>
-                                                                    <td id="phone"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">رشته</td>
-                                                                    <td id="subject"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">ترم</td>
-                                                                    <td id="term"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">پسورد</td>
-                                                                    <td id="password"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">آدرس</td>
-                                                                    <td></td>
-                                                                </tr>
-                                                            </table>
-=======
+                                <!-----------------------start modal details------------------------->
                                 <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
                                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">مشخصات دانشجو</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
+                                            <div class="modal-header row no-margin">
+                                                <h5 class="modal-title col-md-8" id="exampleModalLabel">مشخصات
+                                                    دانشجو</h5>
+                                                <button type="button" class="close my-btn-close col-md-2"
+                                                        data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
@@ -382,48 +335,48 @@
                                                                     </tr>
                                                                 </table>
                                                             </div>
->>>>>>> 3b8dc86d5400abba31758e128b3b615c777a3332
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!----------------------------end modal details------------------------------->
-                                <!--start modal import-->
-                                <div class="modal fade" id="exampleModalimport" tabindex="-1" role="dialog"
-                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="panel-wrapper collapse in">
-                                                    <div class="panel-body">
-                                                        <div class="table-wrap mt-5">
-                                                            <div class="table-responsive">
-                                                                <form action="{{ route('import.student.info') }}"
-                                                                      method="post" enctype="multipart/form-data">
-                                                                    {{csrf_field()}}
-                                                                    <div class="form-group">
-                                                                        <label class="control-label mb-10">انتخاب
-                                                                            کنید:</label>
-                                                                        <input class="form-control" type="file"
-                                                                               name="file" id="file" required="">
-                                                                    </div>
-                                                                    <br>
-                                                                    <button
-                                                                        class="btn btn-success btn-icon left-icon mr-10 pull-left">
-                                                                        <i
-                                                                            class="fa fa-check"></i> <span>آپلود</span>
-                                                                    </button>
-                                                                </form>
+                                    <!----------------------------end modal details------------------------------->
+                                    <!--start modal import-->
+                                    <div class="modal fade" id="exampleModalimport" tabindex="-1" role="dialog"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="panel-wrapper collapse in">
+                                                        <div class="panel-body">
+                                                            <div class="table-wrap mt-5">
+                                                                <div class="table-responsive">
+                                                                    <form action="{{ route('import.student.info') }}"
+                                                                          method="post" enctype="multipart/form-data">
+                                                                        {{csrf_field()}}
+                                                                        <div class="form-group">
+                                                                            <label class="control-label mb-10">انتخاب
+                                                                                کنید:</label>
+                                                                            <input class="form-control" type="file"
+                                                                                   name="file" id="file" required="">
+                                                                        </div>
+                                                                        <br>
+                                                                        <button
+                                                                            class="btn btn-success btn-icon left-icon mr-10 pull-left">
+                                                                            <i
+                                                                                class="fa fa-check"></i>
+                                                                            <span>آپلود</span>
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -431,46 +384,46 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--end modal import-->
                                 </div>
-                                <!--end modal import-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-    <!-- /Row -->
-    <!-----------------------------start modal hazf--------------------------------->
-<div class="modal fade" id="exampleModal1"  aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="#">
-                        <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
-                              aria-expanded="true" style="">
-                            <div class="input-group">
-                                <label>آیا می خواهید حذف کنید؟</label>
+        </div>
+        <!-- /Row -->
+        <!-----------------------------start modal hazf--------------------------------->
+        <div class="modal fade" id="exampleModal1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="#">
+                            <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
+                                  aria-expanded="true" style="">
+                                <div class="input-group">
+                                    <label>آیا می خواهید حذف کنید؟</label>
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger btn-anim" data-dismiss="modal"><i
+                                        class="fa fa-recycle" aria-hidden="true"></i><span
+                                        class="btn-text">delete</span>
+                                </button>
+                                <button type="button" class="btn btn-primary">close</button>
                             </div>
                         </form>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-danger btn-anim" data-dismiss="modal"><i
-                                    class="fa fa-recycle" aria-hidden="true"></i><span class="btn-text">delete</span>
-                            </button>
-                            <button type="button" class="btn btn-primary">close</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-------------------------------end modal hazf------------------------------------>
-    <!-- /Main Content -->
+        <!-------------------------------end modal hazf------------------------------------>
+        <!-- /Main Content -->
 @stop
