@@ -22,13 +22,14 @@
                     var National_Code = data["National_Code"];
                     var term = data["term"];
                     var student_code = data["student_code"];
+                    var mobileNumber = data["mobileNumber"];
 
                     //set values in modal
                     $("#count").text(count);
                     $("#name").text(name + " " + family);
                     $("#student_code").text(student_code);
                     $("#national_code").text(National_Code);
-                    $("#phone").text("09921558293");
+                    $("#mobileNumber").text(mobileNumber);
                     $("#subject").text("مهندسی کامپیوتر");
                     $("#term").text(term);
 
@@ -51,7 +52,8 @@
                     var student_code = data[0]["student_code"];
                     var term = data[0]["term"];
                     var subject = "مهندسی کامپیوتر";
-                    var phone = "09921558293";
+                    var mobileNumber = data["mobileNumber"];
+
 
 
                     //set values in modal
@@ -60,7 +62,7 @@
                     $("#namvafamily").text(name + " " + family);
                     $("#daneshjoo_code").text(student_code);
                     $("#code_melli").text(National_Code);
-                    $("#mobile").text("09921558293");
+                    $("#mobileNumber").text(mobileNumber);
                     $("#reshte").text("مهندسی کامپیوتر");
                     $("#student_term").text(term);
 
@@ -172,7 +174,7 @@
 
                                                             <tr>
                                                                 <td class="header-table">شماره موبایل</td>
-                                                                <td id="mobile"></td>
+                                                                <td id="mobileNumber"></td>
                                                             </tr>
 
                                                             <tr>
@@ -252,7 +254,7 @@
                                                 <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
                                                 <td id="daneshjoo_code">{{$student->student_code}}</td>
                                                 <td id="code_melli">{{$student->National_Code}}</td>
-                                                <td id="mobile">{{$student->mobileNumber}}</td>
+                                                <td id="mobileNumber">{{$student->mobileNumber}}</td>
                                                 <td id="reshte">{{$student->reshte}}</td>
                                                 <td id="student_term">{{$student->term}}</td>
                                                 <td class="text-nowrap">
@@ -315,7 +317,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="header-table">شماره موبایل</td>
-                                                                        <td id="phone"></td>
+                                                                        <td id="mobileNumber"></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="header-table">رشته</td>
