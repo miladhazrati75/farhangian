@@ -31,15 +31,14 @@
                     <div class="panel-body">
                         <form action="" method="post" style="padding: 22px">
                             <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-4 mt-10">
+                                <div class="col-md-3 mt-10">
                                     <div class="form-group">
                                         <label class="control-label mb-10">تاریخ شروع</label>
                                         <input type="text" id="family" name="datestart" class="form-control"
                                                 title="فارسی تایپ کنید">
                                     </div>
                                 </div>
-                                <div class="col-md-4 mt-10">
+                                <div class="col-md-3 mt-10">
                                     <div class="form-group">
                                         <label class="control-label mb-10">تاریخ پایان</label>
                                         <input type="text" id="student_code" name="dateend"
@@ -47,7 +46,7 @@
                                                 title="فارسی تایپ کنید">
                                     </div>
                                 </div>
-                                <div class="col-md-2"></div>
+                                <div class="col-md-6"></div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">

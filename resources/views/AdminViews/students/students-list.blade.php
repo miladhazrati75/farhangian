@@ -234,7 +234,7 @@
                                 <table class="table table-striped mb-0" id="table">
                                     <thead>
                                     <tr>
-                                        <th>ردیف</th>
+                                        <th>شناسه</th>
                                         <th>نام و نام خانوادگی</th>
                                         <th>شماره دانشجویی</th>
                                         <th>شماره ملی</th>

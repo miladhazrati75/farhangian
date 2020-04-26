@@ -86,7 +86,7 @@
                                                         <table class="table table-striped mb-0">
                                                             <thead>
                                                             <tr>
-                                                                <th>ردیف</th>
+                                                                <th>شناسه</th>
                                                                 <th>نام و نام خانوادگی</th>
                                                                 <th>شناسه استاد</th>
                                                                 <th>شماره ملی</th>
@@ -124,7 +124,7 @@
                                                                     <table class="table table-striped mb-0">
                                                                         <thead>
                                                                         <tr>
-                                                                            <th>ردیف</th>
+                                                                            <th>شناسه</th>
                                                                             <th>نام و نام خانوادگی</th>
                                                                             <th>شناسه استاد</th>
                                                                             <th>شماره ملی</th>
@@ -160,7 +160,7 @@
                                 <table class="table table-striped mb-0">
                                     <thead>
                                     <tr>
-                                        <th>ردیف</th>
+                                        <th>شناسه</th>
                                         <th>نام و نام خانوادگی</th>
                                         <th>شماره دانشجویی</th>
                                         <th>ترم</th>
@@ -217,7 +217,7 @@
                                                 <table class="table table-striped mb-0">
                                                     <thead>
                                                     <tr>
-                                                        <th>ردیف</th>
+                                                        <th>شناسه</th>
                                                         <th>نام و نام خانوادگی</th>
                                                         <th>شماره دانشجویی</th>
                                                         <th>شماره ملی</th>

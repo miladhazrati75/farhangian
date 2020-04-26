@@ -75,7 +75,7 @@
                             <table class="table table-striped mb-0">
                                 <thead>
                                     <tr>
-                                        <th>ردیف</th>
+                                        <th>شناسه</th>
                                         <th>نام و نام خانوادگی</th>
                                         <th>کد پرسنلی</th>
                                         <th>شماره ملی</th>

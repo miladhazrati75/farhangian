@@ -46,11 +46,12 @@ class PlaceController extends Controller
             'address' => request()->input('address'),
             'phone' => request()->input('phone'),
             'managerName' => request()->input('managerName'),
+            'moaven_name' => request()->input('mName'),
             'capacity' => request()->input('capacity')
         ];
         $new_place_object = Place::create($place_data);
         if ($new_place_object && $new_place_object instanceof Place) {
-            return redirect()->route('place-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('place-list')->with('success', 'مدرسه مورد نظر با موفقیت اضافه شد');
         }
     }
 
@@ -98,7 +99,7 @@ class PlaceController extends Controller
         $place = Place::find($place_id);
         $place->update($place_data);
         if ($place) {
-            return redirect()->route('place-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('place-list')->with('success', 'اطلاعات مدرسه مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 }
