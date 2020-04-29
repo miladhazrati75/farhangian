@@ -83,7 +83,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">شماره موبایل</label>
-                                                    <input type="text"  name="mobileNumber" class="form-control"
+                                                    <input type="text" id="mobileNumber"  name="mobileNumber" class="form-control"
                                                            value="" >
                                                 </div>
                                             </div>
@@ -119,7 +119,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">پسورد</label>
-                                                    <input type="text" id="term" name="term" class="form-control"
+                                                    <input type="text" id="password" name="password" class="form-control"
                                                             >
                                                 </div>
                                             </div>
@@ -131,7 +131,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ادرس</label>
-                                                    <input type="text" id="term" name="term" class="form-control">
+                                                    <input type="text" id="address" name="address" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

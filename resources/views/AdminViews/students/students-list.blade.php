@@ -23,6 +23,8 @@
                     var term = data["term"];
                     var student_code = data["student_code"];
                     var mobileNumber = data["mobileNumber"];
+                    var address = data["address"];
+                    var subject = data[0]["reshteh"];
 
                     //set values in modal
                     $("#count").text(count);
@@ -30,8 +32,9 @@
                     $("#student_code").text(student_code);
                     $("#national_code").text(National_Code);
                     $("#mobileNumber").text(mobileNumber);
-                    $("#subject").text("مهندسی کامپیوتر");
+                    $("#reshte").text(subject);
                     $("#term").text(term);
+                    $("#address").text(address);
 
                 });
             });
@@ -51,8 +54,8 @@
                     var National_Code = data[0]["National_Code"];
                     var student_code = data[0]["student_code"];
                     var term = data[0]["term"];
-                    var subject = "مهندسی کامپیوتر";
-                    var mobileNumber = data["mobileNumber"];
+                    var subject = data[0]["reshteh"];
+                    var mobileNumber = data[0]["mobileNumber"];
 
 
 
@@ -63,7 +66,7 @@
                     $("#daneshjoo_code").text(student_code);
                     $("#code_melli").text(National_Code);
                     $("#mobileNumber").text(mobileNumber);
-                    $("#reshte").text("مهندسی کامپیوتر");
+                    $("#reshte").text(subject);
                     $("#student_term").text(term);
 
 
@@ -188,11 +191,11 @@
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">پسورد</td>
-                                                                <td></td>
+                                                                <td id="password"></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">ادرس</td>
-                                                                <td></td>
+                                                                <td id="address"></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">عملیات</td>

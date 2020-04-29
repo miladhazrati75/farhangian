@@ -23,6 +23,7 @@ class StudentsTable extends Migration
             $table->string('mobileNumber');
             $table->string('reshte');
             $table->string('term');
+            $table->string('address');
             $table->string('student_code', 20)->unique();
             $table->bigInteger('professorID')->unsigned()->nullable();
             $table->bigInteger('schoolID')->unsigned()->nullable();

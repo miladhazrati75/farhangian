@@ -131,7 +131,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ادرس</label>
                                                     <input type="text" id="term" name="term" class="form-control"
-                                                           value="" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
+                                                           value="{{old('name',isset($studentItem) ? $studentItem->address : '')}}" pattern="[\u06f1-\u06f8]{1}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

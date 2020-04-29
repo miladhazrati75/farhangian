@@ -53,6 +53,7 @@ class StudentsController extends Controller
             'National_Code' => request()->input('National_Code'),
             'student_code' => request()->input('student_code'),
             'mobileNumber' => request()->input('mobileNumber'),
+            'address' => request()->input('address'),
             'reshte' => request()->input('reshte'),
             'term' => request()->input('term'),
         ];
@@ -77,6 +78,7 @@ class StudentsController extends Controller
             'National_Code' => request()->input('National_Code'),
             'mobileNumber' => request()->input('mobileNumber'),
             'reshte' => request()->input('reshte'),
+            'address' => request()->input('address'),
             'term' => request()->input('term'),
         ];
         $new_student_object = Student::create($student_data);
