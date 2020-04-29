@@ -88,7 +88,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
-                                            <input type="text" id="National_Code" name="National_Code" class="form-control" value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                            <input type="text" id="National_Code" name="National_Code" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->National_Code : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -99,7 +99,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره تماس</label>
-                                            <input type="text" id="education" name="education" class="form-control" value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                            <input type="text" id="education" name="mobileNumber" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->mobileNumber : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -110,7 +110,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">پسورد</label>
-                                            <input type="text" id="education" name="education" class="form-control" value="" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
+                                            <input type="text" id="education" name="password" class="form-control" value="{{old('name',isset($professorItem) ? $professorItem->password : '')}}" pattern="[\u0621-\u06cc]{0,}" title="فارسی تایپ کنید">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

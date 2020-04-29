@@ -99,7 +99,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">شماره تماس</label>
-                                            <input class="form-control" type="text" name="education" required="" >
+                                            <input class="form-control" type="text" name="mobileNumber" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -111,7 +111,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">پسورد</label>
-                                            <input class="form-control" type="text" name="education" required="" >
+                                            <input class="form-control" type="text" name="password" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
