@@ -78,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10"> نام معاون</label>
-                                            <input type="text"  name="mName" class="form-control" value="">
+                                            <input type="text"  name="moaven_name" class="form-control" value="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -100,7 +100,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تعداد پایه ها</label>
-                                            <input type="text"  class="form-control" name="capacity" id="capacity" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                            <input type="text"  class="form-control" name="Tcapacity" id="Tcapacity" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

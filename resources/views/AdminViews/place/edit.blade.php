@@ -77,7 +77,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10"> نام معاون</label>
-                                            <input type="text" id="managerName" name="managerName" class="form-control" value="">
+                                            <input type="text" id="moaven_name" name="moaven_name" class="form-control" value="{{old('name',isset($place) ? $place->moaven_name : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -99,7 +99,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تعداد پایه ها</label>
-                                            <input type="text" id="capacity" name="capacity" class="form-control" value="">
+                                            <input type="text" id="Tcapacity" name="Tcapacity" class="form-control" value="{{old('name',isset($place) ? $place->Tcapacity : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

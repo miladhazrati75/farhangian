@@ -46,7 +46,8 @@ class PlaceController extends Controller
             'address' => request()->input('address'),
             'phone' => request()->input('phone'),
             'managerName' => request()->input('managerName'),
-            'moaven_name' => request()->input('mName'),
+            'moaven_name' => request()->input('moaven_name'),
+            'Tcapacity' => request()->input('Tcapacity'),
             'capacity' => request()->input('capacity')
         ];
         $new_place_object = Place::create($place_data);

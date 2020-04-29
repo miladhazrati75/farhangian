@@ -21,6 +21,8 @@ class Places extends Migration
             $table->integer('phone');
             $table->string('managerName');
             $table->string('capacity');
+            $table->string('moaven_name');
+            $table->string('Tcapacity');
             $table->timestamps();
         });
     }
