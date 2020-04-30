@@ -47,6 +47,7 @@ class ProfessorsController extends Controller
             'family' =>request()->input('family'),
             'mobileNumber' =>request()->input('mobileNumber'),
             'password' =>request()->input('password'),
+            'gerayesh' =>request()->input('gerayesh'),
             'Professor_Code' =>request()->input('Professor_Code'),
             'National_Code' =>request()->input('National_Code'),
             'education' =>request()->input('education'),

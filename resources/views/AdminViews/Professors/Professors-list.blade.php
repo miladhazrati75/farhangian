@@ -22,6 +22,9 @@
                 var National_Code = data["National_Code"];
                 var education = data["education"];
                 var professor_code = data["Professor_Code"];
+                var gerayesh = data["gerayesh"];
+                var mobileNumber = data["mobileNumber"];
+                var password = data["password"];
 
                 //set values in modal
                 $("#count").text(count);
@@ -29,7 +32,9 @@
                 $("#professor_code").text(professor_code);
                 $("#national_code").text(National_Code);
                 $("#education").text(education);
-
+                $("#gerayesh").text(gerayesh);
+                $("#mobileNumber").text(mobileNumber);
+                $("#password").text(password);
             });
         });
 
@@ -299,16 +304,17 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="header-table">شماره تماس</td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="header-table">پسورد</td>
-                                                                    <td></td>
+                                                                    <td id="mobileNumber"></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="header-table">گرایش</td>
-                                                                    <td></td>
+                                                                    <td id="gerayesh"></td>
                                                                 </tr>
+                                                                <tr>
+                                                                    <td class="header-table">پسورد</td>
+                                                                    <td id="password"></td>
+                                                                </tr>
+                                                                
 
 
                                                             </table>

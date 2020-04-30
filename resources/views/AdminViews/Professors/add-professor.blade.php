@@ -78,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تحصیلات</label>
-                                            <input class="form-control" type="text" name="National_Code" required="">
+                                            <input class="form-control" type="text" name="education" required="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -89,7 +89,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">گرایش</label>
-                                            <input class="form-control" type="text" name="education" required="" >
+                                            <input class="form-control" type="text" name="gerayesh" required="" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">

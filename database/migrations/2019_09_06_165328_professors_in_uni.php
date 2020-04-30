@@ -20,6 +20,7 @@ class ProfessorsInUni extends Migration
             $table->string('family');
             $table->string('mobileNumber');
             $table->string('password');
+            $table->string('gerayesh');
             $table->string('National_Code')->nullable();
             $table->string('Professor_Code')->unique();
             $table->string('education')->nullable();
