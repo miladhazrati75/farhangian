@@ -94,7 +94,9 @@ class PlaceController extends Controller
             'nameSchool' => request()->input('nameSchool'),
             'address' => request()->input('address'),
             'phone' => request()->input('phone'),
+            'moaven_name' => request()->input('moaven_name'),
             'managerName' => request()->input('managerName'),
+            'Tcapacity' => request()->input('Tcapacity'),
             'capacity' => request()->input('capacity')
         ];
         $place = Place::find($place_id);
