@@ -24,7 +24,8 @@
                     var student_code = data["student_code"];
                     var mobileNumber = data["mobileNumber"];
                     var address = data["address"];
-                    var subject = data[0]["reshteh"];
+                    var reshteh = data["reshteh"];
+                    var password = data["password"];
 
                     //set values in modal
                     $("#count").text(count);
@@ -32,9 +33,10 @@
                     $("#student_code").text(student_code);
                     $("#national_code").text(National_Code);
                     $("#mobileNumber").text(mobileNumber);
-                    $("#reshte").text(subject);
+                    $("#reshteh").text(reshteh);
                     $("#term").text(term);
                     $("#address").text(address);
+                    $("#password").text(password);
 
                 });
             });
@@ -54,7 +56,7 @@
                     var National_Code = data[0]["National_Code"];
                     var student_code = data[0]["student_code"];
                     var term = data[0]["term"];
-                    var subject = data[0]["reshteh"];
+                    var reshteh = data[0]["reshteh"];
                     var mobileNumber = data[0]["mobileNumber"];
 
 
@@ -66,7 +68,7 @@
                     $("#daneshjoo_code").text(student_code);
                     $("#code_melli").text(National_Code);
                     $("#mobileNumber").text(mobileNumber);
-                    $("#reshte").text(subject);
+                    $("#reshteh").text(reshteh);
                     $("#student_term").text(term);
 
 
@@ -182,7 +184,7 @@
 
                                                             <tr>
                                                                 <td class="header-table">رشته</td>
-                                                                <td id="reshte"></td>
+                                                                <td id="reshteh"></td>
                                                             </tr>
 
                                                             <tr>
@@ -258,7 +260,7 @@
                                                 <td id="daneshjoo_code">{{$student->student_code}}</td>
                                                 <td id="code_melli">{{$student->National_Code}}</td>
                                                 <td id="mobileNumber">{{$student->mobileNumber}}</td>
-                                                <td id="reshte">{{$student->reshte}}</td>
+                                                <td id="reshteh">{{$student->reshteh}}</td>
                                                 <td id="student_term">{{$student->term}}</td>
                                                 <td class="text-nowrap">
                                                     <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
@@ -324,7 +326,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="header-table">رشته</td>
-                                                                        <td id="subject"></td>
+                                                                        <td id="reshteh"></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="header-table">ترم</td>

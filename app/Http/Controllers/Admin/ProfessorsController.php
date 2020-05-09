@@ -76,7 +76,10 @@ class ProfessorsController extends Controller
           'family' => request()->input('family'),
           'Professor_Code' => request()->input('Professor_Code'),
           'National_Code' => request()->input('National_Code'),
-          'education' => request()->input('education')
+          'education' => request()->input('education'),
+          'mobileNumber' =>request()->input('mobileNumber'),
+          'password' => request()->input('password'),
+          'gerayesh' => request()->input('gerayesh')
         ];
         $professor = Professor::find($professor_id);
         $professor->update($professor_data);

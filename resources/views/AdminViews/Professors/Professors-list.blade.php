@@ -269,7 +269,7 @@
                                 {{$professors->links()}}
                             </div>
                             <!--end table list daneshjoyan-->
-                            <!--start modal details-->
+                            <!----------------------start modal details--------------------------------->
                             <div class="modal fade" id="exampleModaldetails" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">

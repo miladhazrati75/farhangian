@@ -54,8 +54,9 @@ class StudentsController extends Controller
             'student_code' => request()->input('student_code'),
             'mobileNumber' => request()->input('mobileNumber'),
             'address' => request()->input('address'),
-            'reshte' => request()->input('reshte'),
+            'reshteh' => request()->input('reshteh'),
             'term' => request()->input('term'),
+            'password' => request()->input('password'),
         ];
         $student = Student::find($student_id);
         $student->update($student_data);
@@ -77,8 +78,9 @@ class StudentsController extends Controller
             'student_code' => request()->input('student_code'),
             'National_Code' => request()->input('National_Code'),
             'mobileNumber' => request()->input('mobileNumber'),
-            'reshte' => request()->input('reshte'),
+            'reshteh' => request()->input('reshteh'),
             'address' => request()->input('address'),
+            'password' => request()->input('password'),
             'term' => request()->input('term'),
         ];
         $new_student_object = Student::create($student_data);
@@ -93,9 +95,9 @@ class StudentsController extends Controller
         $allOfStudents = Student::all();
         $filename = 'studentsInfo.csv';
         $handle = fopen($filename, 'w+');
-        fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'mobileNumber', 'reshte', 'term'));
+        fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'mobileNumber', 'reshteh', 'term'));
         foreach ($allOfStudents as $rows) {
-            fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['mobileNumber'], $rows['reshte'], $rows['term']));
+            fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['mobileNumber'], $rows['reshteh'], $rows['term']));
         }
         fclose($handle);
         $headers = array(

@@ -18,10 +18,10 @@ class StudentsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
             $table->string('family');
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->string('National_Code')->unique();
             $table->string('mobileNumber');
-            $table->string('reshte');
+            $table->string('reshteh');
             $table->string('term');
             $table->string('address');
             $table->string('student_code', 20)->unique();
