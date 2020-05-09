@@ -172,7 +172,6 @@
                                         <th>شماره دانشجویی</th>
                                         <th>شماره ملی</th>
                                         <th>تاریخ غیبت</th>
-                                        <th>شماره موبایل</th>
                                         <th>رشته</th>
                                         <th>ترم</th>
                                         <th class="text-nowrap">عملیات</th>
@@ -185,7 +184,6 @@
                                                 <td id="daneshjoo_code"></td>
                                                 <td id="code_melli"></td>
                                                 <td id="date"></td>
-                                                <td id="mobileNumber"></td>
                                                 <td id="reshteh"></td>
                                                 <td id="student_term"></td>
                                                 <td class="text-nowrap">
@@ -244,6 +242,10 @@
                                                                         <td id="national_code"></td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td class="header-table">تاریخ غیبت</td>
+                                                                        <td id="date"></td>
+                                                                    </tr>
+                                                                    <tr>
                                                                         <td class="header-table">شماره موبایل</td>
                                                                         <td id="mobileNumber"></td>
                                                                     </tr>
@@ -255,14 +257,19 @@
                                                                         <td class="header-table">ترم</td>
                                                                         <td id="term"></td>
                                                                     </tr>
+                                                                     <tr>
+                                                                        <td class="header-table">آدرس</td>
+                                                                        <td  id="address"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">جزییات</td>
+                                                                        <td  id="details"></td>
+                                                                    </tr>
                                                                     <tr>
                                                                         <td class="header-table">پسورد</td>
                                                                         <td id="password"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td class="header-table">آدرس</td>
-                                                                        <td></td>
-                                                                    </tr>
+                                                                   
                                                                 </table>
                                                             </div>
                                                         </div>
