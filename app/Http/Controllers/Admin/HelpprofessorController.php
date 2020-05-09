@@ -55,7 +55,7 @@ class HelpprofessorController extends Controller
             'password'=>request()->input('password'),
             'personalCode'=>request()->input('personal_code'),
             'NationalCode'=>request()->input('National_Code'),
-            'gerayesh'=>request()->input('gherayesh'),
+            'gerayesh'=>request()->input('gerayesh'),
             'tahsilat'=>request()->input('tahsilat')
         ];
         $helpprofessor=Helpprofessor::find($helpprofessor_id);
