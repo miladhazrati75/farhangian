@@ -102,21 +102,21 @@
             <div class="row">
                 <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                     <a href="{{route('download.professor.info')}}">
-                        <div class="btn btn-warning btn-rounded btn-anim mt-5"><i class="fa fa-download"></i><span
+                        <div class="btn btn-warning btn-rounded btn-anim mt-5 custom-h"><i class="fa fa-download"></i><span
                                 class="btn-text">دانلود</span>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                     <a href="{{route('add-get-professor')}}">
-                        <div class="btn btn-danger btn-rounded btn-anim mt-5"><i class="fa fa-plus"></i><span
+                        <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h"><i class="fa fa-plus"></i><span
                                 class="btn-text">افزودن</span>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                     <a class="import" data-toggle="tooltip" data-original-title="import">
-                        <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport"
+                        <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h" data-target="#exampleModalimport"
                             data-toggle="modal"><i class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
                         </div>
                     </a>

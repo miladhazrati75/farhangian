@@ -29,14 +29,14 @@
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                         <a href="">
-                            <div class="btn btn-warning btn-rounded btn-anim mt-5"><i
+                            <div class="btn btn-warning btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-download"></i><span class="btn-text font-13">دانلود</span>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                         <a href="">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-plus"></i><span class="btn-text font-13">افزودن</span>
                             </div>
                         </a>
@@ -45,7 +45,7 @@
                         <a class="import"
                            data-toggle="tooltip"
                            data-original-title="import">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport"
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h" data-target="#exampleModalimport"
                                  data-toggle="modal"><i
                                     class="fa fa-plus"></i><span class="btn-text font-13">اکسل +</span>
                             </div>
