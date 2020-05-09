@@ -50,8 +50,10 @@
                     var National_Code = data[0]["National_Code"];
                     var student_code = data[0]["student_code"];
                     var term = data[0]["term"];
-                    var subject = "مهندسی کامپیوتر";
-                    var phone = "09921558293";
+                    var address = data[0]["address"];
+                    var phone = data[0]["mobileNumber"];
+                    var password = data[0]["password"];
+                    var reshte = data[0]["reshte"];
 
 
                     //set values in modal
@@ -60,8 +62,10 @@
                     $("#namvafamily").text(name + " " + family);
                     $("#daneshjoo_code").text(student_code);
                     $("#code_melli").text(National_Code);
-                    $("#mobile").text("09921558293");
-                    $("#reshte").text("مهندسی کامپیوتر");
+                    $("#mobile").text(phone);
+                    $("#password").text(password);
+                    $("#address").text(address);
+                    $("#reshte").text(reshte);
                     $("#student_term").text(term);
 
 
@@ -186,11 +190,11 @@
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">پسورد</td>
-                                                                <td></td>
+                                                                <td id="password"></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">ادرس</td>
-                                                                <td></td>
+                                                                <td id="address"></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">عملیات</td>

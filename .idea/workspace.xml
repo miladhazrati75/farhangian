@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1ffb51d0-ac73-4247-a213-d598955b1eda" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_13_083926_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_13_083926_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/add-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AdminViews/students/students-list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +229,13 @@
       <workItem from="1584437674749" duration="63000" />
       <workItem from="1584441366210" duration="2353000" />
       <workItem from="1585174689202" duration="6613000" />
-      <workItem from="1586801588957" duration="11286000" />
+      <workItem from="1586801588957" duration="13768000" />
+      <workItem from="1587326311235" duration="665000" />
+      <workItem from="1587453241477" duration="33000" />
+      <workItem from="1588786472294" duration="1369000" />
+      <workItem from="1588824921160" duration="615000" />
+      <workItem from="1588825586707" duration="652000" />
+      <workItem from="1589036302981" duration="6745000" />
     </task>
     <task id="LOCAL-00001" summary="فایل های php مرتب شدند و سکشن بندی شدند و فایل لاگین اضافه شد">
       <created>1568826423715</created>
@@ -376,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586860233358</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="سرچ دانشجویان عنوان درست شد">
+      <created>1587032575994</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1587032575994</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,14 +451,19 @@
     <MESSAGE value="سایز دکمه های صفحات لیست کم شد" />
     <MESSAGE value="یه سری تغییرات" />
     <MESSAGE value="لیست ها بصورت 10 تایی نمایش داده میشود" />
-    <option name="LAST_COMMIT_MESSAGE" value="لیست ها بصورت 10 تایی نمایش داده میشود" />
+    <MESSAGE value="سرچ دانشجویان عنوان درست شد" />
+    <option name="LAST_COMMIT_MESSAGE" value="سرچ دانشجویان عنوان درست شد" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1586860222467">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1587032574361">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1586860222467" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1587032574361" />
+    <state x="422" y="96" key="FileChooserDialogImpl" timestamp="1588826237475">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="422" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588826237475" />
     <state x="4" y="51" width="1154" height="578" key="MergeDialog" timestamp="1586860360161">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -454,14 +476,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1586807615617" />
-    <state x="234" y="74" key="Vcs.Push.Dialog.v2" timestamp="1586860696665">
+    <state x="234" y="74" key="Vcs.Push.Dialog.v2" timestamp="1587032587380">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="234" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1586860696665" />
-    <state x="338" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1586802004341">
+    <state x="234" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1587032587380" />
+    <state x="338" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1588825598954">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="338" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1586802004341" />
+    <state x="338" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1588825598954" />
     <state x="359" y="134" key="git4idea.merge.GitPullDialog" timestamp="1586860241087">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

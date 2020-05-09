@@ -54,7 +54,8 @@ class StudentsController extends Controller
             'student_code' => request()->input('student_code'),
             'mobileNumber' => request()->input('mobileNumber'),
             'reshte' => request()->input('reshte'),
-            'term' => request()->input('term'),
+//            'password' => request()->input('password'),
+//            'address' => request()->input('address'),
         ];
         $student = Student::find($student_id);
         $student->update($student_data);
@@ -78,6 +79,8 @@ class StudentsController extends Controller
             'mobileNumber' => request()->input('mobileNumber'),
             'reshte' => request()->input('reshte'),
             'term' => request()->input('term'),
+            'password' => request()->input('password'),
+            'address' => request()->input('address'),
         ];
         $new_student_object = Student::create($student_data);
         if ($new_student_object && $new_student_object instanceof Student) {
