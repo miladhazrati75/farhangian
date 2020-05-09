@@ -23,6 +23,7 @@ class Places extends Migration
             $table->string('capacity');
             $table->string('moaven_name');
             $table->string('Tcapacity');
+            $table->string('password');
             $table->timestamps();
         });
     }

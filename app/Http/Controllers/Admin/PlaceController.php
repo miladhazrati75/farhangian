@@ -48,6 +48,7 @@ class PlaceController extends Controller
             'managerName' => request()->input('managerName'),
             'moaven_name' => request()->input('moaven_name'),
             'Tcapacity' => request()->input('Tcapacity'),
+            'password' => request()->input('password'),
             'capacity' => request()->input('capacity')
         ];
         $new_place_object = Place::create($place_data);
@@ -97,6 +98,7 @@ class PlaceController extends Controller
             'moaven_name' => request()->input('moaven_name'),
             'managerName' => request()->input('managerName'),
             'Tcapacity' => request()->input('Tcapacity'),
+            'password' => request()->input('password'),
             'capacity' => request()->input('capacity')
         ];
         $place = Place::find($place_id);

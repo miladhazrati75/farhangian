@@ -107,6 +107,17 @@
 
                                     </div>
                                 </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">پسورد</label>
+                                            <input type="text"  class="form-control" name="password" id="password" required="" oninvalid="this.setCustomValidity('لطفا این فیلد را پر کنید')" oninput="setCustomValidity('')">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
 
 
                                 <div class="form-actions mt-20">
