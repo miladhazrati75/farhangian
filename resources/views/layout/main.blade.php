@@ -203,7 +203,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="#table_dr">
+                <a href="{{route('listGHeybatha')}}" data-toggle="collapse" data-target="#table_dr">
                     <div class="pull-left"><i class="zmdi zmdi-border-color mr-20"></i><span class="right-nav-text">گزارش غیبت ها</span>
                     </div>
                     <div class="clearfix"></div>
