@@ -62,7 +62,7 @@ class SchoolsController extends Controller
         $school = School::find($school_id);
         $school->update($school_data);
         if ($school) {
-            return redirect()->route('student-list')->with('success', 'اطلاعات دانشجوی مورد نظر شما با موفقیت به روز رسانی شد');
+            return redirect()->route('student-list')->with('success', 'اطلاعات مدرسه مورد نظر شما با موفقیت به روز رسانی شد');
         }
     }
 
@@ -84,7 +84,7 @@ class SchoolsController extends Controller
         ];
         $new_School_object = School::create($school_data);
         if ($new_School_object && $new_School_object instanceof School) {
-            return redirect()->route('student-list')->with('success', 'دانشجوی مورد نظر با موفقیت اضافه شد');
+            return redirect()->route('student-list')->with('success', 'مدرسه مورد نظر با موفقیت اضافه شد');
         }
     }
 }

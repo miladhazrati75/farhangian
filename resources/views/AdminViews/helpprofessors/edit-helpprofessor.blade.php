@@ -53,19 +53,7 @@
 
                                     </div>
                                 </div>
-                                <div class="row mt-10">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="control-label mb-10">پسورد</label>
-                                            <input type="text" id="password" name="password" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->password : '')}}"
-                                                   class="form-control"
-                                                   required="" >
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                    </div>
-                                </div>
+                                
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -105,6 +93,30 @@
                                     </div>
                                 </div>
 
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">گرایش</label>
+                                            <input type="text" name="gerayesh" class="form-control" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->gerayesh : '')}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">پسورد</label>
+                                            <input type="text" id="password" name="password" value="{{old('name',isset($helpprofessorItem) ? $helpprofessorItem->password : '')}}"
+                                                   class="form-control"
+                                                   required="" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                    </div>
+                                </div>
                                 <div class="form-actions mt-20">
                                     <button class="btn btn-success btn-icon left-icon mr-10 pull-left"><i
                                             class="fa fa-check"></i> <span>ثبت</span></button>

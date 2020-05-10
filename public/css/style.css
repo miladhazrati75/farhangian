@@ -7674,3 +7674,7 @@ h1,p,b,h2,body,h3,h4,h6{font-family:CodeAdvance!important}
   margin-left: 0px !important;
   margin-right: 0px !important;
 }
+.custom-h{
+  height: 39px;
+  width: 93px;
+}

@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 //Route::get('/', 'Admin\StudentsController@masterpage')->name('masterpage');
 
 Route::get('/', 'DashboardController@Dashbord')->name('masterpage');
@@ -26,6 +28,10 @@ Route::get('/search/professor/', 'Admin\ProfessorsController@searchProfessor');
 
 Route::get('/details/place/', 'Admin\PlaceController@details')->name('details.place');
 Route::get('/search/place/', 'Admin\PlaceController@searchPlace');
+
+    //گزارش غیبت ها در پنل ادمین
+Route::get('/listGHeybatha', 'Admin\listGHeybatha@listGHeybatha')->name('listGHeybatha');
+
 
 //Route::get('/xxx',function (Request $request){
 //    if (Request::ajax()){

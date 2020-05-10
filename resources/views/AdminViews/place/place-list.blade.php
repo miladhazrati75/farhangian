@@ -97,14 +97,14 @@
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
                     <a href="{{route('download.place.info')}}">
-                            <div class="btn btn-warning btn-rounded btn-anim mt-5"><i
+                            <div class="btn btn-warning btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-download"></i><span class="btn-text">دانلود</span>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
                         <a href="{{route('add-get-place')}}">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5"><i
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-plus"></i><span class="btn-text">افزودن</span>
                             </div>
                         </a>
@@ -113,7 +113,7 @@
                         <a class="import"
                             data-toggle="tooltip"
                             data-original-title="import">
-                            <div class="btn btn-danger btn-rounded btn-anim mt-5" data-target="#exampleModalimport" data-toggle="modal"><i
+                            <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h" data-target="#exampleModalimport" data-toggle="modal"><i
                                     class="fa fa-plus"></i><span class="btn-text">اکسل +</span>
                             </div>
                         </a>
@@ -214,49 +214,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-                                    <!--start modal details-->
-                                    <div class="modal fade" id="#exampleModaldetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">مشخصات مدرسه</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="panel-wrapper collapse in">
-                                                        <div class="panel-body">
-                                                            <div class="table-wrap mt-5">
-                                                                <div class="table-responsive">
-                                                                    <table class="table table-striped mb-0">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th>ردیف</th>
-                                                                                <th>نام مدرسه</th>
-                                                                                <th> ادرس مدرسه</th>
-                                                                                <th>تلفن مدرسه</th>
-                                                                                <th>نام مدیر</th>
-                                                                                <th>نام معاون</th>
-                                                                                <th>ظرفیت پذیرش</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -272,7 +229,7 @@
                                 <table class="table table-striped mb-0">
                                     <thead>
                                     <tr>
-                                        <th id="radif">ردیف</th>
+                                        <th id="radif">شناسه</th>
                                         <th id="nameSchool">نام مدرسه</th>
                                         <th id="address"> ادرس مدرسه</th>
                                         <th id="tel">تلفن مدرسه</th>
@@ -292,7 +249,7 @@
                                                 <td>{{$place->address}}</td>
                                                 <td>{{$place->phone}}</td>
                                                 <td>{{$place->managerName}} </td>
-                                                <td><!--نام معاون--> </td>
+                                                <td>{{$place->moaven_name}}</td>
                                                 <td> {{$place->capacity}}</td>
                                                 <td class="text-nowrap">
                                                     <a href="{{route('edit-get-place',[$place->id])}}" class="mr-10" data-toggle="tooltip" data-original-title="ویرایش">

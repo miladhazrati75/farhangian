@@ -94,9 +94,9 @@ class StudentsController extends Controller
         $allOfStudents = Student::all();
         $filename = 'studentsInfo.csv';
         $handle = fopen($filename, 'w+');
-        fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'mobileNumber', 'reshte', 'term'));
+        fputcsv($handle, array('name', 'family', 'National_Code', 'student_code', 'mobileNumber', 'reshteh', 'term'));
         foreach ($allOfStudents as $rows) {
-            fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['mobileNumber'], $rows['reshte'], $rows['term']));
+            fputcsv($handle, array($rows['name'], $rows['family'], $rows['National_Code'], $rows['student_code'], $rows['mobileNumber'], $rows['reshteh'], $rows['term']));
         }
         fclose($handle);
         $headers = array(

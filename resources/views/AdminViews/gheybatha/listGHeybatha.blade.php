@@ -1,96 +1,21 @@
 @extends('layout.main')
 @section('title')
-    لیست دانشجویان|دانشگاه فرهنگیان
+گزارش غیبت ها|دانشگاه فرهنگیان
 @stop
 @section('content')
     <!-- Main Content -->
     <!--start row-->
     @include('partials.success')
     <script src="/js/myJq.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".details").click(function () {
-                var userId = $(this).attr("id");
-                var count = $(this).attr("count");
-                $.get('/details/student', {
-                    userId: userId
-                }, function (data) {
-
-                    //Getting nformations from server
-                    var name = data["name"];
-                    var family = data["family"];
-                    var National_Code = data["National_Code"];
-                    var term = data["term"];
-                    var student_code = data["student_code"];
-                    var mobileNumber = data["mobileNumber"];
-                    var address = data["address"];
-                    var reshteh = data["reshteh"];
-                    var password = data["password"];
-
-                    //set values in modal
-                    $("#count").text(count);
-                    $("#name").text(name + " " + family);
-                    $("#student_code").text(student_code);
-                    $("#national_code").text(National_Code);
-                    $("#mobileNumber").text(mobileNumber);
-                    $("#reshteh").text(reshteh);
-                    $("#term").text(term);
-                    $("#address").text(address);
-                    $("#password").text(password);
-
-                });
-            });
-
-
-            $(".searchSubmit").click(function () {
-
-                var searchInput = $(".searchInput").val();
-                var count;
-                $.get('/search/student', {
-                    searchInput: searchInput
-                }, function (data) {
-                    console.log(data);
-
-                    var name = data[0]["name"];
-                    var family = data[0]["family"];
-                    var National_Code = data[0]["National_Code"];
-                    var student_code = data[0]["student_code"];
-                    var term = data[0]["term"];
-                    var address = data[0]["address"];
-                    var phone = data[0]["mobileNumber"];
-                    var password = data[0]["password"];
-                    var reshte = data[0]["reshte"];
-
-
-                    //set values in modal
-                    // $("#table").text(" ");
-                    // $("#radifCount").text(count);
-                    $("#namvafamily").text(name + " " + family);
-                    $("#daneshjoo_code").text(student_code);
-                    $("#code_melli").text(National_Code);
-                    $("#mobile").text(phone);
-                    $("#password").text(password);
-                    $("#address").text(address);
-                    $("#reshte").text(reshte);
-                    $("#student_term").text(term);
-
-
-                });
-
-            });
-
-
-        });
-    </script>
     <!-- Title -->
     <div class="row heading-bg" id="head-row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h5 class="txt-dark">لیست دانشجویان</h5>
+            <h5 class="txt-dark">گزارش غیبت ها</h5>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
-                <li class="breadcrumb-item"><a href="{{route('student-list')}}">لیست دانشجویان</a></li>
+                <li class="breadcrumb-item"><a href="{{route('listGHeybatha')}"> گزارش غیبت ها</a></li>
             </ol>
         </nav>
     </div>
@@ -103,14 +28,14 @@
             <div class="panel panel-default card-view">
                 <div class="row">
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0" id="div-btn">
-                        <a href="{{route('download.student.info')}}">
+                        <a href="">
                             <div class="btn btn-warning btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-download"></i><span class="btn-text font-13">دانلود</span>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4 mb-0">
-                        <a href="{{route('add.get.student')}}">
+                        <a href="">
                             <div class="btn btn-danger btn-rounded btn-anim mt-5 custom-h"><i
                                     class="fa fa-plus"></i><span class="btn-text font-13">افزودن</span>
                             </div>
@@ -168,39 +93,39 @@
                                                         <table class="table table-striped mb-0">
                                                             <tr>
                                                                 <td class="header-table">نام و نام خانوادگی</td>
-                                                                <td id="namvafamily"></td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">شماره دانشجویی</td>
-                                                                <td id="daneshjoo_code"></td>
+                                                                <td></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <td class="header-table">شماره ملی</td>
-                                                                <td id="code_melli"></td>
+                                                                <td></td>
                                                             </tr>
 
                                                             <tr>
-                                                                <td class="header-table">شماره موبایل</td>
-                                                                <td id="mobileNumber"></td>
+                                                                <td class="header-table">تاریخ غیبت</td>
+                                                                <td></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <td class="header-table">رشته</td>
-                                                                <td id="reshteh"></td>
+                                                                <td></td>
                                                             </tr>
 
                                                             <tr>
                                                                 <td class="header-table">ترم</td>
-                                                                <td id="student_term"></td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">پسورد</td>
-                                                                <td id="password"></td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">ادرس</td>
-                                                                <td id="address"></td>
+                                                                <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="header-table">عملیات</td>
@@ -246,49 +171,42 @@
                                         <th>نام و نام خانوادگی</th>
                                         <th>شماره دانشجویی</th>
                                         <th>شماره ملی</th>
-                                        <th>شماره موبایل</th>
+                                        <th>تاریخ غیبت</th>
                                         <th>رشته</th>
                                         <th>ترم</th>
                                         <th class="text-nowrap">عملیات</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @if($students && count($students)>0)
-                                        {{$i=1}}
-                                        @foreach($students as $student)
-
                                             <tr>
-                                                <td id="radif">{{$i}}</td>
-                                                <td id="namvafamily">{{$student->name}}{{' '}}{{$student->family}}</td>
-                                                <td id="daneshjoo_code">{{$student->student_code}}</td>
-                                                <td id="code_melli">{{$student->National_Code}}</td>
-                                                <td id="mobileNumber">{{$student->mobileNumber}}</td>
-                                                <td id="reshteh">{{$student->reshteh}}</td>
-                                                <td id="student_term">{{$student->term}}</td>
+                                                <td id="radif"></td>
+                                                <td id="namvafamily"></td>
+                                                <td id="daneshjoo_code"></td>
+                                                <td id="code_melli"></td>
+                                                <td id="date"></td>
+                                                <td id="reshteh"></td>
+                                                <td id="student_term"></td>
                                                 <td class="text-nowrap">
-                                                    <a href="{{route('edit.get.student',[$student->id])}}" class="mr-10"
+                                                    <a href="" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="Edit">
                                                         <i class="fa fa-pencil text-inverse" style="color:#2ecd99;"></i>
                                                     </a>
-                                                    <a href="{{route('delete.student',[$student->id])}}" class="mr-10"
+                                                    <a href="" class="mr-10"
                                                        data-toggle="tooltip" data-original-title="delete">
                                                         <i class="fa fa-close text-danger"></i>
                                                     </a>
-                                                    <a id="{{$student->id}}" count="{{$i}}" class="details"
+                                                    <a id="" class="details"
                                                        data-toggle="tooltip" data-original-title="details">
                                                         <i class="fa fa-calendar-check-o m-l-10" data-toggle="modal"
                                                            data-target="#exampleModaldetails"
                                                            style="color: orange;"></i>
                                                     </a>
                                                 </td>
-                                                {{$i++}}
+                                                
                                             </tr>
-                                        @endforeach
-                                    @endif
                                     </tbody>
                                 </table>
                                 <div>
-                                    {{$students->links()}}
                                 </div>
                                 <!--------------------end table list daneshjoyan--------------------->
 
@@ -324,6 +242,10 @@
                                                                         <td id="national_code"></td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td class="header-table">تاریخ غیبت</td>
+                                                                        <td id="date"></td>
+                                                                    </tr>
+                                                                    <tr>
                                                                         <td class="header-table">شماره موبایل</td>
                                                                         <td id="mobileNumber"></td>
                                                                     </tr>
@@ -335,14 +257,19 @@
                                                                         <td class="header-table">ترم</td>
                                                                         <td id="term"></td>
                                                                     </tr>
+                                                                     <tr>
+                                                                        <td class="header-table">آدرس</td>
+                                                                        <td  id="address"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="header-table">جزییات</td>
+                                                                        <td  id="details"></td>
+                                                                    </tr>
                                                                     <tr>
                                                                         <td class="header-table">پسورد</td>
                                                                         <td id="password"></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td class="header-table">آدرس</td>
-                                                                        <td></td>
-                                                                    </tr>
+                                                                   
                                                                 </table>
                                                             </div>
                                                         </div>
@@ -352,49 +279,7 @@
                                         </div>
                                     </div>
                                     <!----------------------------end modal details------------------------------->
-                                    <!--start modal import-->
-                                    <div class="modal fade" id="exampleModalimport" tabindex="-1" role="dialog"
-                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">آپلود فایل</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="panel-wrapper collapse in">
-                                                        <div class="panel-body">
-                                                            <div class="table-wrap mt-5">
-                                                                <div class="table-responsive">
-                                                                    <form action="{{ route('import.student.info') }}"
-                                                                          method="post" enctype="multipart/form-data">
-                                                                        {{csrf_field()}}
-                                                                        <div class="form-group">
-                                                                            <label class="control-label mb-10">انتخاب
-                                                                                کنید:</label>
-                                                                            <input class="form-control" type="file"
-                                                                                   name="file" id="file" required="">
-                                                                        </div>
-                                                                        <br>
-                                                                        <button
-                                                                            class="btn btn-success btn-icon left-icon mr-10 pull-left">
-                                                                            <i
-                                                                                class="fa fa-check"></i>
-                                                                            <span>آپلود</span>
-                                                                        </button>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end modal import-->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -417,7 +302,7 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
-                                  aria-expanded="true" style="">
+                                  aria-expanded="true">
                                 <div class="input-group">
                                     <label>آیا می خواهید حذف کنید؟</label>
                                 </div>

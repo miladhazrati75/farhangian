@@ -118,7 +118,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">پسورد</label>
-                                                    <input type="text" id="term" name="term" class="form-control"
+                                                    <input type="text" id="password" name="password" class="form-control"
                                                            value="{{old('name',isset($studentItem) ? $studentItem->password : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>
@@ -130,7 +130,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-10">ادرس</label>
-                                                    <input type="text" id="term" name="term" class="form-control"
+                                                    <input type="text" id="address" name="address" class="form-control"
                                                            value="{{old('name',isset($studentItem) ? $studentItem->address : '')}}" title="فارسی تایپ کنید">
                                                 </div>
                                             </div>

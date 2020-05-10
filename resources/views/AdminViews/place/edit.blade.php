@@ -12,7 +12,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('masterpage')}}">صفحه اصلی</a></li>
 
-                <li class="breadcrumb-item"><a href="{{route('place-list')}}">لیست حوزه ها</a></li>
+                <li class="breadcrumb-item"><a href="{{route('place-list')}}">لیست مدارس </a></li>
                 <li class="breadcrumb-item active" aria-current="page">ویرایش</li>
             </ol>
         </nav>
@@ -32,7 +32,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">نام حوزه</label>
+                                            <label class="control-label mb-10">نام مدرسه</label>
                                             <input type="text" id="nameSchool" name="nameSchool" class="form-control" value="{{old('name',isset($place) ? $place->nameSchool : '')}}">
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10">ادرس حوزه </label>
+                                            <label class="control-label mb-10">ادرس مدرسه </label>
                                             <input type="text" id="address" name="address" class="form-control" value="{{old('name',isset($place) ? $place->address : '')}}">
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@
                                 <div class="row mt-10">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label mb-10"> تلفن حوزه</label>
+                                            <label class="control-label mb-10"> تلفن مدرسه</label>
                                             <input type="text" id="phone" name="phone" class="form-control" value="{{old('name',isset($place) ? $place->phone : '')}}">
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10"> نام معاون</label>
-                                            <input type="text" id="managerName" name="managerName" class="form-control" value="">
+                                            <input type="text" id="moaven_name" name="moaven_name" class="form-control" value="{{old('name',isset($place) ? $place->moaven_name : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -99,7 +99,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label mb-10">تعداد پایه ها</label>
-                                            <input type="text" id="capacity" name="capacity" class="form-control" value="">
+                                            <input type="text" id="Tcapacity" name="Tcapacity" class="form-control" value="{{old('name',isset($place) ? $place->Tcapacity : '')}}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -107,7 +107,17 @@
                                     </div>
                                 </div>
 
+                                <div class="row mt-10">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label mb-10">پسورد</label>
+                                            <input type="text"  class="form-control" name="password" id="password"value="{{old('name',isset($place) ? $place->password : '')}}" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
 
+                                    </div>
+                                </div>
                                 <div class="form-actions mt-20">
                                     <button class="btn btn-success btn-icon left-icon mr-10 pull-left">
                                         <i class="fa fa-check"></i> <span>ثبت</span>

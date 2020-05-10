@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>@yield('title')</title>
     <meta name="description" content="dashboard site uni farhangian."/>
-    <meta name="keywords"
-          content="admin, admin dashboard, admin template, cms, crm, Philbert Admin, Philbertadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application"/>
-    <meta name="author" content="hencework"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 @yield('meta')
 <!-- Custom CSS -->
