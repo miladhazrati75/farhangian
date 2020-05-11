@@ -354,7 +354,7 @@
             <div class="modal-body">
                 <form method="post" action="#">
                     <form id="search_form" role="search" class="top-nav-search pull-left collapse in"
-                        aria-expanded="true" style="">
+                        aria-expanded="true">
                         <div class="input-group">
                             <label>آیا می خواهید حذف کنید؟</label>
                         </div>
